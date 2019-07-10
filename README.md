@@ -85,14 +85,19 @@ As Nathaniel, I'd like to have a dog trainer that is available to come to my hou
 
 ### WireFrames
 
-#### /
-![/](https://i.imgur.com/62JrMVt.png)
+### /
+![/](https://i.imgur.com/aJN7HMg.png)
 
-#### /about
 
-![wireframe](https://i.imgur.com/k0DOtdy.png)
-![wireframe](https://i.imgur.com/CnaNbzd.png)
-![wireframe](https://i.imgur.com/lseUA2S.png)
+### /about
+
+![wireframe](https://i.imgur.com/Aebm1aJ.png)
+![wireframe](https://i.imgur.com/NC6mMt0.png)
+![wireframe](https://i.imgur.com/gstFrLl.png)
+![wireframe](https://i.imgur.com/wC3nyt0.png)
+![wireframe](https://i.imgur.com/dcRsFWF.png)
+
+
 
 ### Database Entity Relationship Diagrams
 
