@@ -20,7 +20,8 @@
 ## About
 1. Link to [Original Website](https://www.muttswithmanners.com.au/)
 2. Link to [published app on Heroku](https://kendodeal.herokuapp.com/)
-3. Link to [Github Repo](https://github.com/keshibat/dogtrain_react)
+3. Link to [Github Repo Frond-end](https://github.com/keshibat/dogtrain_react)
+3. Link to [Github Repo Back-end]()
 
 [![kendo coupns](https://i.imgur.com/xia7mKr.png)](https://kendodeal.herokuapp.com/)
 
@@ -86,19 +87,32 @@ As Nathaniel, I'd like to have a dog trainer that is available to come to my hou
 ### WireFrames
 
 ### /
-![/](https://i.imgur.com/aJN7HMg.png)
+![/](https://i.imgur.com/RCKyIZv.png)
 
 
 ### /about
+![Imgur](https://i.imgur.com/7UG6Ouf.png)
+![Imgur](https://i.imgur.com/wZsN9fG.png)
+![Imgur](https://i.imgur.com/MLUxsQu.png)
+![Imgur](https://i.imgur.com/0XmiS0Z.png)
+![Imgur](https://i.imgur.com/9yjIXos.png)
+![Imgur](https://i.imgur.com/qxYgpp3.png)
 
-![wireframe](https://i.imgur.com/Aebm1aJ.png)
-![wireframe](https://i.imgur.com/NC6mMt0.png)
-![wireframe](https://i.imgur.com/gstFrLl.png)
-![wireframe](https://i.imgur.com/wC3nyt0.png)
-![wireframe](https://i.imgur.com/dcRsFWF.png)
 
 ### /trainning
-![wireframe](https://i.imgur.com/HXLdQDq.png)
+![Imgur](https://i.imgur.com/QjHZyS9.png)
+
+
+### /testimonials
+![Imgur](https://i.imgur.com/xKhnh11.png)
+
+### /shop
+![Imgur](https://i.imgur.com/vU8d814.png)
+
+
+### /booking
+![Imgur](https://i.imgur.com/v5qs4As.png)
+
 
 ### Database Entity Relationship Diagrams
 
