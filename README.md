@@ -97,7 +97,8 @@ As Nathaniel, I'd like to have a dog trainer that is available to come to my hou
 ![wireframe](https://i.imgur.com/wC3nyt0.png)
 ![wireframe](https://i.imgur.com/dcRsFWF.png)
 
-
+### /trainning
+![wireframe](https://i.imgur.com/HXLdQDq.png)
 
 ### Database Entity Relationship Diagrams
 
