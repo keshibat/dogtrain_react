@@ -11,6 +11,14 @@ import ContactusView from "./Pages/About/ContactusView";
 
 
 class App extends React.Component {
+  state = { location: "home"}
+
+
+  getView() {
+    const { location } =this.sa
+  }
+
+
   render() {
     return (
       <>
