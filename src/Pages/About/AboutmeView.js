@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-
-
-const AboutmeView = () => {
-    render() {
-        return (
-
-        )
-    }
+export default class AboutmeView extends Component {
+  render() {
+    return (
+      <>
+        <h1> About Me View</h1>
+      </>
+    );
+  }
 }
