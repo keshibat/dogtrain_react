@@ -1,5 +1,5 @@
 import React from "react";
-
+import "bulma/css/bulma.css";
 import AboutMe from "./Pages/About/AboutmeView";
 import AreasWeService from "./Pages/About/AreasweService";
 import FaqView from "./Pages/About/FaqView";
