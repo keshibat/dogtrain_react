@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
-export default class AreasweService extends Component {
+
+class AreasweServiceView extends Component {
   render() {
     return (
       <>
@@ -10,3 +10,6 @@ export default class AreasweService extends Component {
     );
   }
 }
+
+
+export default AreasweServiceView;
