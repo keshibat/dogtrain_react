@@ -5,7 +5,7 @@ export default class AreasweService extends Component {
   render() {
     return (
       <>
-        <h1> Areas We Service </h1>
+        <h1> Areas We Service Views</h1>
       </>
     );
   }

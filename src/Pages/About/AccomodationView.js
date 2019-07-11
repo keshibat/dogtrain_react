@@ -12,3 +12,8 @@ class AccomodationView extends Component {
 }
 
 export default AccomodationView;
+
+
+
+
+
