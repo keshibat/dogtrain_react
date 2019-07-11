@@ -20,7 +20,8 @@
 ## About
 1. Link to [Original Website](https://www.muttswithmanners.com.au/)
 2. Link to [published app on Heroku](https://kendodeal.herokuapp.com/)
-3. Link to [Github Repo](https://github.com/keshibat/dogtrain_react)
+3. Link to [Github Repo Frond-end](https://github.com/keshibat/dogtrain_react)
+3. Link to [Github Repo Back-end]()
 
 [![kendo coupns](https://i.imgur.com/xia7mKr.png)](https://kendodeal.herokuapp.com/)
 
@@ -51,47 +52,15 @@ Implementing/resolving all of the above using the most recent technology using t
 
 
 ### Tech stack
-[![Tech Stack](https://i.imgur.com/DziCzWH.png)](https://stackshare.io/keshibat/my-stack)
-[![](https://i.imgur.com/PqNxYcg.png)](https://stackshare.io/keshibat/my-stack)
+
 
 ### Instruction
-Open your terminal
 
-```sh
-$ git clone https://github.com/keshibat/ken_adam_ob
-$ cd your_directory
-$ bundle install
-$ rails db:create
-$ rails db:seed
-$ rails db:migrate
-$ rails server
-```
-Access to http://localhost:3000/
 
 ### Design process
 
+
 #### mood baord
-
-
-
-#### hand writing wireframe
-/
-![wireframe](https://i.imgur.com/ltWyidg.jpg)
-/about
-![wireframe](https://i.imgur.com/Q7C1zqL.jpg)
-/training
-![wireframe](https://i.imgur.com/8wNdA9H.jpg)
-/accomodation
-![wireframe](https://i.imgur.com/iDQSfVK.jpg)
-/petsitting
-![wireframe](https://i.imgur.com/iDQSfVK.jpg)
-/testmonials
-![wireframe](https://i.imgur.com/0C1p47y.jpg)
-/blog
-![wireframe](https://i.imgur.com/ynxhjjE.jpg)
-/conctact
-![wireframe](https://i.imgur.com/ynxhjjE.jpg)
-
 
 
 
@@ -117,7 +86,32 @@ As Nathaniel, I'd like to have a dog trainer that is available to come to my hou
 
 ### WireFrames
 
+### /
+![/](https://i.imgur.com/RCKyIZv.png)
 
+
+### /about
+![Imgur](https://i.imgur.com/7UG6Ouf.png)
+![Imgur](https://i.imgur.com/wZsN9fG.png)
+![Imgur](https://i.imgur.com/MLUxsQu.png)
+![Imgur](https://i.imgur.com/0XmiS0Z.png)
+![Imgur](https://i.imgur.com/9yjIXos.png)
+![Imgur](https://i.imgur.com/qxYgpp3.png)
+
+
+### /trainning
+![Imgur](https://i.imgur.com/QjHZyS9.png)
+
+
+### /testimonials
+![Imgur](https://i.imgur.com/xKhnh11.png)
+
+### /shop
+![Imgur](https://i.imgur.com/vU8d814.png)
+
+
+### /booking
+![Imgur](https://i.imgur.com/v5qs4As.png)
 
 
 ### Database Entity Relationship Diagrams

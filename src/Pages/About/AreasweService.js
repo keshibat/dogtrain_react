@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default class FaqView extends Component {
+export default class AreasweService extends Component {
   render() {
     return (
       <>
-        <h1> FAQ Views </h1>
+        <h1> Areas We Service </h1>
       </>
     );
   }
