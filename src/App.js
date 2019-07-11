@@ -1,26 +1,28 @@
-import React from "react"
-import { BrowserRouter, Route } from "react-router-dom";
-import AboutmeView from "./Pages/AccomodationView";
-import FaqView from "./Pages/AccomodationView";
-import AreasweService from "./Pages/AccomodationView";
-import AccomodationView from "./Pages/AccomodationView";
-import PetsittingView from "./Pages/AccomodationView";
-import ContactView from "./Pages/AccomodationView";
+import React, { Component } from "react"
+import AboutmeView from "./Pages/About/AccomodationView";
+import FaqView from "./Pages/About/FaqView";
+import AreasweServiceView from "./Pages/About/AreasweServiceView";
+import AccomodationView from "./Pages/About/AccomodationView";
+import PetsittingView from "./Pages/About/PetsittingView";
+import ContactusView from "./Pages/About/ContactusView";
 
-class App extends React.Component {
+
+class App extends Component {
 
   render() {
     return (
       <div>
         <AboutmeView />
         <FaqView />
-        <AreasweService />
+        <AreasweServiceView />
         <AccomodationView />
         <PetsittingView />
-        <ContactView />
+        <ContactusView />
       </div>
     )
   }
 }
 
 export default App
+
+
