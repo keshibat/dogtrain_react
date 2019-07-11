@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class ContactusView extends Component {
+class ContactUsView extends Component {
   render() {
     return (
       <div>
@@ -10,6 +10,6 @@ class ContactusView extends Component {
   }
 }
 
-export default ContactusView;
+export default ContactUsView;
 
 
