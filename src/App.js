@@ -1,12 +1,17 @@
 import React from "react"
+import { BrowserRouter, Route } from "react-router-dom";
+import AccomodationView from "./Pages/AccomodationView";
+
 
 class App extends React.Component {
 
   render() {
     return (
-      <>
-        <h1>Hello World!</h1>
-      </>
+      <div>
+        <AccomodationView />
+        <ContactusView />
+        <PetsittingView />
+      </div>
     )
   }
 }
