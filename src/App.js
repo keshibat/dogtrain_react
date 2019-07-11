@@ -16,6 +16,10 @@ import ApartmentTrainningView from "./Pages/Trainning/ApartmentTrainningView";
 import NewFamilyMemberTrainningView from "./Pages/Trainning/NewFamilyMemberTrainningView";
 import ObedienceTrainningView from "./Pages/Trainning/ObedienceTrainningView";
 import AdvancedTrainningView from "./Pages/Trainning/AdvancedTrainningView";
+import TestmonialsView from "./Pages/Testmonials/TestmonialsView";
+import BlogView from "./Pages/Blog/BlogView";
+import ShopView from "./Pages/Shop/ShopView";
+import BookingView from "./Pages/Booking/BookingView";
 
 class App extends React.Component {
 
@@ -50,6 +54,11 @@ class App extends React.Component {
             <Route exact path="/newfamilymember" component={NewFamilyMemberTrainningView} />
             <Route exact path="/obedience" component={ObedienceTrainningView} />
             <Route exact path="/advanced" component={AdvancedTrainningView} />
+
+            <Route exact path="/testmonials" component={TestmonialsView} />
+            <Route exact path="/blog" component={BlogView} />
+            <Route exact path="/shop" component={ShopView} />
+            <Route exact path="/booking" component={BookingView} />
 
 
           </div>

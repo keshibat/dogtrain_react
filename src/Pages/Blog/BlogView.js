@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class ShopView extends Component {
+class BlogView extends Component {
   render() {
     return (
       <>
-        <h1> Shop </h1>
+        <h1> Blog </h1>
       </>
     );
   }
 }
 
-export default ShopView
+export default BlogView
