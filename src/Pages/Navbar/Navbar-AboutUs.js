@@ -4,23 +4,24 @@ import { Link } from "react-router-dom";
 export default class NavbarAboutUs extends Component {
   render() {
     return (
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="dropdown is-active">
-          <div class="dropdown-trigger">
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="dropdown is-active">
+          <div className="dropdown-trigger">
             <button
-              class="button"
+              className="button"
               aria-haspopup="true"
               aria-controls="dropdown-menu"
             >
               <span>About Us</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true" />
+              <span className="icon is-small">
+                <i className="fas fa-angle-down" aria-hidden="true" />
               </span>
             </button>
           </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content">
-              <Link to="/aboutus">
+
+          <div className="dropdown-menu" id="dropdown-menu" role="menu">
+            <div className="dropdown-content">
+              <Link to="/aboutme">
                 <button>About Us</button>
               </Link>
               <Link to="/areasweservice">

@@ -7,19 +7,19 @@ class AboutMeView extends Component {
       <>
         <h1> About Me View</h1>
 
-        <div class="container has-text-centered">
-          <div class="columns">
-            <div class="column is-half">
-              <div class="content" />
+        <div className="container has-text-centered">
+          <div className="columns">
+            <div className="column is-half">
+              <div className="content" />
               <img
-                class="is-centered"
+                className="is-centered"
                 src={MariaCunningHam}
                 alt="maria-cunningham"
               />
             </div>
 
-            <div class="column">
-              <div class="content is-centered">
+            <div className="column">
+              <div className="content is-centered">
                 <p>
                   Mutts with Manners’ chief instructor, Maria Cunningham, has
                   been a professional dog obedience trainer since 1993. This
@@ -37,4 +37,4 @@ class AboutMeView extends Component {
   }
 }
 
-export default AboutMeView
+export default AboutMeView;
