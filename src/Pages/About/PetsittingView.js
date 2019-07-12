@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class PetsittingView extends Component {
+class PetSittingView extends Component {
   render() {
     return (
       <div>
-        <h1>This is PetsittingView</h1>
+        <h1>This is PetSittingView</h1>
       </div>
     );
   }
 }
 
-export default PetsittingView;
+export default PetSittingView;

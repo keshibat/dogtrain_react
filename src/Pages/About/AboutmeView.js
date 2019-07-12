@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MariaCunningHam from "./../../assets/images/maria-cunningham.jpg";
 
-export default class AboutMeView extends Component {
+class AboutMeView extends Component {
   render() {
     return (
       <>
@@ -36,3 +36,5 @@ export default class AboutMeView extends Component {
     );
   }
 }
+
+export default AboutMeView
