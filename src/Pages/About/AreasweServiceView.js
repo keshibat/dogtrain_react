@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-
-class AreasweServiceView extends Component {
+class AreasWeServiceView extends Component {
   render() {
     return (
       <>
@@ -11,5 +10,4 @@ class AreasweServiceView extends Component {
   }
 }
 
-
-export default AreasweServiceView;
+export default AreasWeServiceView;

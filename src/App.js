@@ -21,6 +21,7 @@ import BlogView from "./Pages/Blog/BlogView";
 import ShopView from "./Pages/Shop/ShopView";
 import BookingView from "./Pages/Booking/BookingView";
 
+
 class App extends React.Component {
 
   componentDidMount() {
