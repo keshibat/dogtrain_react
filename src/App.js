@@ -2,8 +2,8 @@ import React from "react";
 import "bulma/css/bulma.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import HomeView from "./Pages/HomeView";
-import AboutMeView from "./Pages/About/AboutmeView";
-import AreasweServiceView from "./Pages/About/AreasweServiceView";
+import AboutMeView from "./Pages/About/AboutMeView";
+import AreasWeServiceView from "./Pages/About/AreasWeServiceView";
 import FaqView from "./Pages/About/FaqView";
 import AccomodationView from "./Pages/About/AccomodationView";
 import PetSittingView from "./Pages/About/PetSittingView";
@@ -40,7 +40,7 @@ class App extends React.Component {
           <div>
             <Route exact path="/" component={HomeView} />
             <Route exact path="/aboutme" component={AboutMeView} />
-            <Route exact path="/areasweservice" component={AreasweServiceView} />
+            <Route exact path="/areasweservice" component={AreasWeServiceView} />
             <Route exact path="/faq" component={FaqView} />
             <Route exact path="/accomodation" component={AccomodationView} />
             <Route exact path="/petsitting" component={PetSittingView} />
