@@ -21,9 +21,7 @@ import BlogView from "./Pages/Blog/BlogView";
 import ShopView from "./Pages/Shop/ShopView";
 import BookingView from "./Pages/Booking/BookingView";
 
-
 class App extends React.Component {
-
   componentDidMount() {
     fetch("http://127.0.0.1:3000/")
       .then(function(response) {
@@ -41,7 +39,11 @@ class App extends React.Component {
           <div>
             <Route exact path="/" component={HomeView} />
             <Route exact path="/aboutme" component={AboutMeView} />
-            <Route exact path="/areasweservice" component={AreasweServiceView} />
+            <Route
+              exact
+              path="/areasweservice"
+              component={AreasweServiceView}
+            />
             <Route exact path="/faq" component={FaqView} />
             <Route exact path="/accomodation" component={AccomodationView} />
             <Route exact path="/petsitting" component={PetSittingView} />
@@ -52,7 +54,11 @@ class App extends React.Component {
             <Route exact path="/feaful" component={FearfulTrainningView} />
             <Route exact path="/rescued" component={RescuedTrainningView} />
             <Route exact path="/apartment" component={ApartmentTrainningView} />
-            <Route exact path="/newfamilymember" component={NewFamilyMemberTrainningView} />
+            <Route
+              exact
+              path="/newfamilymember"
+              component={NewFamilyMemberTrainningView}
+            />
             <Route exact path="/obedience" component={ObedienceTrainningView} />
             <Route exact path="/advanced" component={AdvancedTrainningView} />
 
@@ -60,8 +66,6 @@ class App extends React.Component {
             <Route exact path="/blog" component={BlogView} />
             <Route exact path="/shop" component={ShopView} />
             <Route exact path="/booking" component={BookingView} />
-
-
           </div>
         </BrowserRouter>
       </div>
