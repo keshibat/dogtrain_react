@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MariaCunningHam from "./../../assets/images/maria-cunningham.jpg";
 
-export default class AboutmeView extends Component {
+export default class AboutMeView extends Component {
   render() {
     return (
       <>

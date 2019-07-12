@@ -2,12 +2,12 @@ import React from "react";
 import "bulma/css/bulma.css";
 import Navbar from "./Pages/Navbar/Navbar";
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import AboutMe from "./Pages/About/AboutmeView";
-import AreasWeService from "./Pages/About/AreasweService";
+import AboutMe from "./Pages/About/AboutMeView";
+import AreasWeServiceView from "./Pages/About/AreasWeServiceView";
 import FaqView from "./Pages/About/FaqView";
 import AccomodationView from "./Pages/About/AccomodationView";
 import PetsittingView from "./Pages/About/PetsittingView";
-import ContactusView from "./Pages/About/ContactusView";
+import ContactUsView from "./Pages/About/ContactUsView";
 
 class App extends React.Component {
   componentDidMount() {
@@ -26,11 +26,15 @@ class App extends React.Component {
         <BrowserRouter>
           <div>
             <Route exact path="/aboutus" component={AboutMe} />
-            <Route exact path="/areasweservice" component={AreasWeService} />
+            <Route
+              exact
+              path="/areasweservice"
+              component={AreasWeServiceView}
+            />
             <Route exact path="/faq" component={FaqView} />
             <Route exact path="/accomodation" component={AccomodationView} />
             <Route exact path="/petsitting" component={PetsittingView} />
-            <Route exact path="/contactus" component={ContactusView} />
+            <Route exact path="/contactus" component={ContactUsView} />
           </div>
 
           <Navbar />
