@@ -6,24 +6,23 @@ import AboutMeView from "./Pages/About/AboutMeView";
 import AreasWeServiceView from "./Pages/About/AreasWeServiceView";
 import FaqView from "./Pages/About/FaqView";
 import AccomodationView from "./Pages/About/AccomodationView";
-import PetSittingView from "./Pages/About/PetSittingView";
+import PetSittingView from "./Pages/About/PetsittingView";
 import ContactUsView from "./Pages/About/ContactUsView";
-import PuppyTrainningView from "./Pages/Trainning/PuppyTrainningView";
-import NaughtyTrainningView from "./Pages/Trainning/NaughtyTrainningView";
-import FearfulTrainningView from "./Pages/Trainning/FearfulTrainningView";
-import RescuedTrainningView from "./Pages/Trainning/RescuedTrainningView";
-import ApartmentTrainningView from "./Pages/Trainning/ApartmentTrainningView";
-import NewFamilyMemberTrainningView from "./Pages/Trainning/NewFamilyMemberTrainningView";
-import ObedienceTrainningView from "./Pages/Trainning/ObedienceTrainningView";
-import AdvancedTrainningView from "./Pages/Trainning/AdvancedTrainningView";
+import PuppyTrainingView from "./Pages/Training/PuppyTrainingView";
+import NaughtyTrainingView from "./Pages/Training/NaughtyTrainingView";
+import FearfulTrainingView from "./Pages/Training/FearfulTrainingView";
+import RescuedTrainingView from "./Pages/Training/RescuedTrainingView";
+import ApartmentTrainingView from "./Pages/Training/ApartmentTrainingView";
+import NewFamilyMemberTrainingView from "./Pages/Training/NewFamilymMemberTrainingView";
+import ObedienceTrainingView from "./Pages/Training/ObedienceTrainingView";
+import AdvancedTrainingView from "./Pages/Training/AdvancedTrainingView";
 import TestmonialsView from "./Pages/Testmonials/TestmonialsView";
 import BlogView from "./Pages/Blog/BlogView";
 import ShopView from "./Pages/Shop/ShopView";
 import BookingView from "./Pages/Booking/BookingView";
-
+import Navbar from "./Pages/Navbar/Navbar";
 
 class App extends React.Component {
-
   componentDidMount() {
     fetch("http://127.0.0.1:3000/")
       .then(function(response) {
@@ -38,30 +37,37 @@ class App extends React.Component {
     return (
       <div>
         <BrowserRouter>
+          <Navbar />
           <div>
             <Route exact path="/" component={HomeView} />
             <Route exact path="/aboutme" component={AboutMeView} />
-            <Route exact path="/areasweservice" component={AreasWeServiceView} />
+            <Route
+              exact
+              path="/areasweservice"
+              component={AreasWeServiceView}
+            />
             <Route exact path="/faq" component={FaqView} />
             <Route exact path="/accomodation" component={AccomodationView} />
             <Route exact path="/petsitting" component={PetSittingView} />
             <Route exact path="/contactus" component={ContactUsView} />
 
-            <Route exact path="/puppy" component={PuppyTrainningView} />
-            <Route exact path="/naughty" component={NaughtyTrainningView} />
-            <Route exact path="/feaful" component={FearfulTrainningView} />
-            <Route exact path="/rescued" component={RescuedTrainningView} />
-            <Route exact path="/apartment" component={ApartmentTrainningView} />
-            <Route exact path="/newfamilymember" component={NewFamilyMemberTrainningView} />
-            <Route exact path="/obedience" component={ObedienceTrainningView} />
-            <Route exact path="/advanced" component={AdvancedTrainningView} />
+            <Route exact path="/puppy" component={PuppyTrainingView} />
+            <Route exact path="/naughty" component={NaughtyTrainingView} />
+            <Route exact path="/feaful" component={FearfulTrainingView} />
+            <Route exact path="/rescued" component={RescuedTrainingView} />
+            <Route exact path="/apartment" component={ApartmentTrainingView} />
+            <Route
+              exact
+              path="/newfamilymember"
+              component={NewFamilyMemberTrainingView}
+            />
+            <Route exact path="/obedience" component={ObedienceTrainingView} />
+            <Route exact path="/advanced" component={AdvancedTrainingView} />
 
             <Route exact path="/testmonials" component={TestmonialsView} />
             <Route exact path="/blog" component={BlogView} />
             <Route exact path="/shop" component={ShopView} />
             <Route exact path="/booking" component={BookingView} />
-
-
           </div>
         </BrowserRouter>
       </div>
