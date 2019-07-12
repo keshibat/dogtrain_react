@@ -6,7 +6,7 @@ import AboutMeView from "./Pages/About/AboutMeView";
 import AreasWeServiceView from "./Pages/About/AreasWeServiceView";
 import FaqView from "./Pages/About/FaqView";
 import AccomodationView from "./Pages/About/AccomodationView";
-import PetSittingView from "./Pages/About/PetsittingView";
+import PetSittingView from "./Pages/About/PetSittingView";
 import ContactUsView from "./Pages/About/ContactUsView";
 import PuppyTrainingView from "./Pages/Training/PuppyTrainingView";
 import NaughtyTrainingView from "./Pages/Training/NaughtyTrainingView";
