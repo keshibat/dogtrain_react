@@ -23,7 +23,7 @@ export default class Navbar extends Component {
 
           <a
             role="button"
-            class="navbar-burger burger"
+            class="navbar-burger"
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarBasicExample"
