@@ -36,8 +36,8 @@ export default class Navbar extends Component {
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <Link to="/" class="navbar-item">
-              Home
+            <Link to="/testimonials" class="navbar-item">
+              Testimonials
             </Link>
 
             <div class="navbar-item has-dropdown is-hoverable">
