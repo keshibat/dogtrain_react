@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export default class NavbarHome extends Component {
   render() {
     return (
-      <Link to="/">
-        <button>Home</button>
-      </Link>
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <Link to="/">Home</Link>
+      </nav>
     );
   }
 }
