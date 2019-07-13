@@ -11,5 +11,3 @@ class ContactUsView extends Component {
 }
 
 export default ContactUsView;
-
-
