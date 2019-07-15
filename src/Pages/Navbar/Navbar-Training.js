@@ -7,32 +7,35 @@ export default class NavbarTraining extends Component {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="dropdown is-active">
           <div className="dropdown-trigger">
-            <Link to="/puppy" class="dropdown-item">
-              <b>Puppy Training</b>
+            <div className="navbar-item">
+              <b>Puppies</b>
+            </div>
+            <Link to="/puppy" className="dropdown-item">
+              Puppy Training
             </Link>
-            <hr class="navbar-divider" />
-            <div class="navbar-item">
+            <hr className="navbar-divider" />
+            <div className="navbar-item">
               <b>Older Dog Training</b>
             </div>
-            <Link to="/naughty" class="dropdown-item">
+            <Link to="/naughty" className="dropdown-item">
               Naughty Dogs
             </Link>
-            <Link to="/feaful" class="dropdown-item">
+            <Link to="/feaful" className="dropdown-item">
               Fearful Dogs
             </Link>
-            <Link to="/rescued" class="dropdown-item">
+            <Link to="/rescued" className="dropdown-item">
               Rescue Dogs
             </Link>
-            <Link to="/apartment" class="dropdown-item">
+            <Link to="/apartment" className="dropdown-item">
               Apartment Dogs
             </Link>
-            <Link to="/newfamilymember" class="dropdown-item">
+            <Link to="/newfamilymember" className="dropdown-item">
               Adding a new Family Member
             </Link>
-            <Link to="/obedience" class="dropdown-item">
+            <Link to="/obedience" className="dropdown-item">
               Obedience Training
             </Link>
-            <Link to="/advanced" class="dropdown-item">
+            <Link to="/advanced" className="dropdown-item">
               Advanced Training
             </Link>
           </div>
