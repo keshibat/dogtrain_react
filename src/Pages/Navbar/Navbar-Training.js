@@ -7,8 +7,11 @@ export default class NavbarTraining extends Component {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="dropdown is-active">
           <div className="dropdown-trigger">
+            <div class="navbar-item">
+              <b>Puppies</b>
+            </div>
             <Link to="/puppy" class="dropdown-item">
-              <b>Puppy Training</b>
+              Puppy Training
             </Link>
             <hr class="navbar-divider" />
             <div class="navbar-item">

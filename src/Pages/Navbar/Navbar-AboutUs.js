@@ -13,15 +13,19 @@ export default class NavbarAboutUs extends Component {
             <Link to="/areasweservice" class="dropdown-item">
               Areas We Service
             </Link>
-            <Link to="/petsitting" class="dropdown-item">
-              Pet Sitting
-            </Link>
             <Link to="/faq" class="dropdown-item">
               Frequently Asked Questions
             </Link>
+            <hr class="navbar-divider" />
+            <div class="navbar-item" />
             <Link to="/accomodation" class="dropdown-item">
               Dog Friendly Accomodation
             </Link>
+            <Link to="/petsitting" class="dropdown-item">
+              Pet Sitting
+            </Link>
+            <hr class="navbar-divider" />
+            <div class="navbar-item" />
             <Link to="/contactus" class="dropdown-item">
               Contact Us
             </Link>
