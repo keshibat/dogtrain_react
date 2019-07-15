@@ -8,12 +8,12 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav
-        class="navbar is-fixed-top"
+        className="navbar is-fixed-top"
         role="navigation"
         aria-label="main navigation"
       >
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="https://bulma.io">
             <img
               src="https://bulma.io/images/bulma-logo.png"
               width="112"
@@ -23,7 +23,7 @@ export default class Navbar extends Component {
 
           <a
             role="button"
-            class="navbar-burger"
+            className="navbar-burger"
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarBasicExample"
@@ -34,46 +34,46 @@ export default class Navbar extends Component {
           </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <Link to="/" class="navbar-item">
+        <div id="navbarBasicExample" className="navbar-menu">
+          <div className="navbar-start">
+            <Link to="/" className="navbar-item">
               Home
             </Link>
 
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">About Us</a>
-              <div class="navbar-dropdown">
+            <div className="navbar-item has-dropdown is-hoverable">
+              <a className="navbar-link">About Us</a>
+              <div className="navbar-dropdown">
                 <NavbarAboutUs />
               </div>
             </div>
 
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">Training</a>
+            <div className="navbar-item has-dropdown is-hoverable">
+              <a className="navbar-link">Training</a>
 
-              <div class="navbar-dropdown">
+              <div className="navbar-dropdown">
                 <NavbarTraining />
               </div>
             </div>
 
-            <div class="navbar-end">
-              <Link to="/booking" class="navbar-item">
+            <div className="navbar-end">
+              <Link to="/booking" className="navbar-item">
                 Book An Appointment
               </Link>
             </div>
 
-            <div class="navbar-end">
-              <Link to="/blog" class="navbar-item">
+            <div className="navbar-end">
+              <Link to="/blog" className="navbar-item">
                 Blog
               </Link>
             </div>
           </div>
 
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <Link to="/testimonials" class="navbar-item">
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <Link to="/testimonials" className="navbar-item">
                 Testimonials
               </Link>
-              <Link to="/shop" class="navbar-item">
+              <Link to="/shop" className="navbar-item">
                 Shop
               </Link>
             </div>
