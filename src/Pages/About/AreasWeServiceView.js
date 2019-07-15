@@ -61,6 +61,30 @@ const westPushPins = [
       })
      },
     pushPinOption: { title: "Alexandria", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.8796898, 151.1609614],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Annandale.','Contact us if you live nearby.'],
+        // image: 'dog_location.jpg'
+      })
+     },
+    pushPinOption: { title: "Annandale", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.8894654, 151.1186891],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Ashfield.','Contact us if you live nearby.'],
+        // image: 'dog_location.jpg'
+      })
+     },
+    pushPinOption: { title: "Ashfield", description: 'Pushpin', icon: "icon.svg" },
   }
 ];
 
