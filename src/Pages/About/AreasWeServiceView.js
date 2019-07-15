@@ -43,12 +43,24 @@ const westPushPins = [
     addHandler: "mouseover",
     infoboxOption: {
       htmlContent: infoboxTemplate({
-        title: "Abbotsford", 
-        descriptions: ['We provide service in', 'Abbotsford.','Contact us if you live nearby.'],
-        image: 'dog_location.jpg'
+        title: "Yes!", 
+        descriptions: ['We provide service in Abbotsford.','Contact us if you live nearby.'],
+        // image: 'dog_location.jpg'
       })
      },
     pushPinOption: { title: "Abbotsford", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.9082024, 151.174343],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Alexandria.','Contact us if you live nearby.'],
+        // image: 'dog_location.jpg'
+      })
+     },
+    pushPinOption: { title: "Alexandria", description: 'Pushpin', icon: "icon.svg" },
   }
 ];
 
