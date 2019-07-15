@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MariaCunningHam from "./../../assets/images/maria-cunningham.jpg";
 
-class AboutmeView extends Component {
+class AboutMeView extends Component {
   render() {
     return (
       <>
@@ -96,5 +96,4 @@ class AboutmeView extends Component {
   }
 }
 
-export default AboutmeView;
-// naming issue. Git doesn't track the name change.
+export default AboutMeView;
