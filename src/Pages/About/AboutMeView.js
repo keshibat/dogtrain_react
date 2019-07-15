@@ -5,7 +5,7 @@ class AboutMeView extends Component {
   render() {
     return (
       <>
-        <section class="section is-medium">
+        <section className="section is-medium">
           <div className="container">
             <div className="columns is-centered">
               <div className="column is-half">
@@ -57,7 +57,7 @@ class AboutMeView extends Component {
             </div>
           </div>
         </section>
-        <section class="section is-medium">
+        <section className="section is-medium">
           <div className="container">
             <div className="columns is-centered">
               <div className="column">
