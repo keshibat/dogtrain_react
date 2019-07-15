@@ -50,7 +50,7 @@ class AboutMeView extends Component {
                   <p>
                     Maria is also the author of "Ruling The Roost - What Your
                     Dog REALLY Wants You To Know!" available through our
-                    'Training Aids' page and also via Amazon as an e-book.
+                    'Training Aids' page and also via Amazon as an e-book.s
                   </p>
                 </div>
               </div>
