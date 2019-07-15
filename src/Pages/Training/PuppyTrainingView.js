@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import puppy from "./../../assets/images/puppy.png";
 
 class PuppyTrainingView extends Component {
   render() {
@@ -28,7 +29,7 @@ class PuppyTrainingView extends Component {
                     <p class="title">Train your puppy early, and ENJOY him</p>
                     <p class="subtitle">A 2 hour in-home puppy training lesson shortly after pup comes home allows us to find the toilet training and separation techniques that suit you! </p>
                     <figure class="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png" />
+                      <img src={puppy} alt="puppy picture"/>
                     </figure>
                   </article>
                 </div>
