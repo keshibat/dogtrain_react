@@ -5,7 +5,7 @@ class AboutMeView extends Component {
   render() {
     return (
       <>
-        <section class="section is-medium">
+        <section className="section is-medium">
           <div className="container">
             <div className="columns is-centered">
               <div className="column is-half">
@@ -50,14 +50,14 @@ class AboutMeView extends Component {
                   <p>
                     Maria is also the author of "Ruling The Roost - What Your
                     Dog REALLY Wants You To Know!" available through our
-                    'Training Aids' page and also via Amazon as an e-book.s
+                    'Training Aids' page and also via Amazon as an e-book.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="section is-medium">
+        <section className="section is-medium">
           <div className="container">
             <div className="columns is-centered">
               <div className="column">
