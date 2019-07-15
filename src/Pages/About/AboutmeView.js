@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MariaCunningHam from "./../../assets/images/maria-cunningham.jpg";
 
-class AboutMeView extends Component {
+class AboutmeView extends Component {
   render() {
     return (
       <>
@@ -50,7 +50,7 @@ class AboutMeView extends Component {
                   <p>
                     Maria is also the author of "Ruling The Roost - What Your
                     Dog REALLY Wants You To Know!" available through our
-                    'Training Aids' page and also via Amazon as an e-book.
+                    'Training Aids' page and also via Amazon as an e-book.s
                   </p>
                 </div>
               </div>
@@ -96,4 +96,5 @@ class AboutMeView extends Component {
   }
 }
 
-export default AboutMeView;
+export default AboutmeView;
+// naming issue. Git doesn't track the name change.
