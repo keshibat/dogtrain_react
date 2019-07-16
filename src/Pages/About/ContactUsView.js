@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import PlaceHolder from "./../../assets/images/640x360.png";
+import ContactUsCSS from "./../../assets/styles/AboutSCSS/ContactUsCSS.css";
+import ContactUsIMG from "./../../assets/images/contact-us.jpeg";
 
 class ContactUsView extends Component {
   render() {
@@ -102,9 +103,11 @@ class ContactUsView extends Component {
                 <div className="container">
                   <img
                     className="is-centered"
-                    src={PlaceHolder}
+                    src={ContactUsIMG}
                     alt="place-holder"
                   />
+                </div>
+                <div className="container">
                   <p>
                     <b>Address:</b> PO Box 37 Camperdown NSW 1450
                   </p>
