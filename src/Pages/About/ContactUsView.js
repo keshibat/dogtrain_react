@@ -58,7 +58,7 @@ class ContactUsView extends Component {
                   <div className="control">
                     <input
                       className="input"
-                      type="email"
+                      type="text"
                       placeholder="e.g Camperdown"
                       required
                     />
