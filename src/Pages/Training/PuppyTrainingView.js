@@ -10,7 +10,7 @@ class PuppyTrainingView extends Component {
             <div class="tile is-vertical is-8">
               <div class="tile">
                 <div class="tile is-parent is-vertical">
-                  <article class="tile is-child notification is-primary">
+                  <article class="tile is-child notification">
                     <p class="title">In-Home Puppy Training (from just 8 weeks of age!)</p>
                     <p class="subtitle">Free follow-up email and telephone puppy training support available</p>
                     <p class="subtitle">from 48 hours after pup arrives home (this gives pup time to settle in)</p>
@@ -18,38 +18,38 @@ class PuppyTrainingView extends Component {
                     <p class="subtitle">puppy obedience training too!</p>
 
                   </article>
-                  <article class="tile is-child notification is-warning">
+                  <article class="tile is-child notification">
                     <p class="title">Resolve toilet training, play biting and puppy separation anxiety quickly!</p>
                     <p class="subtitle">Puppy training will also cover any other puppy problems that may have come up.</p>
 
                   </article>
                 </div>
                 <div class="tile is-parent">
-                  <article class="tile is-child notification is-info">
+                  <article class="tile is-child notification">
                     <p class="title">Train your puppy early, and ENJOY him</p>
                     <p class="subtitle">A 2 hour in-home puppy training lesson shortly after pup comes home allows us to find the toilet training and separation techniques that suit you! </p>
                     <figure class="image is-4by3">
-                      <img src={puppy} alt="puppy picture"/>
+                      <img src={puppy} alt="puppy picture" />
                     </figure>
                   </article>
                 </div>
               </div>
               <div class="tile is-parent">
-                <article class="tile is-child notification is-danger">
+                <article class="tile is-child notification">
                   <p class="title">A two hour puppy training consultation  will include:</p>
                   <p class="subtitle">Our gentle puppy training methods also mean that you can start training your pup in basic dog obedience at this age too!</p>
-                  <div class="content is-primary">
-                      <ul>
+                  <div class="content">
+                    <ul>
                       <li class="subtitle">How to toilet train a puppy</li>
                       <li class="subtitle">Stop play biting and nipping</li>
                       <li class="subtitle">Appropriate games</li>
                       <li class="subtitle">Setting rules and boundaries that work for ALL</li>
                       <li class="subtitle">Chewing, mouthing, destructive behaviour, puppy aggression</li>
                       <li class="subtitle">Whining, barking, crying and yelping (separation 'anxiety')</li>
-                      </ul>
+                    </ul>
                   </div>
                 </article>
-                <article class="tile is-child notification is-danger">
+                <article class="tile is-child notification">
                   <p class="title">1 hour follow-up lesson with us to cover:</p>
                   <p class="subtitle">Ideally you will follow puppy training with puppy socialisation before having a 1 hour follow-up lesson with us to cover puppy training on the streets and at the parks.  This will cover:</p>
                   <div class="content is-primary">
@@ -71,12 +71,12 @@ class PuppyTrainingView extends Component {
                   <div class="content">
                     <p class="is-size-5">
                       <p class="subtitle is-size-4">Sam, Mike & Indie</p>
-                        We made various attempts to take Indie to puppy training school
-                        where the classes were more like a battle with our dog
-                        as opposed to an enjoyable learning experience.
-                        Then we were very happy to meet you and join together to train our beautiful new pup.
-                        Your advice and assistance in training was comparable to none and the difference in the behaviour of Indie was noticeable in 2 weeks.
-                        We look forward to seeing you soon. Thanks again.
+                      We made various attempts to take Indie to puppy training school
+                      where the classes were more like a battle with our dog
+                      as opposed to an enjoyable learning experience.
+                      Then we were very happy to meet you and join together to train our beautiful new pup.
+                      Your advice and assistance in training was comparable to none and the difference in the behaviour of Indie was noticeable in 2 weeks.
+                      We look forward to seeing you soon. Thanks again.
                     </p>
                   </div>
                   <div class="content">
@@ -90,6 +90,27 @@ class PuppyTrainingView extends Component {
                   </div>
                 </div>
               </article>
+            </div>
+          </div>
+        </section>
+        <section class="hero is-primary">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                Missed Appointment and Cancellation Policy
+              </h1>
+              <h2 class="subtitle">
+                If you are unable to keep an appointment
+                please give at least 24 hours notice to ensure that
+                you will not be charge for the appointment or part-thereof.
+              </h2>
+              <h2 class="subtitle">
+                12 to 24 hours notice of cancellation will require $50 value to be paid,
+                less than 12 hours notice will require full payment.
+              </h2>
+              <h2 class="subtitle">
+                Thank you for your consideration in ensuring that adequate notice is given.
+              </h2>
             </div>
           </div>
         </section>
