@@ -19,12 +19,156 @@ const cityPushPins = [
     addHandler: "mouseover",
     infoboxOption: {
       htmlContent: infoboxTemplate({
-        title: "Alexandria", 
-        descriptions: ['We provide service in', 'Alexandria.','Contact us if you live nearby.'],
-        image: 'dog_location.jpg'
+        title: "Yes!", 
+        descriptions: ['We provide service in Alexandria.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
       })
      },
     pushPinOption: { title: "Alexandria", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.9114971, 151.1982193],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Beaconsfield.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Beaconsfield", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.8842976, 151.192429],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Broadway.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Broadway", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.8862875, 151.1912344],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Chippendale.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Chippendale", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.8794164, 151.2164518],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Darlinghurst.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Darlinghurst", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.8908743, 151.1910582],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Darlington.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Darlington", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.8693039, 151.1883216],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Pyrmont.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Pyrmont", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.8931067, 151.2024146],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Redfern.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Redfern", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.9185714, 151.2005018],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Rosebery.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Rosebery", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.8844647, 151.2056549],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Surry Hills.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Surry Hills", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.8794803, 151.1940736],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Ultimo.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Ultimo", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.9003386, 151.2030525],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Waterloo.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Waterloo", description: 'Pushpin', icon: "icon.svg" },
+  },
+  {
+    location: [-33.9076619, 151.2039548],
+    addHandler: "mouseover",
+    infoboxOption: {
+      htmlContent: infoboxTemplate({
+        title: "Yes!", 
+        descriptions: ['We provide service in Zetland.','Contact us if you live nearby.'],
+        image: 'mutt.jpg'
+      })
+     },
+    pushPinOption: { title: "Zetland", description: 'Pushpin', icon: "icon.svg" },
   }
 ];
 const westPushPins = [
