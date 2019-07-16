@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Calendar from 'react-calendar';
+import bookingViewCSS from "./../../assets/styles/BookingSCSS/bookingView.css";
 
 
 class BookingView extends Component {
@@ -33,7 +34,7 @@ class BookingView extends Component {
   }
 
   //have a message display saying a email has been sent and booking will be confirmed by trainer
-  onFormSubmit = (event) => {
+  onFormSubmit = async (event) => {
     event.preventDefault();
 
     const {
@@ -52,9 +53,18 @@ class BookingView extends Component {
       bookingDate
     }
 
-    axios.post("http://127.0.0.1:5000/bookings", newBooking)
-      .then(response => console.log(response))
-      .catch(err => console.log(err));
+    const response = await axios.post("http://127.0.0.1:5000/bookings", newBooking);
+    console.log(response);
+    this.setState({ 
+      firstName: "",
+      lastName: "",
+      email: "",
+      details: "",
+      bookingDate: new Date()
+    });
+    //this.setState, you can update your state with new data and page will also reload
+    //clean up later to optimize getting confirmed bookings
+    //you want confirmed dates to be given back after form submit (actually not necessary as bookings are confirmed manually)
   }
 
   render() {
@@ -81,43 +91,111 @@ class BookingView extends Component {
 
     return (
       <>
-        <br />
-        <br />
-        <br />
-        <h1> Booking </h1>
-        <Calendar
-          onChange={this.onChange}
-          value={this.state.bookingDate}
-          tileContent={tileContent}
-          tileClassName={tileClassName}
-        />
+        <section className="section title-heading">
+          <div className="container">
+            <div className="content has-text-centered">
+              <h1>
+                Book An Appointment
+              </h1>
+            </div>
+          </div>
+        </section>
 
-        <form onSubmit={this.onFormSubmit}>
-          <div>
-            <label>First Name</label>
-            <input type="text" name="firstName" value={firstName} onChange={(event) => this.onInputChange("firstName", event)} />
+        <div className="calendar container box">
+        <div className="columns is-centered">
+        <div className="column is-half is-centered calendarGroup">
+          <Calendar
+            onChange={this.onChange}
+            value={this.state.bookingDate}
+            // tileContent={tileContent}
+            tileClassName={tileClassName}
+          />
+          <div className="box">
+            <ul className="keyList">
+              <li className="keyItem">
+                <div className="keyBox"></div>
+                <p>Free</p>
+              </li>
+              <li className="keyItem">
+                <div className="keyBox keySBusy"></div>
+                <p>Slightly Busy</p>
+              </li>
+              <li className="keyItem">
+                <div className="keyBox keyBusy"></div>
+                <p>Busy</p>
+              </li>
+            </ul>
           </div>
-          <div>
-            <label>Last Name</label>
-            <input type="text" name="lastName" value={lastName} onChange={(event) => this.onInputChange("lastName", event)} />
-          </div>
-          <div>
-            <label>Email</label>
-            <input type="text" name="email" value={email} onChange={(event) => this.onInputChange("email", event)} />
-          </div>
-          <div>
-            <label>Date</label>
-            <input type="text" name="bookingDate" value={bookingDate.toLocaleDateString()} readOnly />
-          </div>
-          <div>
-            <label>Details</label>
-            <textarea name="details" value={details} onChange={(event) => this.onInputChange("details", event)} />
-          </div>
-          <div>
-            <input type="submit" value="Book" />
-          </div>
-        </form>
+        </div>
 
+          <div className="column is-half ">
+          <form onSubmit={this.onFormSubmit}>
+            <div className="field">
+              <label className="label">First Name</label>
+              <div className="control">
+              <input className="input" type="text" name="firstName" value={firstName} onChange={(event) => this.onInputChange("firstName", event)} />
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Last Name</label>
+              <div className="control">
+              <input className="input" type="text" name="lastName" value={lastName} onChange={(event) => this.onInputChange("lastName", event)} />
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Email</label>
+              <div className="control">
+              <input className="input" type="text" name="email" value={email} onChange={(event) => this.onInputChange("email", event)} />
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Date</label>
+              <div className="control">
+              <input className="input" type="text" name="bookingDate" value={bookingDate.toLocaleDateString()} readOnly />
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Details</label>
+              <div className="control">
+              <textarea className="textarea" name="details" value={details} onChange={(event) => this.onInputChange("details", event)} />
+              </div>
+            </div>
+
+            <div className="field is-centered">
+              <div className="formButton control">
+              <input className="button is-primary" type="submit" value="Book" />
+              </div>
+            </div>
+          </form>
+
+          </div>
+        </div>
+        </div>
+
+        <section className="section">
+         <div className="box content">
+           <div className="content is-centered">
+             <h3>Missed Appointment and Cancellation Policy </h3>
+             <p>
+               If you are unable to keep an appointment please give at least 24
+               hours notice to ensure that you will not be charge for the
+               appointment or part-thereof.
+             </p>
+             <p>
+               12 to 24 hours notice of cancellation will require $50 value to
+               be paid, less than 12 hours notice will require full payment.
+             </p>
+             <p>
+               Thank you for your consideration in ensuring that adequate
+               notice is given.
+             </p>
+           </div>
+         </div>
+       </section>
       </>
     );
   }
