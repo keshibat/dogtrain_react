@@ -45,6 +45,7 @@ class AccomodationView extends Component {
                   className="button is-info"
                   href="https://www.schatzisonshalimah.com/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Visit the Property
                 </a>
