@@ -102,7 +102,7 @@ class ContactUsView extends Component {
               <div className="column">
                 <div className="container">
                   <img
-                    className="is-centered"
+                    className="is-centered dognoseimage"
                     src={ContactUsIMG}
                     alt="place-holder"
                   />
