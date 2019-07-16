@@ -82,7 +82,7 @@ class AccomodationView extends Component {
             </div>
           </div>
         </section>
-        <section className="section">
+        <section className="section three">
           <div className="box content">
             <div className="columns">
               <div className="column">
