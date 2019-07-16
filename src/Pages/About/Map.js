@@ -5,7 +5,7 @@ export class Map extends Component {
     render() {
         return (                
             <ReactBingmaps 
-                bingmapKey = "AukGn0Jz_W_XKbE40N4RPaNKicJh4srAyEtumFn0ZcC6jfCRGvUyb4mAw8Z3SaRr"
+                bingmapKey = {process.env.REACT_APP_BINGMAP_API}
                 center = {this.props.center}
                 infoboxesWithPushPins = { this.props.pushPins }
             />

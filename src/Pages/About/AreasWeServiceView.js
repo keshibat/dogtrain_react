@@ -1,16 +1,6 @@
 import React, { Component } from "react";
 import { Map } from './Map';
 
-// class AreasWeServiceView extends Component {
-//   render() {
-//     return (
-//       <>
-//         <h1> Areas We Service Views</h1>
-//       </>
-//     );
-//   }
-// }
-
 const infoboxTemplate = (options) => {
   return (
     <div class="customInfobox">
