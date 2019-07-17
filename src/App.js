@@ -24,7 +24,7 @@ import Navbar from "./Pages/Navbar/Navbar";
 
 class App extends React.Component {
   componentDidMount() {
-    fetch("http://127.0.0.1:5000/")
+    fetch("https://dogsdata.herokuapp.com/")
       .then(function(response) {
         console.log(response);
       })

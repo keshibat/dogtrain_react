@@ -1111,11 +1111,6 @@ export class AreasWeServiceView extends Component {
             </div>
           </div>
         </section>
-
-        {/* <select onChange={this.selectCategory}>
-          <option value="cityPushPins">City</option>
-          <option value="westPushPins">Inner West</option>
-        </select> */}
       </>
     );
   }
