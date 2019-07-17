@@ -1,0 +1,98 @@
+.section.section.title-heading {
+    margin-top: 50px;
+    padding-bottom: 0;
+  }
+  
+  .section.section {
+    padding-bottom: 0px;
+  }
+  
+  h1 {
+    margin-bottom: 0;
+  }
+  
+  /* div.box.content.boxtwo {
+    padding-bottom: 28px;
+  } */
+
+/* .calendar {
+    display: flex;
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+} */
+
+.calendar.container {
+    width: 80%;
+    max-width: 600px;
+}
+
+.formButton {
+    text-align: center;
+}
+
+.formButton input {
+    width: 100px;
+}
+
+.booked {
+    background-color: orange;
+}
+
+.calendar .box {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.react-calendar {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.keyList {
+    display: flex;
+    justify-content: space-around;
+}
+
+.keyBox {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid gray;
+}
+
+.keyBusy {
+    background-color: crimson;
+}
+
+.keySBusy {
+    background-color: orange;
+}
+
+
+.keyItem {
+    display: flex;
+    align-items: center;
+}
+
+.keyItem p {
+    padding-left: 3px;
+    font-size: 12px;
+}
+
+.calendarGroup {
+    margin-top: 70px;
+}
+
+.bookForm h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.react-calendar__tile {
+    height: 40px;
+}
+
+/* .react-calendar__month-view__days__day {
+    height: 60px;
+} */
