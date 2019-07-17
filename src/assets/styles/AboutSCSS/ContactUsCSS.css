@@ -1,0 +1,10 @@
+img.is-centered.dognoseimage {
+  height: 385px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  img.is-centered.dognoseimage {
+    height: 200px;
+  }
+}
