@@ -4,7 +4,7 @@ class HomeView extends Component {
   render() {
     return (
       <>
-        <section className="section">
+        <section className="section title-heading">
           <div className="container has-text-centered">
             <div className="content is-centered">
               <h1 className="title">
