@@ -1,0 +1,20 @@
+        <section className="section">
+          <div className="box content">
+            <div className="content is-centered">
+              <h3>Missed Appointment and Cancellation Policy </h3>
+              <p>
+                If you are unable to keep an appointment please give at least 24
+                hours notice to ensure that you will not be charge for the
+                appointment or part-thereof.
+              </p>
+              <p>
+                12 to 24 hours notice of cancellation will require $50 value to
+                be paid, less than 12 hours notice will require full payment.
+              </p>
+              <p>
+                Thank you for your consideration in ensuring that adequate
+                notice is given.
+              </p>
+            </div>
+          </div>
+        </section>
