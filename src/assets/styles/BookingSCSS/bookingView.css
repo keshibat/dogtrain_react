@@ -23,7 +23,8 @@
 } */
 
 .calendar.container {
-    width: 70%;
+    width: 80%;
+    max-width: 600px;
 }
 
 .formButton {
@@ -79,11 +80,19 @@
     font-size: 12px;
 }
 
-.calendar div:first-child {
- /* background-color: red; */
- /* width: 400px; */
-}
-
 .calendarGroup {
     margin-top: 70px;
 }
+
+.bookForm h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.react-calendar__tile {
+    height: 40px;
+}
+
+/* .react-calendar__month-view__days__day {
+    height: 60px;
+} */

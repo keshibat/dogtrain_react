@@ -21,7 +21,7 @@ class BookingView extends Component {
   }
 
   getConfirmed = async () => {
-    const response = await axios.get("http://127.0.0.1:5000/bookings/confirmed");
+    const response = await axios.get("https://dogsdata.herokuapp.com/bookings/confirmed");
     return response.data;
   }
 
@@ -53,7 +53,7 @@ class BookingView extends Component {
       bookingDate
     }
 
-    const response = await axios.post("http://127.0.0.1:5000/bookings", newBooking);
+    const response = await axios.post("https://dogsdata.herokuapp.com/bookings", newBooking);
     console.log(response);
     this.setState({ 
       firstName: "",
@@ -101,9 +101,10 @@ class BookingView extends Component {
           </div>
         </section>
 
-        <div className="calendar container box">
-        <div className="columns is-centered">
-        <div className="column is-half is-centered calendarGroup">
+        <div className="calendar container">
+          <div className="column">
+        {/* <div className="columns is-centered"> */}
+        {/* <div className="column is-half is-centered calendarGroup"> */}
           <Calendar
             onChange={this.onChange}
             value={this.state.bookingDate}
@@ -128,7 +129,9 @@ class BookingView extends Component {
           </div>
         </div>
 
-          <div className="column is-half ">
+          <div className="column bookForm">
+
+            <h2>Enter Your Details:</h2>
           <form onSubmit={this.onFormSubmit}>
             <div className="field">
               <label className="label">First Name</label>
@@ -174,7 +177,7 @@ class BookingView extends Component {
 
           </div>
         </div>
-        </div>
+        {/* </div> */}
 
         <section className="section">
          <div className="box content">
