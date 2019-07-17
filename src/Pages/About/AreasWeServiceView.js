@@ -20,6 +20,7 @@ const infoboxTemplate = options => {
   );
 };
 
+// Pins for the different areas on the map Mutts with manners vists.
 const cityPushPins = [
   {
     location: [-33.9082024, 151.174343],
