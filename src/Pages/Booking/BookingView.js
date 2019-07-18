@@ -90,116 +90,124 @@ class BookingView extends Component {
             </div>
           </div>
         </section>
+        <section className="section">
+          <div className="calendar container">
+            <div className="columns">
+              <div className="column calender">
+                <h2>Choose a date:</h2>
+                {/* <div className="columns is-centered"> */}
+                {/* <div className="column is-half is-centered calendarGroup"> */}
+                <Calendar
+                  onChange={this.onChange}
+                  value={this.state.bookingDate}
+                  // tileContent={tileContent}
+                  tileClassName={tileClassName}
+                />
+                <div className="box calender">
+                  <ul className="keyList">
+                    <li className="keyItem">
+                      <div className="keyBox" />
+                      <p>Free</p>
+                    </li>
+                    <li className="keyItem">
+                      <div className="keyBox keySBusy" />
+                      <p>Slightly Busy</p>
+                    </li>
+                    <li className="keyItem">
+                      <div className="keyBox keyBusy" />
+                      <p>Busy</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-        <div className="calendar container">
-          <div className="column">
-            {/* <div className="columns is-centered"> */}
-            {/* <div className="column is-half is-centered calendarGroup"> */}
-            <Calendar
-              onChange={this.onChange}
-              value={this.state.bookingDate}
-              // tileContent={tileContent}
-              tileClassName={tileClassName}
-            />
-            <div className="box">
-              <ul className="keyList">
-                <li className="keyItem">
-                  <div className="keyBox" />
-                  <p>Free</p>
-                </li>
-                <li className="keyItem">
-                  <div className="keyBox keySBusy" />
-                  <p>Slightly Busy</p>
-                </li>
-                <li className="keyItem">
-                  <div className="keyBox keyBusy" />
-                  <p>Busy</p>
-                </li>
-              </ul>
+              <div className="column bookForm">
+                <h2>Enter Your Details:</h2>
+                <form onSubmit={this.onFormSubmit}>
+                  <div className="field">
+                    <label className="label">First Name</label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type="text"
+                        name="firstName"
+                        value={firstName}
+                        onChange={event =>
+                          this.onInputChange("firstName", event)
+                        }
+                      />
+                    </div>
+                  </div>
+
+                  <div className="field">
+                    <label className="label">Last Name</label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type="text"
+                        name="lastName"
+                        value={lastName}
+                        onChange={event =>
+                          this.onInputChange("lastName", event)
+                        }
+                      />
+                    </div>
+                  </div>
+
+                  <div className="field">
+                    <label className="label">Email</label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type="text"
+                        name="email"
+                        value={email}
+                        onChange={event => this.onInputChange("email", event)}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="field">
+                    <label className="label">Date</label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type="text"
+                        name="bookingDate"
+                        value={bookingDate.toLocaleDateString()}
+                        readOnly
+                      />
+                    </div>
+                  </div>
+
+                  <div className="field">
+                    <label className="label">Details</label>
+                    <div className="control">
+                      <textarea
+                        className="textarea"
+                        name="details"
+                        value={details}
+                        onChange={event => this.onInputChange("details", event)}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="field is-centered">
+                    <div className="formButton control">
+                      <input
+                        className="button is-primary"
+                        type="submit"
+                        value="Book"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div className="column bookForm">
-            <h2>Enter Your Details:</h2>
-            <form onSubmit={this.onFormSubmit}>
-              <div className="field">
-                <label className="label">First Name</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    type="text"
-                    name="firstName"
-                    value={firstName}
-                    onChange={event => this.onInputChange("firstName", event)}
-                  />
-                </div>
-              </div>
-
-              <div className="field">
-                <label className="label">Last Name</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    type="text"
-                    name="lastName"
-                    value={lastName}
-                    onChange={event => this.onInputChange("lastName", event)}
-                  />
-                </div>
-              </div>
-
-              <div className="field">
-                <label className="label">Email</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    type="text"
-                    name="email"
-                    value={email}
-                    onChange={event => this.onInputChange("email", event)}
-                  />
-                </div>
-              </div>
-
-              <div className="field">
-                <label className="label">Date</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    type="text"
-                    name="bookingDate"
-                    value={bookingDate.toLocaleDateString()}
-                    readOnly
-                  />
-                </div>
-              </div>
-
-              <div className="field">
-                <label className="label">Details</label>
-                <div className="control">
-                  <textarea
-                    className="textarea"
-                    name="details"
-                    value={details}
-                    onChange={event => this.onInputChange("details", event)}
-                  />
-                </div>
-              </div>
-
-              <div className="field is-centered">
-                <div className="formButton control">
-                  <input
-                    className="button is-primary"
-                    type="submit"
-                    value="Book"
-                  />
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <section className="section">
+        <section className="section cancelpolicy">
           <div className="box content">
             <div className="content has-text-centered">
               <h3>Missed Appointment and Cancellation Policy </h3>
