@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import "bulma/css/bulma.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import HomeView from "./Pages/HomeView";
@@ -21,18 +22,30 @@ import BlogView from "./Pages/Blog/BlogView";
 import ShopView from "./Pages/Shop/ShopView";
 import BookingView from "./Pages/Booking/BookingView";
 import Navbar from "./Pages/Navbar/Navbar";
+import DashboardView from "./Pages/Admin/DashboardView";
+
+import BookingsIndexView from "./Pages/Booking/IndexView";
+import BookingsEditView from "./Pages/Booking/EditView";
 
 class App extends React.Component {
-  componentDidMount() {
-    fetch("http://127.0.0.1:5000/")
-      .then(function(response) {
-        console.log(response);
-      })
-      .then(function(myJson) {
-        console.log(JSON.stringify(myJson));
-      });
+  state = {
+    bookings: []
   }
 
+  componentDidMount() {
+      this.getBookings();
+  }
+
+  getBookings = async () => {
+    const response = await axios.get("https://dogsdata.herokuapp.com/bookings");
+
+    this.setState({
+      bookings: response.data.map(booking => {
+        return { ...booking }
+      })
+    });
+  }
+  
   render() {
     return (
       <div>
@@ -68,6 +81,12 @@ class App extends React.Component {
             <Route exact path="/blog" component={BlogView} />
             <Route exact path="/shop" component={ShopView} />
             <Route exact path="/booking" component={BookingView} />
+
+            <Route exact path="/admin" render={props => <DashboardView {...props} bookings={this.state.bookings} />} />
+            <Route exact path="/bookings/:id" render={props => <BookingsIndexView {...props} bookings={this.state.bookings} />} />
+            <Route exact path="/bookings/:id/edit" render={props => <BookingsEditView {...props} bookings={this.state.bookings} />} />
+            <Route exact path="/bookings/:id/update" render={props => <BookingsIndexView {...props} bookings={this.state.bookings} />} />
+
           </div>
         </BrowserRouter>
       </div>

@@ -3,7 +3,6 @@ import axios from "axios";
 import Calendar from 'react-calendar';
 import bookingViewCSS from "./../../assets/styles/BookingSCSS/bookingView.css";
 
-
 class BookingView extends Component {
   state = {
     firstName: "",
@@ -14,6 +13,8 @@ class BookingView extends Component {
     confirmed: {}
   }
 
+
+  //change this later to not use async, make use of props
   async componentDidMount() {
     const confirmedDates = await this.getConfirmed();
     console.log(confirmedDates);
@@ -68,6 +69,9 @@ class BookingView extends Component {
   }
 
   render() {
+  console.log(this.props);
+  console.log(this.props.testing);
+
     const { 
       firstName,
       lastName,
