@@ -20,6 +20,7 @@ const infoboxTemplate = options => {
   );
 };
 
+// Pins for the different areas on the map Mutts with manners vists.
 const cityPushPins = [
   {
     location: [-33.9082024, 151.174343],
@@ -1048,7 +1049,7 @@ export class AreasWeServiceView extends Component {
   render() {
     return (
       <>
-        <section className="section">
+        <section className="section title-heading">
           <div className="container">
             <div className="content has-text-centered">
               <h1>Areas We Service</h1>
@@ -1110,11 +1111,6 @@ export class AreasWeServiceView extends Component {
             </div>
           </div>
         </section>
-
-        {/* <select onChange={this.selectCategory}>
-          <option value="cityPushPins">City</option>
-          <option value="westPushPins">Inner West</option>
-        </select> */}
       </>
     );
   }
