@@ -24,7 +24,7 @@ class HomeView extends Component {
                     className="twitter-timeline"
                     data-theme="light"
                     href="https://twitter.com/MuttswithMannrs?ref_src=twsrc%5Etfw"
-                    data-width="300"
+                    data-width="100%"
                     data-height="300"
                   >
                     Tweets by MuttswithMannrs
@@ -35,22 +35,7 @@ class HomeView extends Component {
                     charSet="utf-8"
                   />
                 </div>
-                <div className="column">
-                  <a
-                    className="twitter-timeline"
-                    data-theme="light"
-                    href="https://twitter.com/MuttswithMannrs?ref_src=twsrc%5Etfw"
-                    data-width="300"
-                    data-height="300"
-                  >
-                    Tweets by MuttswithMannrs
-                  </a>
-                  <script
-                    async
-                    src="https://platform.twitter.com/widgets.js"
-                    charSet="utf-8"
-                  />
-                </div>
+                <div className="column" />
               </div>
             </div>
           </div>
