@@ -1,0 +1,7 @@
+nav.navbar.is-fixed-top {
+  height: 100px;
+}
+
+.navbar-item img {
+  max-height: 100%;
+}
