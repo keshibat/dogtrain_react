@@ -6,13 +6,28 @@
 }
 
 
-quotes.style {
-    height: 260px;
-}
 
-article.message.is-info.is-medium.two {
+article.message.is-info.is-medium.quote {
   height: 100%;
 }
+
+
+div.message.is-info.message-header.listheader {
+  height: 12em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

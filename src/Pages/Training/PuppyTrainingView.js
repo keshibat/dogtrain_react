@@ -26,8 +26,8 @@ class PuppyTrainingView extends Component {
         <section className="has-background-light">
             <div className="columns">
               <div className="column">
-                <article1 className="message is-info">
-                  <div className="message-header">
+                <article className="message is-info">
+                <div className="message-header listheader">
                     <p className="title has-text-centered">Train your puppy early, and ENJOY him</p>
                   </div>
                   <div className="message-body">
@@ -37,11 +37,11 @@ class PuppyTrainingView extends Component {
                       </figure>
                     </div>
                   </div>
-                </article1>
+                </article>
               </div>
               <div className="column">
-                <article1 className="message is-info">
-                  <div className="message-header">
+                <article className="message is-info">
+                <div className="message-header listheader">
                     <p className="title has-text-centered">A two hour puppy training consultation will include:</p>
                   </div>
                   <div className="message-body">
@@ -56,11 +56,11 @@ class PuppyTrainingView extends Component {
                       </ul>
                     </div>
                   </div>
-                </article1>
+                </article>
               </div>
               <div className="column">
-                <article1 className="message is-info">
-                  <div className="message-header">
+                <article className="message is-info">
+                <div className="message-header listheader">
                     <p className="title has-text-centered">1 hour follow-up lesson with us to cover:</p>
                   </div>
                   <div className="message-body">
@@ -74,7 +74,7 @@ class PuppyTrainingView extends Component {
                       </ul>
                     </div>
                   </div>
-                </article1>
+                </article>
               </div>
             </div>
         </section>
@@ -96,7 +96,7 @@ class PuppyTrainingView extends Component {
         <section className="quotes" >
           <div className="columns">
             <div className="column">
-              <article className="message is-primary is-medium">
+              <article className="message is-primary is-medium quote">
                 <div className="message-body">
                   We made various attempts to take Indie to puppy training school
                   where the classes were more like a battle with our dog
@@ -111,7 +111,7 @@ class PuppyTrainingView extends Component {
             </div>
 
             <div className="column">
-              <article className="message is-info is-medium two">
+              <article className="message is-info is-medium quote">
                 <div className="message-body">
                   I would like to start with a big Thank You. Misty and I really enjoyed puppy training.
                     We learnt so much and lots of great tips.
