@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 // import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 
-class BookingsIndexView extends Component {
+class BookingsShowView extends Component {
     state = {
         booking: {}
     }
@@ -40,12 +40,12 @@ class BookingsIndexView extends Component {
         <>
             <h1>Booking Details</h1>
             <ul>
-                <li><span>Date Created: </span> {new Date(date).toLocaleDateString()}</li>
+                <li><span>Date Created: </span> {date && new Date(date).toLocaleDateString()}</li>
                 <li><span>Customer Name: </span> {firstName} {lastName}</li>
-                <li><span>Day for Training: </span> {bookingDate}</li>
+                <li><span>Date of Training Session: </span> {bookingDate}</li>
                 <li><span>Email: </span> {email}</li>
                 <li><span>Status: </span> {status}</li>
-                <li><span>Paid: </span> {`${paid}`}</li>
+                <li><span>Paid: </span> {(paid === false) && `${paid}`}</li>
                 <li><span>Details: </span> {details}</li>
             </ul>
             <p>
@@ -57,4 +57,4 @@ class BookingsIndexView extends Component {
     }
   }
   
-export default BookingsIndexView
+export default BookingsShowView

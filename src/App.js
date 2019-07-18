@@ -24,7 +24,7 @@ import BookingView from "./Pages/Booking/BookingView";
 import Navbar from "./Pages/Navbar/Navbar";
 import DashboardView from "./Pages/Admin/DashboardView";
 
-import BookingsIndexView from "./Pages/Booking/IndexView";
+import BookingsShowView from "./Pages/Booking/ShowView";
 import BookingsEditView from "./Pages/Booking/EditView";
 
 class App extends React.Component {
@@ -83,9 +83,9 @@ class App extends React.Component {
             <Route exact path="/booking" component={BookingView} />
 
             <Route exact path="/admin" render={props => <DashboardView {...props} bookings={this.state.bookings} />} />
-            <Route exact path="/bookings/:id" render={props => <BookingsIndexView {...props} bookings={this.state.bookings} />} />
+            <Route exact path="/bookings/:id" render={props => <BookingsShowView {...props} bookings={this.state.bookings} />} />
             <Route exact path="/bookings/:id/edit" render={props => <BookingsEditView {...props} bookings={this.state.bookings} />} />
-            <Route exact path="/bookings/:id/update" render={props => <BookingsIndexView {...props} bookings={this.state.bookings} />} />
+            <Route exact path="/bookings/:id/update" render={props => <BookingsShowView {...props} bookings={this.state.bookings} />} />
 
           </div>
         </BrowserRouter>
