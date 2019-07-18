@@ -44,7 +44,7 @@ class PuppyTrainingView extends Component {
                   <div class="message-header">
                     <p class="title has-text-centered">A two hour puppy training consultation will include:</p>
                   </div>
-                  <div class="message-body is-862x632.5">
+                  <div class="message-body">
                     <div class="content is-primary">
                       <ul>
                         <li class="subtitle">How to toilet train a puppy</li>
