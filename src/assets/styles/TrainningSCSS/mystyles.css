@@ -6,11 +6,13 @@
 }
 
 
-element.style {
+quotes.style {
     height: 260px;
 }
 
-
+article.message.is-info.is-medium.two {
+  height: 100%;
+}
 
 
 
