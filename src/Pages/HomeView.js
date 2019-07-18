@@ -11,7 +11,9 @@ class HomeView extends Component {
         <section className="section title-heading">
           <div className="container">
             <div className="content has-text-centered">
-              <h1>Mutts with Manners</h1>
+              <h1>
+                Expert Puppy Training, Dog Obedience & Dog Behaviour Training
+              </h1>
             </div>
           </div>
         </section>
@@ -25,7 +27,7 @@ class HomeView extends Component {
                     data-theme="light"
                     href="https://twitter.com/MuttswithMannrs?ref_src=twsrc%5Etfw"
                     data-width="100%"
-                    data-height="300"
+                    data-height="320px"
                   >
                     Tweets by MuttswithMannrs
                   </a>
