@@ -41,6 +41,7 @@ h1 {
 .react-calendar {
   width: 100%;
   border-radius: 4px;
+  padding-bottom: 50px;
 }
 
 .keyList {
@@ -77,6 +78,7 @@ h1 {
   margin-top: 70px;
 }
 
+/* Booking Form Styling */
 .bookForm h2 {
   text-align: center;
   margin-top: 20px;
@@ -104,6 +106,12 @@ ul.keyList {
 .react-calendar__tile {
   height: 40px;
 }
+
+input.button.is-primary {
+  width: 100%;
+}
+
+/* Cancelation policy styling */
 
 section.section.cancelpolicy {
   padding-left: 160px;

@@ -90,11 +90,33 @@ class BookingView extends Component {
             </div>
           </div>
         </section>
+        <section className="section cancelpolicy">
+          <div className="box content">
+            <div className="content has-text-centered">
+              <h3>Missed Appointment and Cancellation Policy </h3>
+              <p>
+                If you are unable to keep an appointment please give at least 24
+                hours notice to ensure that you will not be charge for the
+                appointment or part-thereof.
+              </p>
+              <p>
+                12 to 24 hours notice of cancellation will require $50 value to
+                be paid, less than 12 hours notice will require full payment.
+              </p>
+              <p>
+                Thank you for your consideration in ensuring that adequate
+                notice is given.
+              </p>
+            </div>
+          </div>
+        </section>
         <section className="section">
           <div className="calendar container">
             <div className="columns">
               <div className="column calender">
-                <h2>Choose a date:</h2>
+                <h2>
+                  <b>Choose a date:</b>
+                </h2>
                 {/* <div className="columns is-centered"> */}
                 {/* <div className="column is-half is-centered calendarGroup"> */}
                 <Calendar
@@ -122,7 +144,9 @@ class BookingView extends Component {
               </div>
 
               <div className="column bookForm">
-                <h2>Enter Your Details:</h2>
+                <h2>
+                  <b>Enter Your Details:</b>
+                </h2>
                 <form onSubmit={this.onFormSubmit}>
                   <div className="field">
                     <label className="label">First Name</label>
@@ -203,27 +227,6 @@ class BookingView extends Component {
                   </div>
                 </form>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section cancelpolicy">
-          <div className="box content">
-            <div className="content has-text-centered">
-              <h3>Missed Appointment and Cancellation Policy </h3>
-              <p>
-                If you are unable to keep an appointment please give at least 24
-                hours notice to ensure that you will not be charge for the
-                appointment or part-thereof.
-              </p>
-              <p>
-                12 to 24 hours notice of cancellation will require $50 value to
-                be paid, less than 12 hours notice will require full payment.
-              </p>
-              <p>
-                Thank you for your consideration in ensuring that adequate
-                notice is given.
-              </p>
             </div>
           </div>
         </section>
