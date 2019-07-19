@@ -13,4 +13,9 @@ h1 {
 
 div.box.content.boxtwo {
   padding-bottom: 28px;
+  height: 100%;
+}
+
+i.has-text-grey {
+  font-family: "Source Sans Pro", sans-serif;
 }
