@@ -12,9 +12,10 @@ article.message.is-info.is-medium.quote {
 }
 
 
-div.message.is-info.message-header.listheader {
+div.message-header.listheader {
   height: 12em;
 }
+
 
 
 
