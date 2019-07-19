@@ -97,7 +97,7 @@ class BookingsEditView extends Component {
                 <div className="field">
                 <label className="label">Date of Training Session</label>
                 <div className="control">
-                <input className="input" type="text" name="bookingDate" value={bookingDate && new Date(bookingDate).toLocaleDateString()} onChange={(event) => this.onInputChange("bookingDate", event)} />
+                <input className="input" type="text" name="bookingDate" value={bookingDate} onChange={(event) => this.onInputChange("bookingDate", event)} />
                 </div>
                 </div>
 

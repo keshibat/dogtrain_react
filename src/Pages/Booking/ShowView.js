@@ -52,7 +52,7 @@ class BookingsShowView extends Component {
                 <li><span>Date of Training Session: </span> {bookingDate}</li>
                 <li><span>Email: </span> {email}</li>
                 <li><span>Status: </span> {status}</li>
-                <li><span>Paid: </span> {(paid === false) && `${paid}`}</li>
+                <li><span>Paid: </span> {paid ? "True" : "False"}</li>
                 <li><span>Details: </span> {details}</li>
             </ul>
             <p>
