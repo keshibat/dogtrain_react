@@ -37,7 +37,7 @@ class App extends React.Component {
   }
 
   getBookings = async () => {
-    const response = await axios.get("https://dogsdata.herokuapp.com/bookings");
+    const response = await axios.get("http://localhost:5000/bookings");
 
     this.setState({
       bookings: response.data.map(booking => {

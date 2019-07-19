@@ -11,7 +11,7 @@ class BookingsShowView extends Component {
     //try using filter array to get item, if its faster than querying
     componentDidMount() {
         const id = this.props.match.params.id;
-        axios.get(`https://dogsdata.herokuapp.com/bookings/${id}`)
+        axios.get(`http://localhost:5000/bookings/${id}`)
         .then(res => this.setState({ booking: {...res.data} }));
     }
 

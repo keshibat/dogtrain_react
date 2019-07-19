@@ -5,31 +5,27 @@ import axios from "axios";
 
 class BookingsEditView extends Component {
     state = {
-        booking: {
-            bookingDate: "",
-            details: "",
-            email: "",
-            firstName: "",
-            lastName: "",
-            paid: "",
-            status: ""
-        }
+        bookingDate: "",
+        details: "",
+        email: "",
+        firstName: "",
+        lastName: "",
+        paid: "",
+        status: ""
       }
 
     //change later to get props from lifted state
     componentDidMount() {
         const id = this.props.match.params.id;
-        axios.get(`https://dogsdata.herokuapp.com/bookings/${id}`)
-        .then(res => this.setState({ 
-            booking: {...res.data} 
-        }));
+        axios.get(`http://localhost:5000/bookings/${id}`)
+        .then(res => this.setState({ ...res.data }));
     }
     
     onInputChange = (name, event) => {
+        console.log(event.target.value);
         this.setState({ [name]: event.target.value });
     }
 
-    //have a message display saying a email has been sent and booking will be confirmed by trainer
     onFormSubmit = async (event) => {
         event.preventDefault();
 
@@ -41,7 +37,7 @@ class BookingsEditView extends Component {
             lastName,
             paid,
             status
-        } = this.state.booking;
+        } = this.state;
 
         const updateBooking = {
             bookingDate,
@@ -53,16 +49,12 @@ class BookingsEditView extends Component {
             status
         }
 
-        const response = await axios.put(`https://dogsdata.herokuapp.com/${this.props.match.params.id}`, updateBooking);
+        const response = await axios.put(`http://localhost:5000/bookings/${this.props.match.params.id}`, updateBooking);
         console.log(response);
-        // return this.props.history.push(`/bookings/${this.props.match.params.id}`);
+        return this.props.history.push(`/bookings/${this.props.match.params.id}`);
     }
 
     render() {
-                // console.log(this.props.history);
-        // const { bookings } = this.state;
-        // console.log(this.props.match.params.id);
-        // console.log(this.props.bookings);
         const {
             bookingDate,
             details,
@@ -71,7 +63,9 @@ class BookingsEditView extends Component {
             lastName,
             paid,
             status
-        } = this.state.booking;
+        } = this.state;
+
+        const dateString = new Date(bookingDate).toLocaleDateString() || "";
 
       return (
         <>
@@ -103,21 +97,33 @@ class BookingsEditView extends Component {
                 <div className="field">
                 <label className="label">Date of Training Session</label>
                 <div className="control">
-                <input className="input" type="text" name="bookingDate" value={bookingDate && new Date(bookingDate).toLocaleDateString()} readOnly />
+                <input className="input" type="text" name="bookingDate" value={bookingDate && new Date(bookingDate).toLocaleDateString()} onChange={(event) => this.onInputChange("bookingDate", event)} />
                 </div>
                 </div>
 
                 <div className="field">
                 <label className="label">Paid</label>
                 <div className="control">
-                <input className="input" type="text" name="paid" value={paid} onChange={(event) => this.onInputChange("paid", event)} />
+                    <div className="select">
+                        <select name="paid" value={paid.toString()} onChange={(event) => this.onInputChange("paid", event)}>
+                            <option value="true">True</option>
+                            <option value="false">False</option>
+                        </select>
+                    </div>
                 </div>
                 </div>
 
                 <div className="field">
                 <label className="label">Status</label>
                 <div className="control">
-                <input className="input" type="text" name="status" value={status} onChange={(event) => this.onInputChange("status", event)} />
+                    <div className="select">
+                        <select name="status" value={status} onChange={(event) => this.onInputChange("status", event)}>
+                            <option value="Pending">Pending</option>
+                            <option value="Confirmed">Confirmed</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </div>
                 </div>
                 </div>
 
@@ -138,7 +144,6 @@ class BookingsEditView extends Component {
             </div>
 
             <p>
-                <Link to={`/bookings/${this.props.match.params.id}/update`}>Save</Link> | {}
                 <Link to={`/bookings/${this.props.match.params.id}`}>Cancel</Link>
             </p>
 
