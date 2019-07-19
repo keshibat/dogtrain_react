@@ -22,6 +22,16 @@ import ShopView from "./Pages/Shop/ShopView";
 import BookingView from "./Pages/Booking/BookingView";
 import Navbar from "./Pages/Navbar/Navbar";
 
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faCheckSquare, faCoffee, faQuoteLeft)
+
+
+
+
 class App extends React.Component {
   componentDidMount() {
     fetch("https://dogsdata.herokuapp.com/")

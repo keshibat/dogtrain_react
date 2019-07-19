@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import mystyles from "./../../assets/styles/TrainningSCSS/mystyles.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 
 class PuppyTrainingView extends Component {
@@ -94,6 +96,10 @@ class PuppyTrainingView extends Component {
         </section>
 
         <section className="quotes" >
+          <div class="has-text-centered is-size-1">
+            <FontAwesomeIcon icon="quote-left" />
+          </div>
+
           <div className="columns">
             <div className="column">
               <article className="message is-primary is-medium quote">
