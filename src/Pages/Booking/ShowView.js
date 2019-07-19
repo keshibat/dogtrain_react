@@ -10,7 +10,7 @@ class BookingsShowView extends Component {
 
     //try using filter array to get item, if its faster than querying
     componentDidMount() {
-        const id = this.props.match.params.id;
+        const { id } = this.props.match.params;
         axios.get(`http://localhost:5000/bookings/${id}`)
         .then(res => this.setState({ booking: {...res.data} }));
     }
@@ -20,6 +20,13 @@ class BookingsShowView extends Component {
     //     const response = await axios.get(`https://dogsdata.herokuapp.com/bookings/${id}`);   
     //     return response.data;
     // }
+
+    onDeleteClick = async (event) => {
+        event.preventDefault();
+        const { id } = this.props.match.params;
+        const response = await axios.delete(`http://localhost:5000/bookings/${id}`);
+        return this.props.history.push("/admin");
+    }
 
     render() {
         // const { bookings } = this.state;
@@ -50,7 +57,8 @@ class BookingsShowView extends Component {
             </ul>
             <p>
                 <Link to={`/bookings/${this.props.match.params.id}/edit`}>Edit</Link> | {}
-                <Link to={`/bookings/`}>Delete</Link>
+                <a href="" onClick={this.onDeleteClick}>Delete</a> | {}
+                <Link to={"/admin"}>Back</Link>
             </p>
         </>
       );

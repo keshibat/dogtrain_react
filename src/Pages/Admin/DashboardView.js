@@ -7,28 +7,28 @@ import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css"
 //CRUD views, edit/update, delete, confirm/change status
 class DashboardView extends Component {
 
-    // state = {
-    //     bookings: []
-    // }
+    state = {
+        bookings: []
+    }
 
     // componentDidMount() {
-    // // async componentDidMount() {
-    //     // const bookings = await this.getBookings();
-    //     // console.log(bookings);
+    async componentDidMount() {
+        const bookings = await this.getBookings();
+        console.log(bookings);
     //     const testing = this.props.testing;
     //     // console.log(this.props.testing);
-    //     this.setState({bookings:[...testing]});
-    // }
+        this.setState({bookings:[...bookings]});
+    }
 
     //need an array of the bookings https://dogsdata.herokuapp.com/bookings
-    // getBookings = async () => {
-    //     const response = await axios.get("https://dogsdata.herokuapp.com/bookings");
-    //     return response.data;
-    // }
+    getBookings = async () => {
+        const response = await axios.get("http://localhost:5000/bookings");
+        return response.data;
+    }
 
     render() {
         // console.log(this.props.testing);
-        const { bookings } = this.props;
+        const { bookings } = this.state;
         console.log(bookings);
       return (
         <>

@@ -28,23 +28,23 @@ import BookingsShowView from "./Pages/Booking/ShowView";
 import BookingsEditView from "./Pages/Booking/EditView";
 
 class App extends React.Component {
-  state = {
-    bookings: []
-  }
+  // state = {
+  //   bookings: []
+  // }
 
-  componentDidMount() {
-      this.getBookings();
-  }
+  // componentDidMount() {
+  //     this.getBookings();
+  // }
 
-  getBookings = async () => {
-    const response = await axios.get("http://localhost:5000/bookings");
+  // getBookings = async () => {
+  //   const response = await axios.get("http://localhost:5000/bookings");
 
-    this.setState({
-      bookings: response.data.map(booking => {
-        return { ...booking }
-      })
-    });
-  }
+  //   this.setState({
+  //     bookings: response.data.map(booking => {
+  //       return { ...booking }
+  //     })
+  //   });
+  // }
   
   render() {
     return (
@@ -82,10 +82,11 @@ class App extends React.Component {
             <Route exact path="/shop" component={ShopView} />
             <Route exact path="/booking" component={BookingView} />
 
-            <Route exact path="/admin" render={props => <DashboardView {...props} bookings={this.state.bookings} />} />
-            <Route exact path="/bookings/:id" render={props => <BookingsShowView {...props} bookings={this.state.bookings} />} />
-            <Route exact path="/bookings/:id/edit" render={props => <BookingsEditView {...props} bookings={this.state.bookings} />} />
-            <Route exact path="/bookings/:id/update" render={props => <BookingsShowView {...props} bookings={this.state.bookings} />} />
+            {/* <Route exact path="/admin" render={props => <DashboardView {...props} bookings={this.state.bookings} />} /> */}
+            <Route exact path="/admin" component={DashboardView} />
+            <Route exact path="/bookings/:id" component={BookingsShowView} />
+            <Route exact path="/bookings/:id/edit" component={BookingsEditView} />
+            {/* <Route exact path="/bookings/:id/update" component={BookingsShowView} /> */}
 
           </div>
         </BrowserRouter>
