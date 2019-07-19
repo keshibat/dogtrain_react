@@ -14,3 +14,7 @@ h1 {
 div.box.content.boxtwo {
   padding-bottom: 28px;
 }
+
+i.has-text-grey {
+  font-family: "Source Sans Pro", sans-serif;
+}

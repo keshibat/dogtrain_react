@@ -1,4 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
+
+h1 h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+p {
+  font-family: "PT Sans", sans-serif;
+}
 
 .box.content.home {
   height: 97.5%;
