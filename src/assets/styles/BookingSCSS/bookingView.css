@@ -121,3 +121,17 @@ section.section.cancelpolicy {
 /* .react-calendar__month-view__days__day {
     height: 60px;
 } */
+
+@media screen and (min-width: 769px) {
+  section.section.cancelpolicy {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .column.is-half.booking,
+  .column.is-half-tablet.booking {
+    flex: none;
+    width: 80%;
+  }
+}
