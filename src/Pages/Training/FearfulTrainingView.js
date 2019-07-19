@@ -43,7 +43,7 @@ class FearfulTrainingView extends Component {
             <div className="column">
               <article className="message is-info">
                 <div className="message-header listheader">
-                  <p className="title has-text-centered">A two hour puppy training consultation will include:</p>
+                  <p className="title has-text-centered"> Our motivational “Think Dog” approach develops a dog’s confidence with </p>
                 </div>
                 <div className="message-body">
                   <div className="content is-primary">
@@ -64,7 +64,7 @@ class FearfulTrainingView extends Component {
             <div className="column">
               <article className="message is-info">
                 <div className="message-header listheader">
-                  <p className="title has-text-centered">1 hour follow-up lesson with us to cover:</p>
+                  <p className="title has-text-centered"> private dog training to help them deal with fear of: </p>
                 </div>
                 <div className="message-body">
                   <div className="content is-primary">

@@ -13,9 +13,13 @@ article.message.is-info.is-medium.quote {
 
 
 div.message-header.listheader {
-  height: 12em;
+  height: 18em;
 }
 
+
+div.message.is-primary.is-medium.quote {
+  height: 100%;
+}
 
 
 
