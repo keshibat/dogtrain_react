@@ -24,11 +24,6 @@ export default class NavbarAboutUs extends Component {
             <Link to="/petsitting" className="dropdown-item">
               Pet Sitting
             </Link>
-            <hr className="navbar-divider" />
-            <div className="navbar-item" />
-            <Link to="/contactus" className="dropdown-item">
-              Contact Us
-            </Link>
           </div>
         </div>
       </nav>

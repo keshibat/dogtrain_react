@@ -5,7 +5,7 @@ export default class FaqView extends Component {
   render() {
     return (
       <>
-        <section className="section">
+        <section className="section title-heading">
           <div className="container">
             <div className="content has-text-centered">
               <h1>Frequently asked Questions</h1>

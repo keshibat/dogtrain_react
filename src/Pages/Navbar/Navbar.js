@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import NavBarCSS from "./../../assets/styles/NavbarSCSS/NavBarCSS.css";
 import NavbarAboutUs from "./Navbar-AboutUs";
 import NavbarTraining from "./Navbar-Training";
+import MwMLogo from "./../../assets/images/MwM-logo.jpg";
 
 import { Link } from "react-router-dom";
 
@@ -13,13 +15,9 @@ export default class Navbar extends Component {
         aria-label="main navigation"
       >
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
-            <img
-              src="https://bulma.io/images/bulma-logo.png"
-              width="112"
-              height="28"
-            />
-          </a>
+          <Link to="/" className="navbar-item" href="/">
+            <img src={MwMLogo} width="112" height="28" />
+          </Link>
 
           <a
             role="button"
@@ -70,6 +68,9 @@ export default class Navbar extends Component {
 
           <div className="navbar-end">
             <div className="navbar-item">
+              <Link to="/contactus" className="navbar-item">
+                Contact Us
+              </Link>
               <Link to="/testimonials" className="navbar-item">
                 Testimonials
               </Link>

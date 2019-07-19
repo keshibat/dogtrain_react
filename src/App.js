@@ -1,7 +1,7 @@
 import React from "react";
 import "bulma/css/bulma.css";
 import { BrowserRouter, Route } from "react-router-dom";
-import HomeView from "./Pages/HomeView";
+import HomeView from "./Pages/Home/HomeView";
 import AboutMeView from "./Pages/About/AboutMeView";
 import AreasWeServiceView from "./Pages/About/AreasWeServiceView";
 import FaqView from "./Pages/About/FaqView";
@@ -24,7 +24,7 @@ import Navbar from "./Pages/Navbar/Navbar";
 
 class App extends React.Component {
   componentDidMount() {
-    fetch("http://127.0.0.1:5000/")
+    fetch("https://dogsdata.herokuapp.com/")
       .then(function(response) {
         console.log(response);
       })
