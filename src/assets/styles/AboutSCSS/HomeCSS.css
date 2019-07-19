@@ -99,3 +99,7 @@ img.content-image {
   border-radius: 25px;
   height: 100%;
 }
+
+div.box.content.home {
+  box-shadow: none;
+}

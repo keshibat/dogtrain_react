@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import LabPup from "./../../assets/images/home/lab-puppy.jpeg";
 
-import LabAdult from "./../../assets/images/home/lab-older.jpeg";
+import Puppy from "./../../assets/images/home/puppies.jpeg";
+import AdultDog from "./../../assets/images/home/adult-dog-1.jpg";
 import BarkingDog from "./../../assets/images/home/barking-dog-1.jpg";
 import AdoptionDog from "./../../assets/images/home/new-family-member.jpeg";
 import ApartmentDog from "./../../assets/images/home/apartment-dog-1.jpeg";
@@ -32,11 +32,11 @@ class HomeView extends Component {
         <section className="section">
           <div className="container">
             <div className="columns">
-              <div className="column">
+              <div className="column one">
                 <Link to="/puppy">
                   <div className="box content home">
                     <div class="content-overlay" />
-                    <img class="content-image" src={LabPup} />
+                    <img class="content-image" src={Puppy} />
                     <div class="content-details fadeIn-bottom">
                       <h3 class="content-title">Puppies</h3>
                       <p class="content-text">
@@ -48,11 +48,11 @@ class HomeView extends Component {
                   </div>
                 </Link>
               </div>
-              <div className="column">
+              <div className="column one">
                 <Link to="/naughty">
                   <div className="box content home">
                     <div class="content-overlay" />
-                    <img class="content-image" src={LabAdult} />
+                    <img class="content-image" src={AdultDog} />
                     <div class="content-details fadeIn-bottom">
                       <h3 class="content-title">Older Dogs</h3>
                       <p class="content-text">
@@ -66,7 +66,7 @@ class HomeView extends Component {
                 </Link>
               </div>
 
-              <div className="column">
+              <div className="column one">
                 <Link to="/naughty">
                   <div className="box content home">
                     <div class="content-overlay" />
@@ -81,7 +81,7 @@ class HomeView extends Component {
                   </div>
                 </Link>
               </div>
-              <div className="column">
+              <div className="column one">
                 <Link to="/newfamilymember">
                   <div className="box content home">
                     <div class="content-overlay" />
@@ -100,7 +100,7 @@ class HomeView extends Component {
           </div>
           <div className="container">
             <div className="columns">
-              <div className="column">
+              <div className="column one">
                 <Link to="/apartment">
                   <div className="box content home">
                     <div class="content-overlay" />
@@ -117,7 +117,7 @@ class HomeView extends Component {
                   </div>
                 </Link>
               </div>
-              <div className="column">
+              <div className="column one">
                 <Link to="/naughty">
                   <div className="box content home">
                     <div class="content-overlay" />
@@ -133,7 +133,7 @@ class HomeView extends Component {
                   </div>
                 </Link>
               </div>
-              <div className="column">
+              <div className="column one">
                 <Link to="/rescued">
                   <div className="box content home">
                     <div class="content-overlay" />
@@ -149,7 +149,7 @@ class HomeView extends Component {
                   </div>
                 </Link>
               </div>
-              <div className="column">
+              <div className="column one">
                 <Link to="/feaful">
                   <div className="box content home">
                     <div class="content-overlay" />
@@ -173,7 +173,7 @@ class HomeView extends Component {
           <div className="container">
             <div className="content">
               <div className="columns">
-                <div className="column">
+                <div className="column one">
                   <a
                     className="twitter-timeline"
                     data-theme="light"
