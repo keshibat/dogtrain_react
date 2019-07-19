@@ -15,7 +15,7 @@ export default class Navbar extends Component {
         aria-label="main navigation"
       >
         <div className="navbar-brand">
-          <Link to="/" className="navbar-item" href="https://bulma.io">
+          <Link to="/" className="navbar-item" href="/">
             <img src={MwMLogo} width="112" height="28" />
           </Link>
 
