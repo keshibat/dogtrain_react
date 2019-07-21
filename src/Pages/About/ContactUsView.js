@@ -36,7 +36,7 @@ class ContactUsView extends Component {
 
     return (
       <>
-        <section className="section">
+        <section className="section title-heading">
           <div className="container">
             <div className="content has-text-centered">
               <h1>Contact Us</h1>

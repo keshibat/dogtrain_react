@@ -30,6 +30,16 @@ import DashboardView from "./Pages/Admin/DashboardView";
 import BookingsShowView from "./Pages/Booking/ShowView";
 import BookingsEditView from "./Pages/Booking/EditView";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faCheckSquare,
+  faCoffee,
+  faQuoteLeft
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(fab, faCheckSquare, faCoffee, faQuoteLeft);
+
 class App extends React.Component {
   constructor(props) {
     super(props);

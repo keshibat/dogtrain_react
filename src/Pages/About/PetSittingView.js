@@ -6,7 +6,7 @@ class PetSittingView extends Component {
   render() {
     return (
       <>
-        <section className="section">
+        <section className="section title-heading">
           <div className="container">
             <div className="content has-text-centered">
               <h1>Pet Sitting and Live-In Dog Training Programs</h1>

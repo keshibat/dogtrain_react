@@ -6,7 +6,7 @@ class AccomodationView extends Component {
   render() {
     return (
       <>
-        <section className="section">
+        <section className="section title-heading">
           <div className="container">
             <div className="content has-text-centered">
               <h1>Dog Friendly Accomodation</h1>

@@ -6,18 +6,31 @@
 }
 
 
- /* article1.message {
-  height: 530px;
-}
 
- article1.div.message-body {
-   	color: yellow;
+article.message.is-info.is-medium.quote {
+  height: 100%;
 }
 
 
-article {
-  height: 260px;
-} */
+div.message-header.listheader {
+  height: 18em;
+}
+
+
+div.message.is-primary.is-medium.quote {
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

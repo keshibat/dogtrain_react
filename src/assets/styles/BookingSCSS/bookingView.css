@@ -1,98 +1,137 @@
 .section.section.title-heading {
-    margin-top: 50px;
-    padding-bottom: 0;
-  }
-  
-  .section.section {
-    padding-bottom: 0px;
-  }
-  
-  h1 {
-    margin-bottom: 0;
-  }
-  
-  /* div.box.content.boxtwo {
-    padding-bottom: 28px;
-  } */
+  margin-top: 50px;
+  padding-bottom: 0;
+}
 
-/* .calendar {
-    display: flex;
-    border: 1px solid red;
-    justify-content: center;
-    align-items: center;
-} */
+.section.section {
+  padding-bottom: 0px;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+.column.one {
+  padding-top: 88px;
+}
+
+/* Calender styling options */
 
 .calendar.container {
-    width: 80%;
-    max-width: 600px;
+  width: 80%;
 }
 
 .formButton {
-    text-align: center;
+  text-align: center;
 }
 
 .formButton input {
-    width: 100px;
+  width: 100px;
 }
 
 .booked {
-    background-color: orange;
+  background-color: orange;
 }
 
 .calendar .box {
-    margin-top: 20px;
-    width: 100%;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .react-calendar {
-    width: 100%;
-    border-radius: 4px;
+  width: 100%;
+  border-radius: 4px;
+  padding-bottom: 50px;
 }
 
 .keyList {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .keyBox {
-    width: 20px;
-    height: 20px;
-    border-radius: 2px;
-    border: 1px solid gray;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid gray;
 }
 
 .keyBusy {
-    background-color: crimson;
+  background-color: crimson;
 }
 
 .keySBusy {
-    background-color: orange;
+  background-color: orange;
 }
 
-
 .keyItem {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .keyItem p {
-    padding-left: 3px;
-    font-size: 12px;
+  padding-left: 3px;
+  font-size: 12px;
 }
 
 .calendarGroup {
-    margin-top: 70px;
+  margin-top: 70px;
+}
+
+/* Booking Form Styling */
+.bookForm h2 {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .bookForm h2 {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.calender h2 {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+
+.box.calender {
+  height: 130px;
+}
+
+ul.keyList {
+  padding-top: 35px;
 }
 
 .react-calendar__tile {
-    height: 60px;
+  height: 40px;
+}
+
+input.button.is-primary {
+  width: 100%;
+}
+
+/* Cancelation policy styling */
+
+section.section.cancelpolicy {
+  padding-left: 160px;
+  padding-right: 160px;
 }
 
 /* .react-calendar__month-view__days__day {
     height: 60px;
 } */
+
+@media screen and (min-width: 769px) {
+  section.section.cancelpolicy {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .column.is-half.booking,
+  .column.is-half-tablet.booking {
+    flex: none;
+    width: 80%;
+  }
+}
