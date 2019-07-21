@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+import LocalAPI from "./apis/local";
 import "bulma/css/bulma.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import HomeView from "./Pages/HomeView";
@@ -22,33 +22,36 @@ import BlogView from "./Pages/Blog/BlogView";
 import ShopView from "./Pages/Shop/ShopView";
 import BookingView from "./Pages/Booking/BookingView";
 import Navbar from "./Pages/Navbar/Navbar";
+//admin
+import LoginView from "./Pages/Admin/LoginView";
 import DashboardView from "./Pages/Admin/DashboardView";
-
+//bookings
 import BookingsShowView from "./Pages/Booking/ShowView";
 import BookingsEditView from "./Pages/Booking/EditView";
 
 class App extends React.Component {
-  // state = {
-  //   bookings: []
-  // }
+  constructor(props) {
+    super(props);
+    const token = sessionStorage.getItem("token") || null;
+    this.state = { token };
 
-  // componentDidMount() {
-  //     this.getBookings();
-  // }
+    if (token) {
+      LocalAPI.setAuthHeader(token);
+    }
+  }
 
-  // getBookings = async () => {
-  //   const response = await axios.get("http://localhost:5000/bookings");
-
-  //   this.setState({
-  //     bookings: response.data.map(booking => {
-  //       return { ...booking }
-  //     })
-  //   });
-  // }
+  onLoginFormSubmit = (token, callback) => {
+    sessionStorage.setItem("token", token);
+    LocalAPI.setAuthHeader(token);
+    this.setState({token}, callback);
+  }
   
   render() {
+    const { token } = this.state;
+
     return (
       <div>
+        { token && <h4>User Logged In!</h4> }
         <BrowserRouter>
           <Navbar />
           <div>
@@ -82,11 +85,11 @@ class App extends React.Component {
             <Route exact path="/shop" component={ShopView} />
             <Route exact path="/booking" component={BookingView} />
 
-            {/* <Route exact path="/admin" render={props => <DashboardView {...props} bookings={this.state.bookings} />} /> */}
             <Route exact path="/admin" component={DashboardView} />
+            <Route exact path="/admin/login" render={(props) => <LoginView {...props} onLoginFormSubmit={this.onLoginFormSubmit} />} />
+
             <Route exact path="/bookings/:id" component={BookingsShowView} />
             <Route exact path="/bookings/:id/edit" component={BookingsEditView} />
-            {/* <Route exact path="/bookings/:id/update" component={BookingsShowView} /> */}
 
           </div>
         </BrowserRouter>

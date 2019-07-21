@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import LocalAPI from "./../../apis/local";
 import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 
 //index view, view all bookings
@@ -11,28 +11,26 @@ class DashboardView extends Component {
         bookings: []
     }
 
-    // componentDidMount() {
-    async componentDidMount() {
-        const bookings = await this.getBookings();
-        console.log(bookings);
-    //     const testing = this.props.testing;
-    //     // console.log(this.props.testing);
-        this.setState({bookings:[...bookings]});
+    componentDidMount() {
+        this.getBookings()
+        .then(res => {
+            console.log(res);
+            this.setState({bookings:[...res]});
+        })
+        .catch(err => console.log(err));
     }
 
-    //need an array of the bookings https://dogsdata.herokuapp.com/bookings
     getBookings = async () => {
-        const response = await axios.get("http://localhost:5000/bookings");
+        const response = await LocalAPI.get("/bookings");
         return response.data;
     }
 
     render() {
-        // console.log(this.props.testing);
         const { bookings } = this.state;
-        console.log(bookings);
+
       return (
         <>
-            <h1> Dashboard </h1>
+            <h1>Dashboard</h1>
             <h2>Bookings:</h2>
             <ul>
                 {bookings.map((item, index) => {

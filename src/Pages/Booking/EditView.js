@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import LocalAPI from "./../../apis/local";
 // import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 
 class BookingsEditView extends Component {
@@ -17,7 +17,7 @@ class BookingsEditView extends Component {
     //change later to get props from lifted state
     componentDidMount() {
         const id = this.props.match.params.id;
-        axios.get(`http://localhost:5000/bookings/${id}`)
+        LocalAPI.get(`/bookings/${id}`)
         .then(res => this.setState({ ...res.data }));
     }
     
@@ -28,7 +28,6 @@ class BookingsEditView extends Component {
 
     onFormSubmit = async (event) => {
         event.preventDefault();
-
         const {
             bookingDate,
             details,
@@ -49,7 +48,7 @@ class BookingsEditView extends Component {
             status
         }
 
-        const response = await axios.put(`http://localhost:5000/bookings/${this.props.match.params.id}`, updateBooking);
+        const response = await LocalAPI.put(`/bookings/${this.props.match.params.id}`, updateBooking);
         console.log(response);
         return this.props.history.push(`/bookings/${this.props.match.params.id}`);
     }

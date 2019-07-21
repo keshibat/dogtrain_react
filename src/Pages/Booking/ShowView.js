@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import LocalAPI from "./../../apis/local";
 // import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 
 class BookingsShowView extends Component {
@@ -11,7 +11,7 @@ class BookingsShowView extends Component {
     //try using filter array to get item, if its faster than querying
     componentDidMount() {
         const { id } = this.props.match.params;
-        axios.get(`http://localhost:5000/bookings/${id}`)
+        LocalAPI.get(`/bookings/${id}`)
         .then(res => this.setState({ booking: {...res.data} }));
     }
 
@@ -24,7 +24,7 @@ class BookingsShowView extends Component {
     onDeleteClick = async (event) => {
         event.preventDefault();
         const { id } = this.props.match.params;
-        const response = await axios.delete(`http://localhost:5000/bookings/${id}`);
+        const response = await LocalAPI.delete(`/bookings/${id}`);
         return this.props.history.push("/admin");
     }
 
