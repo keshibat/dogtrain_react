@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LocalAPI from "./../../apis/local";
 // import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
+import Loader from "./../../components/Loader";
 
 class BookingsEditView extends Component {
     state = {
@@ -11,14 +12,15 @@ class BookingsEditView extends Component {
         firstName: "",
         lastName: "",
         paid: "",
-        status: ""
+        status: "",
+        fetching: true
       }
 
     //change later to get props from lifted state
     componentDidMount() {
         const id = this.props.match.params.id;
         LocalAPI.get(`/bookings/${id}`)
-        .then(res => this.setState({ ...res.data }));
+        .then(res => this.setState({ fetching: false, ...res.data }));
     }
     
     onInputChange = (name, event) => {
@@ -28,6 +30,8 @@ class BookingsEditView extends Component {
 
     onFormSubmit = async (event) => {
         event.preventDefault();
+        this.setState({ fetching: true});
+
         const {
             bookingDate,
             details,
@@ -50,7 +54,7 @@ class BookingsEditView extends Component {
 
         const response = await LocalAPI.put(`/bookings/${this.props.match.params.id}`, updateBooking);
         console.log(response);
-        return this.props.history.push(`/bookings/${this.props.match.params.id}`);
+        this.props.history.push(`/bookings/${this.props.match.params.id}`);
     }
 
     render() {
@@ -61,10 +65,15 @@ class BookingsEditView extends Component {
             firstName,
             lastName,
             paid,
-            status
+            status,
+            fetching
         } = this.state;
 
         const dateString = new Date(bookingDate).toLocaleDateString() || "";
+
+        if (this.state.fetching) {
+            return <Loader />;
+        }
 
       return (
         <>

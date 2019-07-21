@@ -2,20 +2,22 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LocalAPI from "./../../apis/local";
 import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
+import Loader from "./../../components/Loader";
 
 //index view, view all bookings
 //CRUD views, edit/update, delete, confirm/change status
 class DashboardView extends Component {
 
     state = {
-        bookings: []
+        bookings: [],
+        fetching: true
     }
 
     componentDidMount() {
         this.getBookings()
         .then(res => {
             console.log(res);
-            this.setState({bookings:[...res]});
+            this.setState({bookings:[...res], fetching: false});
         })
         .catch(err => console.log(err));
     }
@@ -29,9 +31,12 @@ class DashboardView extends Component {
     }
 
     render() {
-        const { bookings } = this.state;
+        const { bookings, fetching } = this.state;
 
-      return (
+        if (fetching) {
+            return <Loader />;
+        }
+        return (
         <>
             <h1>Dashboard</h1>
             <h2>Bookings:</h2>
@@ -53,8 +58,8 @@ class DashboardView extends Component {
                 })}
             </ul>
         </>
-      );
+        );
     }
-  }
+}
   
 export default DashboardView

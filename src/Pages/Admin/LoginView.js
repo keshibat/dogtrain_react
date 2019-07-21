@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Loader from "./../../components/Loader";
 // import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 
 class LoginView extends Component {
@@ -60,7 +61,8 @@ class LoginView extends Component {
 
                 <div className="field is-centered">
                 <div className="formButton control">
-                {fetching ? <p>Loading...</p> : <input className="button is-primary" type="submit" value="Login" />}
+                {fetching ? <input className="button is-primary" type="submit" value="Login" disabled /> : 
+                    <input className="button is-primary" type="submit" value="Login" />}
                 </div>
                 </div>
             </form>

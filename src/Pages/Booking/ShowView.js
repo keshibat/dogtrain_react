@@ -2,17 +2,19 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LocalAPI from "./../../apis/local";
 // import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
+import Loader from "./../../components/Loader";
 
 class BookingsShowView extends Component {
     state = {
-        booking: {}
+        booking: {},
+        fetching: true
     }
 
     //try using filter array to get item, if its faster than querying
     componentDidMount() {
         const { id } = this.props.match.params;
         LocalAPI.get(`/bookings/${id}`)
-        .then(res => this.setState({ booking: {...res.data} }));
+        .then(res => this.setState({ booking: {...res.data}, fetching: false }));
     }
 
     // getBooking = async () => {
@@ -42,6 +44,10 @@ class BookingsShowView extends Component {
             paid,
             status
         } = this.state.booking;
+
+        if (this.state.fetching) {
+            return <Loader />;
+        }
 
       return (
         <>
