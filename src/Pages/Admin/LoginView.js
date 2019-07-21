@@ -8,7 +8,8 @@ class LoginView extends Component {
     state = {
         username: "",
         password: "",
-        error: null
+        error: null,
+        fetching: false
     }
 
     onFormSubmit = async (event) => {
@@ -16,6 +17,7 @@ class LoginView extends Component {
         const { username, password } = this.state;
 
         try {
+            this.setState({fetching: true});
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/admin/login`, { username, password });
             this.props.onLoginFormSubmit(response.data.token, () => {
                 this.props.history.push("/admin");
@@ -23,6 +25,7 @@ class LoginView extends Component {
         } catch(error) {
             console.log(error)
             this.setState({error})
+            this.setState({fetching: false});
         }
     }
 
@@ -33,7 +36,8 @@ class LoginView extends Component {
     render() {
         const {
             username,
-            password
+            password,
+            fetching
         } = this.state;
 
       return (
@@ -56,7 +60,7 @@ class LoginView extends Component {
 
                 <div className="field is-centered">
                 <div className="formButton control">
-                <input className="button is-primary" type="submit" value="Login" />
+                {fetching ? <p>Loading...</p> : <input className="button is-primary" type="submit" value="Login" />}
                 </div>
                 </div>
             </form>

@@ -21,7 +21,10 @@ class DashboardView extends Component {
     }
 
     getBookings = async () => {
-        const response = await LocalAPI.get("/bookings");
+        const response = await LocalAPI.get("/bookings")
+        .catch(err => {
+            console.log(err);
+        });
         return response.data;
     }
 

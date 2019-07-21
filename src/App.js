@@ -1,7 +1,8 @@
 import React from "react";
-import LocalAPI from "./apis/local";
 import "bulma/css/bulma.css";
 import { BrowserRouter, Route } from "react-router-dom";
+import LocalAPI from "./apis/local";
+import PrivateRoute from "./components/PrivateRoute";
 import HomeView from "./Pages/HomeView";
 import AboutMeView from "./Pages/About/AboutMeView";
 import AreasWeServiceView from "./Pages/About/AreasWeServiceView";
@@ -85,12 +86,13 @@ class App extends React.Component {
             <Route exact path="/shop" component={ShopView} />
             <Route exact path="/booking" component={BookingView} />
 
-            <Route exact path="/admin" component={DashboardView} />
+            <PrivateRoute exact path="/admin" component={DashboardView} token={token} />
             <Route exact path="/admin/login" render={(props) => <LoginView {...props} onLoginFormSubmit={this.onLoginFormSubmit} />} />
 
-            <Route exact path="/bookings/:id" component={BookingsShowView} />
-            <Route exact path="/bookings/:id/edit" component={BookingsEditView} />
+            <PrivateRoute exact path="/bookings/:id" component={BookingsShowView} token={token} />
+            <PrivateRoute exact path="/bookings/:id/edit" component={BookingsEditView} token={token} />
 
+            {/* <Route component={NotFoundPage} /> */}
           </div>
         </BrowserRouter>
       </div>
