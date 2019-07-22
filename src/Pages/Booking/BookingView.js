@@ -13,7 +13,6 @@ class BookingView extends Component {
     confirmed: {}
   };
 
-
   //change this later to not use async, make use of props
   async componentDidMount() {
     const confirmedDates = await this.getConfirmed();
@@ -22,7 +21,9 @@ class BookingView extends Component {
   }
 
   getConfirmed = async () => {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}/bookings/confirmed`);
+    const response = await axios.get(
+      `${process.env.REACT_APP_API_URL}/bookings/confirmed`
+    );
     return response.data;
   };
 
@@ -48,7 +49,10 @@ class BookingView extends Component {
       bookingDate
     };
 
-    const response = await axios.post(`${process.env.REACT_APP_API_URL}/bookings`, newBooking);
+    const response = await axios.post(
+      `${process.env.REACT_APP_API_URL}/bookings`,
+      newBooking
+    );
     console.log(response);
     this.setState({
       firstName: "",
@@ -60,13 +64,7 @@ class BookingView extends Component {
   };
 
   render() {
-    const { 
-      firstName,
-      lastName,
-      email,
-      details,
-      bookingDate,
-    } = this.state;
+    const { firstName, lastName, email, details, bookingDate } = this.state;
 
     const tileClassName = ({ date, view }) => {
       const dates = this.state.confirmed;

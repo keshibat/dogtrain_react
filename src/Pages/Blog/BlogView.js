@@ -5,17 +5,23 @@ class BlogView extends Component {
   constructor() {
     super();
     this.state = {
-      blog: {}
+      blog: {},
+      fetching: true
     };
   }
 
-  componentDidMount() {
-    window.mediumWidget();
+  async componentDidMount() {
+    await window.mediumWidget();
+    console.log("waiting");
   }
 
   render() {
     const { name, height } = this.state.blog;
     // const blogContent = this.state.blog.name;
+
+    if (this.state.fetching) {
+      return <div>testing</div>;
+    }
     return (
       <>
         <section className="section title-heading">
