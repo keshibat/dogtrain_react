@@ -22,7 +22,7 @@ class BookingView extends Component {
   }
 
   getConfirmed = async () => {
-    const response = await axios.get("http://localhost:5000/bookings/confirmed");
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/bookings/confirmed`);
     return response.data;
   };
 
@@ -48,7 +48,7 @@ class BookingView extends Component {
       bookingDate
     };
 
-    const response = await axios.post("http://localhost:5000/bookings", newBooking);
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/bookings`, newBooking);
     console.log(response);
     this.setState({
       firstName: "",
