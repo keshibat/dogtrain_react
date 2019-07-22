@@ -140,7 +140,7 @@ class BookingView extends Component {
 
         <section className="section">
           <div className="calendar container">
-            <div className="column">
+            <div className="columns">
               <div className="column calender">
                 <h2>
                   <b>Choose a date:</b>
