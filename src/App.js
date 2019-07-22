@@ -21,16 +21,18 @@ import BlogView from "./Pages/Blog/BlogView";
 import ShopView from "./Pages/Shop/ShopView";
 import BookingView from "./Pages/Booking/BookingView";
 import Navbar from "./Pages/Navbar/Navbar";
+import Footer from "./Pages/Footer/Footer";
+
+
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fab, faFacebookSquare, faTwitterSquare, faInstagram} from "@fortawesome/free-brands-svg-icons";
+import { fas } from '@fortawesome/free-solid-svg-icons'
 import {
-  faCheckSquare,
-  faCoffee,
   faQuoteLeft
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faCheckSquare, faCoffee, faQuoteLeft);
+library.add(fab, fas, faQuoteLeft, faFacebookSquare, faTwitterSquare, faInstagram);
 
 class App extends React.Component {
   componentDidMount() {
@@ -80,7 +82,9 @@ class App extends React.Component {
             <Route exact path="/booking" component={BookingView} />
           </div>
         </BrowserRouter>
+        <Footer />
       </div>
+
     );
   }
 }
