@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import mystyles from "./../../assets/styles/TrainningSCSS/mystyles.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ApartmentDog from "./../../assets/images/home/apartment-dog-1.jpeg";
 
 
 
@@ -16,14 +17,17 @@ class ApartmentTrainingView extends Component {
               </h1>
               <br />
               <h2 className="subtitle has-text-left">
+                <i className="has-text-grey">
                 Apartment dogs need to be calm - no barking, howling or crying and well toilet trained for a happy residents.
                 Our 1 on 1 dog training solves all your dog's issues for a happy and content home.
+                </i>
               </h2>
             </div>
           </div>
         </section>
 
         <section className="has-background-light">
+          <div className="box content">
           <div className="columns">
             <div className="column">
               <article className="message is-info">
@@ -33,7 +37,7 @@ class ApartmentTrainingView extends Component {
                 <div className="message-body">
                   <div className="content">
                     <figure className="image is-4by3">
-                      <img src="http://via.placeholder.com/640x360" />
+                      <img src={ApartmentDog} />
                     </figure>
                   </div>
                 </div>
@@ -73,6 +77,7 @@ class ApartmentTrainingView extends Component {
               </article>
             </div>
           </div>
+        </div>
         </section>
 
         <section className="hero">
@@ -132,16 +137,22 @@ class ApartmentTrainingView extends Component {
               </h1>
               <br />
               <h2 className="subtitle has-text-left">
-                If you are unable to keep an appointment
-                please give at least 24 hours notice to ensure that
-                you will not be charge for the appointment or part-thereof.
+                <i className="has-text-grey">
+                  If you are unable to keep an appointment
+                    please give at least 24 hours notice to ensure that
+                    you will not be charge for the appointment or part-thereof.
+                </i>
               </h2>
               <h2 className="subtitle has-text-left">
-                12 to 24 hours notice of cancellation will require $50 value to be paid,
-                less than 12 hours notice will require full payment.
+                <i className="has-text-grey">
+                  12 to 24 hours notice of cancellation will require $50 value to be paid,
+                  less than 12 hours notice will require full payment.
+                </i>
               </h2>
               <h2 className="subtitle has-text-left">
-                Thank you for your consideration in ensuring that adequate notice is given.
+                <i className="has-text-grey">
+                  Thank you for your consideration in ensuring that adequate notice is given.
+                </i>
               </h2>
             </div>
           </div>

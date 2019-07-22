@@ -7,9 +7,17 @@
 
 
 
+
+
+article.message.is-primary.is-medium.quote {
+  height: 100%;
+}
+
 article.message.is-info.is-medium.quote {
   height: 100%;
 }
+
+
 
 
 div.message-header.listheader {
@@ -17,9 +25,15 @@ div.message-header.listheader {
 }
 
 
+
+
+
 div.message.is-primary.is-medium.quote {
   height: 100%;
 }
+
+
+
 
 
 

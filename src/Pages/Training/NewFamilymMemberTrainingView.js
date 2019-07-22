@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import mystyles from "./../../assets/styles/TrainningSCSS/mystyles.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import NewFamily from "./../../assets/images/trainning/new_family.jpg";
 
 
 
@@ -16,14 +17,17 @@ class NewFamilyMemberTrainingView extends Component {
               </h1>
               <br />
               <h2 className="subtitle has-text-left">
+                <i className="has-text-grey">
                 Adjusting to a new member of the household – baby, cat, another dog or animal, etc. can be very stressful for everyone involved.
-                A dog who has often been the substitute child now has to deal with a lot of changes.
+                  A dog who has often been the substitute child now has to deal with a lot of changes.
+                </i>
               </h2>
             </div>
           </div>
         </section>
 
         <section className="has-background-light">
+          <div className="box content">
           <div className="columns">
             <div className="column">
               <article className="message is-info">
@@ -33,7 +37,7 @@ class NewFamilyMemberTrainingView extends Component {
                 <div className="message-body">
                   <div className="content">
                     <figure className="image is-4by3">
-                      <img src="http://via.placeholder.com/640x360" />
+                      <img src={NewFamily} />
                     </figure>
                   </div>
                 </div>
@@ -72,6 +76,7 @@ class NewFamilyMemberTrainingView extends Component {
               </article>
             </div>
           </div>
+        </div>
         </section>
 
         <section className="hero">
@@ -141,16 +146,22 @@ class NewFamilyMemberTrainingView extends Component {
               </h1>
               <br />
               <h2 className="subtitle has-text-left">
-                If you are unable to keep an appointment
-                please give at least 24 hours notice to ensure that
-                you will not be charge for the appointment or part-thereof.
+                <i className="has-text-grey">
+                  If you are unable to keep an appointment
+                    please give at least 24 hours notice to ensure that
+                    you will not be charge for the appointment or part-thereof.
+                </i>
               </h2>
               <h2 className="subtitle has-text-left">
-                12 to 24 hours notice of cancellation will require $50 value to be paid,
-                less than 12 hours notice will require full payment.
+                <i className="has-text-grey">
+                  12 to 24 hours notice of cancellation will require $50 value to be paid,
+                  less than 12 hours notice will require full payment.
+                </i>
               </h2>
               <h2 className="subtitle has-text-left">
-                Thank you for your consideration in ensuring that adequate notice is given.
+                <i className="has-text-grey">
+                  Thank you for your consideration in ensuring that adequate notice is given.
+                </i>
               </h2>
             </div>
           </div>

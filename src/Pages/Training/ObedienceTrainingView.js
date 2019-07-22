@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import mystyles from "./../../assets/styles/TrainningSCSS/mystyles.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ObedienceDog from "./../../assets/images/trainning/obedience_dog.jpg";
+
 
 
 
@@ -16,16 +18,19 @@ class NewFamilyMemberTrainingView extends Component {
               </h1>
               <br />
               <h2 className="subtitle has-text-left">
+                <i className="has-text-grey">
                 Free follow-up email and telephone puppy training support available
-                from 48 hours after pup arrives home (this gives pup time to settle in)
-                all puppy issues and questions covered with our unique, gentle 'think dog' technique
-                puppy obedience training too!
+                  from 48 hours after pup arrives home (this gives pup time to settle in)
+                  all puppy issues and questions covered with our unique, gentle 'think dog' technique
+                  puppy obedience training too!
+                </i>
               </h2>
             </div>
           </div>
         </section>
 
         <section className="has-background-light">
+          <div className="box content">
           <div className="columns">
             <div className="column">
               <article className="message is-info">
@@ -35,7 +40,7 @@ class NewFamilyMemberTrainingView extends Component {
                 <div className="message-body">
                   <div className="content">
                     <figure className="image is-4by3">
-                      <img src="http://via.placeholder.com/640x360" />
+                      <img src= {ObedienceDog} />
                     </figure>
                   </div>
                 </div>
@@ -76,6 +81,7 @@ class NewFamilyMemberTrainingView extends Component {
                 </div>
               </article>
             </div>
+          </div>
           </div>
         </section>
 
@@ -134,16 +140,22 @@ class NewFamilyMemberTrainingView extends Component {
               </h1>
               <br />
               <h2 className="subtitle has-text-left">
-                If you are unable to keep an appointment
-                please give at least 24 hours notice to ensure that
-                you will not be charge for the appointment or part-thereof.
+                <i className="has-text-grey">
+                  If you are unable to keep an appointment
+                    please give at least 24 hours notice to ensure that
+                    you will not be charge for the appointment or part-thereof.
+                </i>
               </h2>
               <h2 className="subtitle has-text-left">
-                12 to 24 hours notice of cancellation will require $50 value to be paid,
-                less than 12 hours notice will require full payment.
+                <i className="has-text-grey">
+                  12 to 24 hours notice of cancellation will require $50 value to be paid,
+                  less than 12 hours notice will require full payment.
+                </i>
               </h2>
               <h2 className="subtitle has-text-left">
-                Thank you for your consideration in ensuring that adequate notice is given.
+                <i className="has-text-grey">
+                  Thank you for your consideration in ensuring that adequate notice is given.
+                </i>
               </h2>
             </div>
           </div>
