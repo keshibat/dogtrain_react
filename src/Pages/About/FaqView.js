@@ -2,6 +2,22 @@ import React, { Component } from "react";
 import FaqViewCSS from "./../../assets/styles/AboutSCSS/FaqViewCSS.css";
 
 export default class FaqView extends Component {
+  constructor() {
+    super();
+    this.state = {
+      faq: {}
+    };
+  }
+  componentDidMount() {
+    fetch("http://localhost:1337/faqs/")
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          faq: data
+        });
+      });
+  }
+
   render() {
     return (
       <>
@@ -117,7 +133,7 @@ export default class FaqView extends Component {
           </div>
         </section>
 
-        <section className="section last">
+        <section className="section">
           <div className="box content">
             <h3>Do you have any dog training tips that I can use at home?</h3>
             <p className="is-size-6-desktop">

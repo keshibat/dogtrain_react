@@ -13,6 +13,8 @@ class BookingView extends Component {
     confirmed: {}
   };
 
+
+  //change this later to not use async, make use of props
   async componentDidMount() {
     const confirmedDates = await this.getConfirmed();
     console.log(confirmedDates);
@@ -20,9 +22,7 @@ class BookingView extends Component {
   }
 
   getConfirmed = async () => {
-    const response = await axios.get(
-      "https://dogsdata.herokuapp.com/bookings/confirmed"
-    );
+    const response = await axios.get("http://localhost:5000/bookings/confirmed");
     return response.data;
   };
 
@@ -48,10 +48,7 @@ class BookingView extends Component {
       bookingDate
     };
 
-    const response = await axios.post(
-      "https://dogsdata.herokuapp.com/bookings",
-      newBooking
-    );
+    const response = await axios.post("http://localhost:5000/bookings", newBooking);
     console.log(response);
     this.setState({
       firstName: "",
@@ -66,7 +63,16 @@ class BookingView extends Component {
   };
 
   render() {
-    const { firstName, lastName, email, details, bookingDate } = this.state;
+  console.log(this.props);
+  console.log(this.props.testing);
+
+    const { 
+      firstName,
+      lastName,
+      email,
+      details,
+      bookingDate,
+    } = this.state;
 
     const tileContent = ({ date, view }) => {
       const dates = this.state.confirmed;
