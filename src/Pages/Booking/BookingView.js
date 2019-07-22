@@ -79,7 +79,7 @@ class BookingView extends Component {
 
     if (fetching) {
       return <Loader />;
-  }
+    }
 
     const tileClassName = ({ date, view }) => {
       const dates = this.state.confirmed;

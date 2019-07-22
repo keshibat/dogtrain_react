@@ -23,6 +23,7 @@ class BookingsEditView extends Component {
         .then(res => this.setState({ fetching: false, ...res.data }));
     }
     
+    //convert date that will be displayed on edit form
     convertDate(date) {
         if (Date.parse(date)) {
             return new Date(date).toISOString().slice(0,10);
@@ -76,8 +77,6 @@ class BookingsEditView extends Component {
             fetching
         } = this.state;
 
-        const dateString = new Date(bookingDate).toLocaleDateString() || "";
-
         if (this.state.fetching) {
             return <Loader />;
         }
@@ -112,7 +111,7 @@ class BookingsEditView extends Component {
                 <div className="field">
                 <label className="label">Date of Training Session</label>
                 <div className="control">
-                <input className="input" type="date" name="bookingDate" value={new Date(bookingDate).toISOString().slice(0,10)} onChange={(event) => this.onInputChange("bookingDate", event)} />
+                <input className="input" type="date" name="bookingDate" value={this.convertDate(bookingDate)} onChange={(event) => this.onInputChange("bookingDate", event)} />
                 </div>
                 </div>
 
@@ -151,7 +150,7 @@ class BookingsEditView extends Component {
 
                 <div className="field is-centered">
                 <div className="formButton control">
-                <input className="button is-primary" type="submit" value="Save" />
+                <input className="button is-link" type="submit" value="Save" />
                 </div>
                 </div>
             </form>
