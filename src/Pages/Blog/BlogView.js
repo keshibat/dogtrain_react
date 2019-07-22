@@ -1,21 +1,37 @@
 import React, { Component } from "react";
 import BlogCSS from "./../../assets/styles/BlogSCSS/BlogCSS.css";
+import Loader from "./../../components/Loader";
 
 class BlogView extends Component {
   constructor() {
     super();
     this.state = {
-      blog: {}
+      blog: {},
+      // fetching: true
     };
   }
 
   componentDidMount() {
-    window.mediumWidget();
+
+    // const ttt = () => {
+
+      window.mediumWidget();
+    // this.setState({ fetching: false })
+
+      // return console.log("run");
+    // }
+    // await ttt();
+
+    // console.log(test);
   }
 
   render() {
     const { name, height } = this.state.blog;
     // const blogContent = this.state.blog.name;
+    // if (this.state.fetching) {
+    //   return <Loader />;
+    // }
+
     return (
       <>
         <section className="section title-heading">

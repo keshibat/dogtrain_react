@@ -23,6 +23,13 @@ class BookingsEditView extends Component {
         .then(res => this.setState({ fetching: false, ...res.data }));
     }
     
+    convertDate(date) {
+        if (Date.parse(date)) {
+            return new Date(date).toISOString().slice(0,10);
+        }
+        return null;
+    }
+
     onInputChange = (name, event) => {
         console.log(event.target.value);
         this.setState({ [name]: event.target.value });
@@ -105,7 +112,7 @@ class BookingsEditView extends Component {
                 <div className="field">
                 <label className="label">Date of Training Session</label>
                 <div className="control">
-                <input className="input" type="text" name="bookingDate" value={bookingDate} onChange={(event) => this.onInputChange("bookingDate", event)} />
+                <input className="input" type="date" name="bookingDate" value={new Date(bookingDate).toISOString().slice(0,10)} onChange={(event) => this.onInputChange("bookingDate", event)} />
                 </div>
                 </div>
 
