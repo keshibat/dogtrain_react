@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Calendar from "react-calendar";
+import Loader from "./../../components/Loader";
 import bookingViewCSS from "./../../assets/styles/BookingSCSS/bookingView.css";
+import Messages from "./../../components/Messages";
+
 
 class BookingView extends Component {
   state = {
@@ -10,7 +13,9 @@ class BookingView extends Component {
     email: "",
     details: "",
     bookingDate: new Date(),
-    confirmed: {}
+    confirmed: {},
+    fetching: true,
+    message: null
   };
 
 
@@ -18,7 +23,7 @@ class BookingView extends Component {
   async componentDidMount() {
     const confirmedDates = await this.getConfirmed();
     console.log(confirmedDates);
-    this.setState({ confirmed: { ...confirmedDates } });
+    this.setState({ confirmed: { ...confirmedDates }, fetching: false });
   }
 
   getConfirmed = async () => {
@@ -37,7 +42,7 @@ class BookingView extends Component {
   //have a message display saying a email has been sent and booking will be confirmed by trainer
   onFormSubmit = async event => {
     event.preventDefault();
-
+    this.setState({ fetching: true });
     const { firstName, lastName, email, details, bookingDate } = this.state;
 
     const newBooking = {
@@ -55,7 +60,9 @@ class BookingView extends Component {
       lastName: "",
       email: "",
       details: "",
-      bookingDate: new Date()
+      bookingDate: new Date(),
+      fetching: false,
+      message: "Your booking has been sent and will be reviewed by our trainers. We will be in contact with you shortly."
     });
   };
 
@@ -66,7 +73,13 @@ class BookingView extends Component {
       email,
       details,
       bookingDate,
+      fetching,
+      message
     } = this.state;
+
+    if (fetching) {
+      return <Loader />;
+  }
 
     const tileClassName = ({ date, view }) => {
       const dates = this.state.confirmed;
@@ -86,6 +99,8 @@ class BookingView extends Component {
             </div>
           </div>
         </section>
+
+        {message ? Messages(message) : null}
 
         <section className="section">
           <div className="container">
@@ -228,7 +243,7 @@ class BookingView extends Component {
                   <div className="field is-centered">
                     <div className="formButton control">
                       <input
-                        className="button is-primary"
+                        className="button is-link"
                         type="submit"
                         value="Book"
                       />
