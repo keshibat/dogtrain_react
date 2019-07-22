@@ -7,33 +7,21 @@ class BlogView extends Component {
     super();
     this.state = {
       blog: {},
-      // fetching: true
+      fetching: true
     };
   }
 
   componentDidMount() {
-
-    // const ttt = () => {
-
-      window.mediumWidget();
-    // this.setState({ fetching: false })
-
-      // return console.log("run");
-    // }
-    // await ttt();
-
-    // console.log(test);
+      window.mediumWidget(); //not async
+      setTimeout(() => {this.setState({ fetching: false })}, 1000);
   }
 
   render() {
     const { name, height } = this.state.blog;
-    // const blogContent = this.state.blog.name;
-    // if (this.state.fetching) {
-    //   return <Loader />;
-    // }
 
     return (
       <>
+      {this.state.fetching ? <Loader /> : null}
         <section className="section title-heading">
           <div className="container">
             <div className="content has-text-centered">
