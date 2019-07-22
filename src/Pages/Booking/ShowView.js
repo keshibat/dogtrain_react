@@ -18,8 +18,8 @@ class BookingsShowView extends Component {
     }
 
     // getBooking = async () => {
-    //     const id = this.props.match.params.id;
-    //     const response = await axios.get(`https://dogsdata.herokuapp.com/bookings/${id}`);   
+    //     const { id } = this.props.match.params;
+    //     const response = await LocalAPI.get(`/bookings/${id}`);   
     //     return response.data;
     // }
 
@@ -27,7 +27,17 @@ class BookingsShowView extends Component {
         event.preventDefault();
         const { id } = this.props.match.params;
         const response = await LocalAPI.delete(`/bookings/${id}`);
-        return this.props.history.push("/admin");
+        this.props.history.push("/admin");
+    }
+
+    onConfirmClick = async (event) => {
+        event.preventDefault();
+        this.setState({fetching: true });
+        const { id } = this.props.match.params;
+        await LocalAPI.put(`/bookings/${id}/confirm`);
+        //optimize later
+        LocalAPI.get(`/bookings/${id}`)
+        .then(res => this.setState({ booking: {...res.data}, fetching: false }));
     }
 
     render() {
@@ -62,6 +72,7 @@ class BookingsShowView extends Component {
                 <li><span>Details: </span> {details}</li>
             </ul>
             <p>
+                <a href="" onClick={this.onConfirmClick}>Confirm</a> | {}
                 <Link to={`/bookings/${this.props.match.params.id}/edit`}>Edit</Link> | {}
                 <a href="" onClick={this.onDeleteClick}>Delete</a> | {}
                 <Link to={"/admin"}>Back</Link>
