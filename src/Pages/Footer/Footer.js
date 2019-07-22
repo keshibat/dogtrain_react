@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import mystyles from "./../../assets/styles/FooterSCSS/mystyles.css";
 
 
 class Footer extends Component {
@@ -15,10 +16,16 @@ class Footer extends Component {
           </h5>
         </div>
         <div>
-          <div class="has-text-centered is-size-1">
-            <FontAwesomeIcon icon={['fab', 'instagram']} />
-            <FontAwesomeIcon icon={['fab', 'twitter-square']} />
-            <FontAwesomeIcon icon={['fab', 'facebook-square']} />
+          <div className="columns has-text-centered is-size-1 is-gapless">
+            <div class="column">
+              <div className="footericons">
+                <FontAwesomeIcon icon={['fab', 'instagram']} />
+
+                <FontAwesomeIcon icon={['fab', 'twitter-square']} />
+
+                <FontAwesomeIcon icon={['fab', 'facebook-square']} />
+              </div>
+            </div>
           </div>
         </div>
       </footer>
