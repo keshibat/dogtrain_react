@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Calendar from "react-calendar";
+import Loader from "./../../components/Loader";
 import bookingViewCSS from "./../../assets/styles/BookingSCSS/bookingView.css";
+import Messages from "./../../components/Messages";
 
 class BookingView extends Component {
   state = {
@@ -10,18 +12,21 @@ class BookingView extends Component {
     email: "",
     details: "",
     bookingDate: new Date(),
-    confirmed: {}
+    confirmed: {},
+    fetching: true,
+    message: null
   };
 
+  //change this later to not use async, make use of props
   async componentDidMount() {
     const confirmedDates = await this.getConfirmed();
     console.log(confirmedDates);
-    this.setState({ confirmed: { ...confirmedDates } });
+    this.setState({ confirmed: { ...confirmedDates }, fetching: false });
   }
 
   getConfirmed = async () => {
     const response = await axios.get(
-      "https://dogsdata.herokuapp.com/bookings/confirmed"
+      `${process.env.REACT_APP_API_URL}/bookings/confirmed`
     );
     return response.data;
   };
@@ -37,7 +42,7 @@ class BookingView extends Component {
   //have a message display saying a email has been sent and booking will be confirmed by trainer
   onFormSubmit = async event => {
     event.preventDefault();
-
+    this.setState({ fetching: true });
     const { firstName, lastName, email, details, bookingDate } = this.state;
 
     const newBooking = {
@@ -49,7 +54,7 @@ class BookingView extends Component {
     };
 
     const response = await axios.post(
-      "https://dogsdata.herokuapp.com/bookings",
+      `${process.env.REACT_APP_API_URL}/bookings`,
       newBooking
     );
     console.log(response);
@@ -58,27 +63,35 @@ class BookingView extends Component {
       lastName: "",
       email: "",
       details: "",
-      bookingDate: new Date()
+      bookingDate: new Date(),
+      fetching: false,
+      message:
+        "Your booking has been sent and will be reviewed by our trainers. We will be in contact with you shortly."
     });
-    //this.setState, you can update your state with new data and page will also reload
-    //clean up later to optimize getting confirmed bookings
-    //you want confirmed dates to be given back after form submit (actually not necessary as bookings are confirmed manually)
   };
 
   render() {
-    const { firstName, lastName, email, details, bookingDate } = this.state;
+    const {
+      firstName,
+      lastName,
+      email,
+      details,
+      bookingDate,
+      fetching,
+      message
+    } = this.state;
 
-    const tileContent = ({ date, view }) => {
-      const dates = this.state.confirmed;
-      //!confirmed[date] && confirmed[date] > 1
-      return view === "month" && dates[date.toDateString()] ? (
-        <p>Today is booked!</p>
-      ) : null;
-    };
+    if (fetching) {
+      return <Loader />;
+    }
 
     const tileClassName = ({ date, view }) => {
       const dates = this.state.confirmed;
-      return view === "month" && dates[date.toDateString()] ? "booked" : null;
+      if (view === "month") {
+        if (dates[date.toDateString()] >= 2) return "keyBusy";
+        if (dates[date.toDateString()] === 1) return "keySBusy";
+        return null;
+      }
     };
 
     return (
@@ -90,26 +103,41 @@ class BookingView extends Component {
             </div>
           </div>
         </section>
-        <section className="section cancelpolicy">
-          <div className="box content">
+
+        {message ? Messages(message) : null}
+
+        <section className="section">
+          <div className="container">
+            <div className="content has-text-centered" />
+          </div>
+
+          <div className="container">
             <div className="content has-text-centered">
-              <h3>Missed Appointment and Cancellation Policy </h3>
-              <p>
-                If you are unable to keep an appointment please give at least 24
-                hours notice to ensure that you will not be charge for the
-                appointment or part-thereof.
-              </p>
-              <p>
-                12 to 24 hours notice of cancellation will require $50 value to
-                be paid, less than 12 hours notice will require full payment.
-              </p>
-              <p>
-                Thank you for your consideration in ensuring that adequate
-                notice is given.
-              </p>
+              <div className="columns is-centered">
+                <div className="column is-half booking">
+                  <div className="box content">
+                    <h3>Missed Appointment and Cancellation Policy </h3>
+                    <p>
+                      If you are unable to keep an appointment please give at
+                      least 24 hours notice to ensure that you will not be
+                      charge for the appointment or part-thereof.
+                    </p>
+                    <p>
+                      12 to 24 hours notice of cancellation will require $50
+                      value to be paid, less than 12 hours notice will require
+                      full payment.
+                    </p>
+                    <p>
+                      Thank you for your consideration in ensuring that adequate
+                      notice is given.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
         <section className="section">
           <div className="calendar container">
             <div className="columns">
@@ -219,7 +247,7 @@ class BookingView extends Component {
                   <div className="field is-centered">
                     <div className="formButton control">
                       <input
-                        className="button is-primary"
+                        className="button is-link"
                         type="submit"
                         value="Book"
                       />

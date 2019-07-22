@@ -1,9 +1,19 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
 
-.box.content.home {
-  height: 97.5%;
+h1 h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+p {
+  font-family: "PT Sans", sans-serif;
+}
+
+div.box.content.home {
+  height: 100%;
   padding: 0;
   border-radius: 25px;
+  box-shadow: none;
 }
 
 ul {
@@ -48,6 +58,12 @@ ul {
 
 .content:hover .content-overlay {
   opacity: 1;
+}
+
+div.column.one {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 .content-image {
@@ -98,8 +114,6 @@ ul {
 img.content-image {
   border-radius: 25px;
   height: 100%;
-}
-
-div.box.content.home {
-  box-shadow: none;
+  width: 100%;
+  object-fit: cover;
 }

@@ -22,9 +22,7 @@ class HomeView extends Component {
         <section className="section title-heading">
           <div className="container">
             <div className="content has-text-centered">
-              <h1>
-                Expert Puppy Training, Dog Obedience & Dog Behaviour Training
-              </h1>
+              <h1>Expert Dog Training</h1>
             </div>
           </div>
         </section>
@@ -33,13 +31,15 @@ class HomeView extends Component {
           <div className="container">
             <div className="columns">
               <div className="column one">
+                <h5 className="title is-5">Puppies</h5>
                 <Link to="/puppy">
                   <div className="box content home">
-                    <div class="content-overlay" />
-                    <img class="content-image" src={Puppy} />
-                    <div class="content-details fadeIn-bottom">
-                      <h3 class="content-title">Puppies</h3>
-                      <p class="content-text">
+                    <div className="content-overlay" />
+                    <img className="content-image" src={Puppy} />
+
+                    <div className="content-details fadeIn-bottom">
+                      <h3 className="content-title">Puppies</h3>
+                      <p className="content-text">
                         Puppy toilet training, play biting, crying, barking,
                         nipping or jumping?
                       </p>
@@ -49,13 +49,14 @@ class HomeView extends Component {
                 </Link>
               </div>
               <div className="column one">
+                <h5 className="title is-5">Older Dogs</h5>
                 <Link to="/naughty">
                   <div className="box content home">
-                    <div class="content-overlay" />
-                    <img class="content-image" src={AdultDog} />
-                    <div class="content-details fadeIn-bottom">
-                      <h3 class="content-title">Older Dogs</h3>
-                      <p class="content-text">
+                    <div className="content-overlay" />
+                    <img className="content-image" src={AdultDog} />
+                    <div className="content-details fadeIn-bottom">
+                      <h3 className="content-title">Older Dogs</h3>
+                      <p className="content-text">
                         Your adult dog toilets inside or on furniture, jumps up,
                         won't come when called, pulls on leash or plays too
                         roughly?
@@ -67,13 +68,14 @@ class HomeView extends Component {
               </div>
 
               <div className="column one">
+                <h5 className="title is-5">Barking</h5>
                 <Link to="/naughty">
                   <div className="box content home">
-                    <div class="content-overlay" />
-                    <img class="content-image" src={BarkingDog} />
-                    <div class="content-details fadeIn-bottom">
-                      <h3 class="content-title">Noisy Dogs</h3>
-                      <p class="content-text">
+                    <div className="content-overlay" />
+                    <img className="content-image" src={BarkingDog} />
+                    <div className="content-details fadeIn-bottom">
+                      <h3 className="content-title">Noisy Dogs</h3>
+                      <p className="content-text">
                         Your dog is noisy, barking, crying, howling or whining?
                       </p>
                       <p />
@@ -82,13 +84,14 @@ class HomeView extends Component {
                 </Link>
               </div>
               <div className="column one">
+                <h5 className="title is-5">New Family Introduction</h5>
                 <Link to="/newfamilymember">
                   <div className="box content home">
-                    <div class="content-overlay" />
-                    <img class="content-image" src={AdoptionDog} />
-                    <div class="content-details fadeIn-bottom">
-                      <h3 class="content-title">New Family Introduction</h3>
-                      <p class="content-text">
+                    <div className="content-overlay" />
+                    <img className="content-image" src={AdoptionDog} />
+                    <div className="content-details fadeIn-bottom">
+                      <h3 className="content-title">New Family Introduction</h3>
+                      <p className="content-text">
                         Introducing a new baby or pet into the household?
                       </p>
                       <p />
@@ -101,13 +104,14 @@ class HomeView extends Component {
           <div className="container">
             <div className="columns">
               <div className="column one">
+                <h5 className="title is-5">Apartments</h5>
                 <Link to="/apartment">
                   <div className="box content home">
-                    <div class="content-overlay" />
-                    <img class="content-image" src={ApartmentDog} />
-                    <div class="content-details fadeIn-bottom">
-                      <h3 class="content-title">Apartment Training</h3>
-                      <p class="content-text">
+                    <div className="content-overlay" />
+                    <img className="content-image" src={ApartmentDog} />
+                    <div className="content-details fadeIn-bottom">
+                      <h3 className="content-title">Apartment Training</h3>
+                      <p className="content-text">
                         Your dog needs to learn to live in an apartment, use
                         designated toilet area, ​be well behaved in public
                         areas, be quiet and calm?
@@ -118,13 +122,14 @@ class HomeView extends Component {
                 </Link>
               </div>
               <div className="column one">
+                <h5 className="title is-5">Aggression</h5>
                 <Link to="/naughty">
                   <div className="box content home">
-                    <div class="content-overlay" />
-                    <img class="content-image" src={DogAggression} />
-                    <div class="content-details fadeIn-bottom">
-                      <h3 class="content-title">Aggression</h3>
-                      <p class="content-text">
+                    <div className="content-overlay" />
+                    <img className="content-image" src={DogAggression} />
+                    <div className="content-details fadeIn-bottom">
+                      <h3 className="content-title">Aggression</h3>
+                      <p className="content-text">
                         Your dog is aggressive or destructive? Chewing, digging,
                         stealing or tearing?
                       </p>
@@ -134,13 +139,14 @@ class HomeView extends Component {
                 </Link>
               </div>
               <div className="column one">
+                <h5 className="title is-5">Fearful</h5>
                 <Link to="/rescued">
                   <div className="box content home">
-                    <div class="content-overlay" />
-                    <img class="content-image" src={DogSad} />
-                    <div class="content-details fadeIn-bottom">
-                      <h3 class="content-title">Fearful</h3>
-                      <p class="content-text">
+                    <div className="content-overlay" />
+                    <img className="content-image" src={DogSad} />
+                    <div className="content-details fadeIn-bottom">
+                      <h3 className="content-title">Fearful</h3>
+                      <p className="content-text">
                         Your rescue dog is fearful, insecure, destructive, has
                         separation anxiety and or needs obedience?
                       </p>
@@ -150,13 +156,14 @@ class HomeView extends Component {
                 </Link>
               </div>
               <div className="column one">
+                <h5 className="title is-5">Reactive</h5>
                 <Link to="/feaful">
                   <div className="box content home">
-                    <div class="content-overlay" />
-                    <img class="content-image" src={DogReactive} />
-                    <div class="content-details fadeIn-bottom">
-                      <h3 class="content-title">Reactive</h3>
-                      <p class="content-text">
+                    <div className="content-overlay" />
+                    <img className="content-image" src={DogReactive} />
+                    <div className="content-details fadeIn-bottom">
+                      <h3 className="content-title">Reactive</h3>
+                      <p className="content-text">
                         Your dog is reactive, timid, fear aggressive, insecure,
                         frightened by noises?
                       </p>
@@ -189,7 +196,7 @@ class HomeView extends Component {
                     charSet="utf-8"
                   />
                 </div>
-                <div className="column" />
+                <div className="column one" />
               </div>
             </div>
           </div>
