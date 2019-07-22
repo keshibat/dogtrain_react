@@ -22,7 +22,7 @@ class BookingView extends Component {
   }
 
   getConfirmed = async () => {
-    const response = await axios.get("http://localhost:5000/bookings/confirmed");
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/bookings/confirmed`);
     return response.data;
   };
 
@@ -48,7 +48,7 @@ class BookingView extends Component {
       bookingDate
     };
 
-    const response = await axios.post("http://localhost:5000/bookings", newBooking);
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/bookings`, newBooking);
     console.log(response);
     this.setState({
       firstName: "",
@@ -57,15 +57,9 @@ class BookingView extends Component {
       details: "",
       bookingDate: new Date()
     });
-    //this.setState, you can update your state with new data and page will also reload
-    //clean up later to optimize getting confirmed bookings
-    //you want confirmed dates to be given back after form submit (actually not necessary as bookings are confirmed manually)
   };
 
   render() {
-  console.log(this.props);
-  console.log(this.props.testing);
-
     const { 
       firstName,
       lastName,
@@ -74,17 +68,13 @@ class BookingView extends Component {
       bookingDate,
     } = this.state;
 
-    const tileContent = ({ date, view }) => {
-      const dates = this.state.confirmed;
-      //!confirmed[date] && confirmed[date] > 1
-      return view === "month" && dates[date.toDateString()] ? (
-        <p>Today is booked!</p>
-      ) : null;
-    };
-
     const tileClassName = ({ date, view }) => {
       const dates = this.state.confirmed;
-      return view === "month" && dates[date.toDateString()] ? "booked" : null;
+      if (view === "month") {
+        if (dates[date.toDateString()] >= 2) return "keyBusy";
+        if (dates[date.toDateString()] === 1) return "keySBusy";
+        return null;
+      }
     };
 
     return (
