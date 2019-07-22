@@ -36,6 +36,7 @@ class HomeView extends Component {
                   <div className="box content home">
                     <div className="content-overlay" />
                     <img className="content-image" src={Puppy} />
+
                     <div className="content-details fadeIn-bottom">
                       <h3 className="content-title">Puppies</h3>
                       <p className="content-text">
