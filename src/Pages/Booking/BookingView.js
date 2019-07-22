@@ -5,7 +5,6 @@ import Loader from "./../../components/Loader";
 import bookingViewCSS from "./../../assets/styles/BookingSCSS/bookingView.css";
 import Messages from "./../../components/Messages";
 
-
 class BookingView extends Component {
   state = {
     firstName: "",
@@ -18,7 +17,6 @@ class BookingView extends Component {
     message: null
   };
 
-
   //change this later to not use async, make use of props
   async componentDidMount() {
     const confirmedDates = await this.getConfirmed();
@@ -27,7 +25,9 @@ class BookingView extends Component {
   }
 
   getConfirmed = async () => {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}/bookings/confirmed`);
+    const response = await axios.get(
+      `${process.env.REACT_APP_API_URL}/bookings/confirmed`
+    );
     return response.data;
   };
 
@@ -53,7 +53,10 @@ class BookingView extends Component {
       bookingDate
     };
 
-    const response = await axios.post(`${process.env.REACT_APP_API_URL}/bookings`, newBooking);
+    const response = await axios.post(
+      `${process.env.REACT_APP_API_URL}/bookings`,
+      newBooking
+    );
     console.log(response);
     this.setState({
       firstName: "",
@@ -62,12 +65,13 @@ class BookingView extends Component {
       details: "",
       bookingDate: new Date(),
       fetching: false,
-      message: "Your booking has been sent and will be reviewed by our trainers. We will be in contact with you shortly."
+      message:
+        "Your booking has been sent and will be reviewed by our trainers. We will be in contact with you shortly."
     });
   };
 
   render() {
-    const { 
+    const {
       firstName,
       lastName,
       email,
@@ -136,7 +140,7 @@ class BookingView extends Component {
 
         <section className="section">
           <div className="calendar container">
-            <div className="column">
+            <div className="columns">
               <div className="column calender">
                 <h2>
                   <b>Choose a date:</b>

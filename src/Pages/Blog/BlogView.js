@@ -6,14 +6,18 @@ class BlogView extends Component {
   constructor() {
     super();
     this.state = {
+
       blog: {},
       fetching: true
+
     };
   }
 
   componentDidMount() {
+
       window.mediumWidget(); //not async
       setTimeout(() => {this.setState({ fetching: false })}, 1000);
+
   }
 
   render() {
