@@ -22,9 +22,7 @@ class HomeView extends Component {
         <section className="section title-heading">
           <div className="container">
             <div className="content has-text-centered">
-              <h1>
-                Expert Puppy Training, Dog Obedience & Dog Behaviour Training
-              </h1>
+              <h1>Expert Dog Training</h1>
             </div>
           </div>
         </section>
@@ -33,10 +31,12 @@ class HomeView extends Component {
           <div className="container">
             <div className="columns">
               <div className="column one">
+                <h5 className="title is-5">Puppies</h5>
                 <Link to="/puppy">
                   <div className="box content home">
                     <div className="content-overlay" />
                     <img className="content-image" src={Puppy} />
+
                     <div className="content-details fadeIn-bottom">
                       <h3 className="content-title">Puppies</h3>
                       <p className="content-text">
@@ -49,6 +49,7 @@ class HomeView extends Component {
                 </Link>
               </div>
               <div className="column one">
+                <h5 className="title is-5">Older Dogs</h5>
                 <Link to="/naughty">
                   <div className="box content home">
                     <div className="content-overlay" />
@@ -67,6 +68,7 @@ class HomeView extends Component {
               </div>
 
               <div className="column one">
+                <h5 className="title is-5">Barking</h5>
                 <Link to="/naughty">
                   <div className="box content home">
                     <div className="content-overlay" />
@@ -82,6 +84,7 @@ class HomeView extends Component {
                 </Link>
               </div>
               <div className="column one">
+                <h5 className="title is-5">New Family Introduction</h5>
                 <Link to="/newfamilymember">
                   <div className="box content home">
                     <div className="content-overlay" />
@@ -101,6 +104,7 @@ class HomeView extends Component {
           <div className="container">
             <div className="columns">
               <div className="column one">
+                <h5 className="title is-5">Apartments</h5>
                 <Link to="/apartment">
                   <div className="box content home">
                     <div className="content-overlay" />
@@ -118,6 +122,7 @@ class HomeView extends Component {
                 </Link>
               </div>
               <div className="column one">
+                <h5 className="title is-5">Aggression</h5>
                 <Link to="/naughty">
                   <div className="box content home">
                     <div className="content-overlay" />
@@ -134,6 +139,7 @@ class HomeView extends Component {
                 </Link>
               </div>
               <div className="column one">
+                <h5 className="title is-5">Fearful</h5>
                 <Link to="/rescued">
                   <div className="box content home">
                     <div className="content-overlay" />
@@ -150,6 +156,7 @@ class HomeView extends Component {
                 </Link>
               </div>
               <div className="column one">
+                <h5 className="title is-5">Reactive</h5>
                 <Link to="/feaful">
                   <div className="box content home">
                     <div className="content-overlay" />
@@ -189,22 +196,7 @@ class HomeView extends Component {
                     charSet="utf-8"
                   />
                 </div>
-                <div className="column one">
-                  <a
-                    className="twitter-timeline"
-                    data-theme="light"
-                    href="https://twitter.com/MuttswithMannrs?ref_src=twsrc%5Etfw"
-                    data-width="100%"
-                    data-height="320px"
-                  >
-                    Tweets by MuttswithMannrs
-                  </a>
-                  <script
-                    async
-                    src="https://platform.twitter.com/widgets.js"
-                    charSet="utf-8"
-                  />
-                </div>
+                <div className="column one" />
               </div>
             </div>
           </div>

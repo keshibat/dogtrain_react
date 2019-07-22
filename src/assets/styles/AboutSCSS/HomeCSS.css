@@ -9,10 +9,11 @@ p {
   font-family: "PT Sans", sans-serif;
 }
 
-.box.content.home {
-  height: 97.5%;
+div.box.content.home {
+  height: 100%;
   padding: 0;
   border-radius: 25px;
+  box-shadow: none;
 }
 
 ul {
@@ -57,6 +58,12 @@ ul {
 
 .content:hover .content-overlay {
   opacity: 1;
+}
+
+div.column.one {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 .content-image {
@@ -107,8 +114,6 @@ ul {
 img.content-image {
   border-radius: 25px;
   height: 100%;
-}
-
-div.box.content.home {
-  box-shadow: none;
+  width: 100%;
+  object-fit: cover;
 }
