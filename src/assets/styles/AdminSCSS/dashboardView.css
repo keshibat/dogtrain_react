@@ -1,8 +1,20 @@
 .bookingDetails {
-    display: block;
+  display: block;
 }
 
 .bookingOptions {
-    display: block;
-    padding-left: 10px;
+  display: block;
+  padding-left: 10px;
+}
+
+a.booking-box:hover {
+  color: #3273dc;
+}
+
+a.booking-box {
+  color: rgb(0, 0, 0);
+}
+
+span.bookingDetails {
+  text-align: center;
 }
