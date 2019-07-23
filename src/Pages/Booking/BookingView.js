@@ -90,29 +90,42 @@ class BookingView extends Component {
             </div>
           </div>
         </section>
-        <section className="section cancelpolicy">
-          <div className="box content">
+
+        <section className="section">
+          <div className="container">
+            <div className="content has-text-centered" />
+          </div>
+
+          <div className="container">
             <div className="content has-text-centered">
-              <h3>Missed Appointment and Cancellation Policy </h3>
-              <p>
-                If you are unable to keep an appointment please give at least 24
-                hours notice to ensure that you will not be charge for the
-                appointment or part-thereof.
-              </p>
-              <p>
-                12 to 24 hours notice of cancellation will require $50 value to
-                be paid, less than 12 hours notice will require full payment.
-              </p>
-              <p>
-                Thank you for your consideration in ensuring that adequate
-                notice is given.
-              </p>
+              <div className="columns is-centered">
+                <div className="column is-half booking">
+                  <div className="box content">
+                    <h3>Missed Appointment and Cancellation Policy </h3>
+                    <p>
+                      If you are unable to keep an appointment please give at
+                      least 24 hours notice to ensure that you will not be
+                      charge for the appointment or part-thereof.
+                    </p>
+                    <p>
+                      12 to 24 hours notice of cancellation will require $50
+                      value to be paid, less than 12 hours notice will require
+                      full payment.
+                    </p>
+                    <p>
+                      Thank you for your consideration in ensuring that adequate
+                      notice is given.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
         <section className="section">
           <div className="calendar container">
-            <div className="columns">
+            <div className="column">
               <div className="column calender">
                 <h2>
                   <b>Choose a date:</b>
