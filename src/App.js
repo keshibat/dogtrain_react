@@ -1,6 +1,8 @@
 import React from "react";
 import "bulma/css/bulma.css";
 import { BrowserRouter, Route } from "react-router-dom";
+import LocalAPI from "./apis/local";
+import PrivateRoute from "./components/PrivateRoute";
 import HomeView from "./Pages/Home/HomeView";
 import AboutMeView from "./Pages/About/AboutMeView";
 import AreasWeServiceView from "./Pages/About/AreasWeServiceView";
@@ -21,7 +23,16 @@ import BlogView from "./Pages/Blog/BlogView";
 import ShopView from "./Pages/Shop/ShopView";
 import BookingView from "./Pages/Booking/BookingView";
 import Navbar from "./Pages/Navbar/Navbar";
+
 import Footer from "./Pages/Footer/Footer";
+
+
+//admin
+import LoginView from "./Pages/Admin/LoginView";
+import DashboardView from "./Pages/Admin/DashboardView";
+//bookings
+import BookingsShowView from "./Pages/Booking/ShowView";
+import BookingsEditView from "./Pages/Booking/EditView";
 
 
 
@@ -35,19 +46,28 @@ import {
 library.add(fab, fas, faQuoteLeft, faFacebookSquare, faTwitterSquare, faInstagram);
 
 class App extends React.Component {
-  componentDidMount() {
-    fetch("https://dogsdata.herokuapp.com/")
-      .then(function(response) {
-        console.log(response);
-      })
-      .then(function(myJson) {
-        console.log(JSON.stringify(myJson));
-      });
+  constructor(props) {
+    super(props);
+    const token = sessionStorage.getItem("token") || null;
+    this.state = { token };
+
+    if (token) {
+      LocalAPI.setAuthHeader(token);
+    }
   }
 
+  onLoginFormSubmit = (token, callback) => {
+    sessionStorage.setItem("token", token);
+    LocalAPI.setAuthHeader(token);
+    this.setState({token}, callback);
+  }
+  
   render() {
+    const { token } = this.state;
+
     return (
       <div>
+        { token && <h4>User Logged In!</h4> }
         <BrowserRouter>
           <Navbar />
           <div>
@@ -80,6 +100,14 @@ class App extends React.Component {
             <Route exact path="/blog" component={BlogView} />
             <Route exact path="/shop" component={ShopView} />
             <Route exact path="/booking" component={BookingView} />
+
+            <PrivateRoute exact path="/admin" component={DashboardView} token={token} />
+            <Route exact path="/admin/login" render={(props) => <LoginView {...props} onLoginFormSubmit={this.onLoginFormSubmit} />} />
+
+            <PrivateRoute exact path="/bookings/:id" component={BookingsShowView} token={token} />
+            <PrivateRoute exact path="/bookings/:id/edit" component={BookingsEditView} token={token} />
+
+            {/* <Route component={NotFoundPage} /> */}
           </div>
         </BrowserRouter>
         <Footer />
