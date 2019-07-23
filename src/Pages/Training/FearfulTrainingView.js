@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import mystyles from "./../../assets/styles/TrainningSCSS/mystyles.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import DogSad from "./../../assets/images/home/sad-dog.jpeg";
 
 
 
@@ -16,15 +17,18 @@ class FearfulTrainingView extends Component {
               </h1>
               <br />
               <h2 className="subtitle has-text-left">
+                <i className="has-text-grey">
                 Some dogs are born with phobias, many develop them as they experience life.
-                Some choose to attack what they’re worried about, others prefer to run away.
-                We prefer to enable them to relax.
+                  Some choose to attack what they’re worried about, others prefer to run away.
+                  We prefer to enable them to relax.
+                </i>
               </h2>
             </div>
           </div>
         </section>
 
         <section className="has-background-light">
+          <div className="box content">
           <div className="columns">
             <div className="column">
               <article className="message is-info">
@@ -34,7 +38,7 @@ class FearfulTrainingView extends Component {
                 <div className="message-body">
                   <div className="content">
                     <figure className="image is-4by3">
-                      <img src="http://via.placeholder.com/640x360" />
+                      <img src={DogSad} />
                     </figure>
                   </div>
                 </div>
@@ -83,6 +87,7 @@ class FearfulTrainingView extends Component {
               </article>
             </div>
           </div>
+        </div>
         </section>
 
         <section className="hero">
@@ -135,6 +140,7 @@ class FearfulTrainingView extends Component {
         </section>
 
         <section className="hero has-background-light">
+
           <div className="hero-body">
             <div className="container">
               <h1 className="title has-text-centered">
@@ -142,19 +148,26 @@ class FearfulTrainingView extends Component {
               </h1>
               <br />
               <h2 className="subtitle has-text-left">
-                If you are unable to keep an appointment
-                please give at least 24 hours notice to ensure that
-                you will not be charge for the appointment or part-thereof.
+                <i className="has-text-grey">
+                  If you are unable to keep an appointment
+                    please give at least 24 hours notice to ensure that
+                    you will not be charge for the appointment or part-thereof.
+                </i>
               </h2>
               <h2 className="subtitle has-text-left">
-                12 to 24 hours notice of cancellation will require $50 value to be paid,
-                less than 12 hours notice will require full payment.
+                <i className="has-text-grey">
+                  12 to 24 hours notice of cancellation will require $50 value to be paid,
+                  less than 12 hours notice will require full payment.
+                </i>
               </h2>
               <h2 className="subtitle has-text-left">
-                Thank you for your consideration in ensuring that adequate notice is given.
+                <i className="has-text-grey">
+                  Thank you for your consideration in ensuring that adequate notice is given.
+                </i>
               </h2>
             </div>
           </div>
+
         </section>
 
       </>

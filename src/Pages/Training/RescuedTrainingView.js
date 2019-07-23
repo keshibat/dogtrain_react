@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import mystyles from "./../../assets/styles/TrainningSCSS/mystyles.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import Rescued from "./../../assets/images/trainning/rescue_dog.jpg";
 
 
 class RescuedTrainingView extends Component {
   render() {
     return (
       <>
-        <section className="hero section">
+        <section className="hero section ">
           <div className="hero-body">
             <div className="container">
               <h1 className="title has-text-centered">
@@ -16,14 +16,16 @@ class RescuedTrainingView extends Component {
               </h1>
               <br />
               <h2 className="subtitle has-text-left">
+                <i className="has-text-grey">
                 Learn to understand and guide your rescued dog to handle separation anxiety, fear, aggression and many other issues with our in-home dog training
-
+                </i>
               </h2>
             </div>
           </div>
         </section>
 
         <section className="has-background-light">
+          <div className="box content">
           <div className="columns">
             <div className="column">
               <article className="message is-info">
@@ -33,7 +35,7 @@ class RescuedTrainingView extends Component {
                 <div className="message-body">
                   <div className="content">
                     <figure className="image is-4by3">
-                      <img src="http://via.placeholder.com/640x360" />
+                      <img src={Rescued} />
                     </figure>
                   </div>
                 </div>
@@ -77,6 +79,7 @@ class RescuedTrainingView extends Component {
               </article>
             </div>
           </div>
+          </div>
         </section>
 
         <section className="hero">
@@ -87,11 +90,13 @@ class RescuedTrainingView extends Component {
               </h1>
               <br />
               <h2 className="subtitle has-text-centered">
+                <i className="has-text-grey">
                 Mutts with Manners likes to support rescue organisations such as the RSPCA, Animal Welfare League and the many, MANY smaller individual ones.
-                We also want to support those who adopt! Therefore we have introduced our Rescue Dog Rewards -
-                ANY appointment that you have with your dog within 2 weeks of adoption is discounted by a MASSIVE 20%!
-                Dogs simply need to be 5 months of age or older with adoption paperwork to verify the date of adoption.
-                Mention this when you enquireto get your discount!
+                      We also want to <strong>support those who adopt!</strong> Therefore we have introduced our <strong>Rescue Dog Rewards</strong> -
+                  ANY appointment that you have with your dog within 2 weeks of adoption is discounted by a <strong>MASSIVE 20%!!</strong>
+                  Dogs simply need to be 5 months of age or older with adoption paperwork to verify the date of adoption.
+                  Mention this when you enquireto get your discount!
+                </i>
               </h2>
             </div>
           </div>
@@ -180,26 +185,30 @@ class RescuedTrainingView extends Component {
               </h1>
               <br />
               <h2 className="subtitle has-text-left">
+                <i className="has-text-grey">
                 If you are unable to keep an appointment
-                please give at least 24 hours notice to ensure that
-                you will not be charge for the appointment or part-thereof.
+                  please give at least 24 hours notice to ensure that
+                  you will not be charge for the appointment or part-thereof.
+                </i>
               </h2>
               <h2 className="subtitle has-text-left">
+                <i className="has-text-grey">
                 12 to 24 hours notice of cancellation will require $50 value to be paid,
                 less than 12 hours notice will require full payment.
+                </i>
               </h2>
               <h2 className="subtitle has-text-left">
+                <i className="has-text-grey">
                 Thank you for your consideration in ensuring that adequate notice is given.
+                </i>
               </h2>
             </div>
           </div>
         </section>
-
       </>
     );
   }
 }
-
 
 export default RescuedTrainingView;
 

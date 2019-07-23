@@ -34,19 +34,19 @@ export default class Navbar extends Component {
 
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
-            <Link to="/" className="navbar-item">
+            <Link to="/" className="navbar-item has-text-weight-bold">
               Home
             </Link>
 
             <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">About Us</a>
+              <a className="navbar-link has-text-weight-bold">About Us</a>
               <div className="navbar-dropdown">
                 <NavbarAboutUs />
               </div>
             </div>
 
             <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">Training</a>
+              <a className="navbar-link has-text-weight-bold">Training</a>
 
               <div className="navbar-dropdown">
                 <NavbarTraining />
@@ -54,13 +54,13 @@ export default class Navbar extends Component {
             </div>
 
             <div className="navbar-end">
-              <Link to="/booking" className="navbar-item">
+              <Link to="/booking" className="navbar-item has-text-weight-bold">
                 Book An Appointment
               </Link>
             </div>
 
             <div className="navbar-end">
-              <Link to="/blog" className="navbar-item">
+              <Link to="/blog" className="navbar-item has-text-weight-bold">
                 Blog
               </Link>
             </div>
@@ -68,13 +68,13 @@ export default class Navbar extends Component {
 
           <div className="navbar-end">
             <div className="navbar-item">
-              <Link to="/contactus" className="navbar-item">
+              <Link to="/contactus" className="navbar-item has-text-weight-bold">
                 Contact Us
               </Link>
-              <Link to="/testimonials" className="navbar-item">
+              <Link to="/testimonials" className="navbar-item has-text-weight-bold">
                 Testimonials
               </Link>
-              <Link to="/shop" className="navbar-item">
+              <Link to="/shop" className="navbar-item has-text-weight-bold">
                 Shop
               </Link>
             </div>

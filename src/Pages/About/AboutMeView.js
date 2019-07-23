@@ -10,13 +10,13 @@ class AboutMeView extends Component {
           <div className="container">
             <div className="content has-text-centered">
               <h1>About Us</h1>
-              <h5>
+              <h2>
                 <i className="has-text-grey">
                   Our Mission: to provide superior dog obedience training, puppy
                   training and dog behaviour training for our canine friends as
                   professional puppy and dog trainers.
                 </i>
-              </h5>
+              </h2>
             </div>
           </div>
         </section>
