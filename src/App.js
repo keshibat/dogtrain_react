@@ -26,7 +26,6 @@ import Navbar from "./Pages/Navbar/Navbar";
 
 import Footer from "./Pages/Footer/Footer";
 
-
 //admin
 import LoginView from "./Pages/Admin/LoginView";
 import DashboardView from "./Pages/Admin/DashboardView";
@@ -34,16 +33,24 @@ import DashboardView from "./Pages/Admin/DashboardView";
 import BookingsShowView from "./Pages/Booking/ShowView";
 import BookingsEditView from "./Pages/Booking/EditView";
 
-
-
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab, faFacebookSquare, faTwitterSquare, faInstagram} from "@fortawesome/free-brands-svg-icons";
-import { fas } from '@fortawesome/free-solid-svg-icons'
 import {
-  faQuoteLeft
-} from "@fortawesome/free-solid-svg-icons";
+  fab,
+  faFacebookSquare,
+  faTwitterSquare,
+  faInstagram
+} from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, fas, faQuoteLeft, faFacebookSquare, faTwitterSquare, faInstagram);
+library.add(
+  fab,
+  fas,
+  faQuoteLeft,
+  faFacebookSquare,
+  faTwitterSquare,
+  faInstagram
+);
 
 class App extends React.Component {
   constructor(props) {
@@ -59,15 +66,15 @@ class App extends React.Component {
   onLoginFormSubmit = (token, callback) => {
     sessionStorage.setItem("token", token);
     LocalAPI.setAuthHeader(token);
-    this.setState({token}, callback);
-  }
-  
+    this.setState({ token }, callback);
+  };
+
   render() {
     const { token } = this.state;
 
     return (
       <div>
-        { token && <h4>User Logged In!</h4> }
+        {token && <h4>User Logged In!</h4>}
         <BrowserRouter>
           <Navbar />
           <div>
@@ -101,18 +108,41 @@ class App extends React.Component {
             <Route exact path="/shop" component={ShopView} />
             <Route exact path="/booking" component={BookingView} />
 
-            <PrivateRoute exact path="/admin" component={DashboardView} token={token} />
-            <Route exact path="/admin/login" render={(props) => <LoginView {...props} onLoginFormSubmit={this.onLoginFormSubmit} />} />
+            <PrivateRoute
+              exact
+              path="/admin"
+              component={DashboardView}
+              token={token}
+            />
+            <Route
+              exact
+              path="/admin/login"
+              render={props => (
+                <LoginView
+                  {...props}
+                  onLoginFormSubmit={this.onLoginFormSubmit}
+                />
+              )}
+            />
 
-            <PrivateRoute exact path="/bookings/:id" component={BookingsShowView} token={token} />
-            <PrivateRoute exact path="/bookings/:id/edit" component={BookingsEditView} token={token} />
+            <PrivateRoute
+              exact
+              path="/bookings/:id"
+              component={BookingsShowView}
+              token={token}
+            />
+            <PrivateRoute
+              exact
+              path="/bookings/:id/edit"
+              component={BookingsEditView}
+              token={token}
+            />
 
             {/* <Route component={NotFoundPage} /> */}
           </div>
         </BrowserRouter>
         <Footer />
       </div>
-
     );
   }
 }
