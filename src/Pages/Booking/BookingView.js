@@ -20,7 +20,6 @@ class BookingView extends Component {
   //change this later to not use async, make use of props
   async componentDidMount() {
     const confirmedDates = await this.getConfirmed();
-    console.log(confirmedDates);
     this.setState({ confirmed: { ...confirmedDates }, fetching: false });
   }
 
@@ -39,7 +38,6 @@ class BookingView extends Component {
     this.setState({ [name]: event.target.value });
   };
 
-  //have a message display saying a email has been sent and booking will be confirmed by trainer
   onFormSubmit = async event => {
     event.preventDefault();
     this.setState({ fetching: true });
@@ -57,7 +55,6 @@ class BookingView extends Component {
       `${process.env.REACT_APP_API_URL}/bookings`,
       newBooking
     );
-    console.log(response);
     this.setState({
       firstName: "",
       lastName: "",
@@ -145,12 +142,9 @@ class BookingView extends Component {
                 <h2>
                   <b>Choose a date:</b>
                 </h2>
-                {/* <div className="columns is-centered"> */}
-                {/* <div className="column is-half is-centered calendarGroup"> */}
                 <Calendar
                   onChange={this.onChange}
                   value={this.state.bookingDate}
-                  // tileContent={tileContent}
                   tileClassName={tileClassName}
                 />
                 <div className="box calender">
