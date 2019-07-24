@@ -1,56 +1,44 @@
 import React, { Component } from "react";
-import axios from "axios";
-// import LocalAPI from "./../../apis"
+import LocalAPI from "./../../apis/local"
 import Loader from "./../../components/Loader";
-import bookingViewCSS from "./../../assets/styles/BookingSCSS/bookingView.css";
+import "./../../assets/styles/BookingSCSS/bookingView.css";
 
 class BlogFormView extends Component {
   state = {
     title: "",
     body: "",
-    tags: ""
-    // fetching: true
+    tags: "",
+    fetching: false
   };
-
-  //change this later to not use async, make use of props
-  async componentDidMount() {
-    // const response = await axios.get(
-    //   `${process.env.REACT_APP_API_URL}/testimonials`
-    // );
-    // this.setState({ response });
-  }
 
   onInputChange = (name, event) => {
     this.setState({ [name]: event.target.value });
   };
 
   onFormSubmit = async event => {
-    // event.preventDefault();
-    // // this.setState({ fetching: true });
-    // const { author, body, dog } = this.state;
-    // const newBooking = {
-    //   author,
-    //   body,
-    //   dog
-    // };
-    // const response = await axios.post(
-    //   `${process.env.REACT_APP_API_URL}/bookings`,
-    //   newBooking
-    // );
-    // console.log(response);
-    // this.setState({
-    //   author: "",
-    //   body: "",
-    //   dog: ""
-    // });
+    event.preventDefault();
+    this.setState({ fetching: true });
+    const { title, body, tags } = this.state;
+    const newPost = {
+      title,
+      body,
+      tags
+    };
+    const response = await LocalAPI.post(`/blog`, newPost);
+    this.setState({
+      title: "",
+      body: "",
+      tags: ""
+    });
+    this.setState({ fetching: false });
   };
 
   render() {
-    const { title, body, tags } = this.state;
+    const { title, body, tags, fetching } = this.state;
 
-    // if (fetching) {
-    //   return <Loader />;
-    // }
+    if (fetching) {
+      return <Loader />;
+    }
 
     return (
       <>
@@ -58,7 +46,7 @@ class BlogFormView extends Component {
           <div className="box content">
             <div className="column bookForm">
               <h2>
-                <b>Create a Blog</b>
+                <b>Create Blog Post</b>
               </h2>
               <form onSubmit={this.onFormSubmit}>
                 <div className="field">
@@ -66,6 +54,7 @@ class BlogFormView extends Component {
                   <div className="control">
                     <input
                       className="input"
+                      placeholder="Add a Post Title"
                       type="text"
                       name="title"
                       value={title}
@@ -79,7 +68,7 @@ class BlogFormView extends Component {
                   <div className="control">
                     <textarea
                       class="textarea"
-                      placeholder="Create A Blog Post"
+                      placeholder="Write a Blog Post"
                       name="body"
                       value={body}
                       onChange={event => this.onInputChange("body", event)}
@@ -92,6 +81,7 @@ class BlogFormView extends Component {
                   <div className="control">
                     <input
                       className="input"
+                      placeholder="dogs, training, fun..."
                       type="text"
                       name="tags"
                       value={tags}
@@ -105,7 +95,7 @@ class BlogFormView extends Component {
                     <input
                       className="button is-link"
                       type="submit"
-                      value="Book"
+                      value="Add Post"
                     />
                   </div>
                 </div>

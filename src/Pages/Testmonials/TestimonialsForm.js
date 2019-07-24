@@ -1,56 +1,44 @@
 import React, { Component } from "react";
-import axios from "axios";
-// import LocalAPI from "./../../apis"
+import LocalAPI from "./../../apis/local"
 import Loader from "./../../components/Loader";
-import bookingViewCSS from "./../../assets/styles/BookingSCSS/bookingView.css";
+import "./../../assets/styles/BookingSCSS/bookingView.css";
 
 class TestimonialsFormView extends Component {
   state = {
-    author: "",
+    title: "",
     body: "",
-    dog: ""
-    // fetching: true
+    author: "",
+    fetching: false
   };
-
-  //change this later to not use async, make use of props
-  async componentDidMount() {
-    // const response = await axios.get(
-    //   `${process.env.REACT_APP_API_URL}/testimonials`
-    // );
-    // this.setState({ response });
-  }
 
   onInputChange = (name, event) => {
     this.setState({ [name]: event.target.value });
   };
 
   onFormSubmit = async event => {
-    // event.preventDefault();
-    // // this.setState({ fetching: true });
-    // const { author, body, dog } = this.state;
-    // const newBooking = {
-    //   author,
-    //   body,
-    //   dog
-    // };
-    // const response = await axios.post(
-    //   `${process.env.REACT_APP_API_URL}/bookings`,
-    //   newBooking
-    // );
-    // console.log(response);
-    // this.setState({
-    //   author: "",
-    //   body: "",
-    //   dog: ""
-    // });
+    event.preventDefault();
+    this.setState({ fetching: true });
+    const { title, body, author } = this.state;
+    const newPost = {
+      title,
+      body,
+      author
+    };
+    const response = await LocalAPI.post(`/testimonials`, newPost);
+    this.setState({
+      title: "",
+      body: "",
+      author: ""
+    });
+    this.setState({ fetching: false });
   };
 
   render() {
-    const { author, body, dog } = this.state;
+    const { title, body, author, fetching } = this.state;
 
-    // if (fetching) {
-    //   return <Loader />;
-    // }
+    if (fetching) {
+      return <Loader />;
+    }
 
     return (
       <>
@@ -58,7 +46,7 @@ class TestimonialsFormView extends Component {
           <div className="box content">
             <div className="column bookForm">
               <h2>
-                <b>Testimonials</b>
+                <b>Add Testimonial</b>
               </h2>
               <form onSubmit={this.onFormSubmit}>
                 <div className="field">
@@ -67,9 +55,10 @@ class TestimonialsFormView extends Component {
                     <input
                       className="input"
                       type="text"
-                      name="dog"
-                      value={dog}
-                      onChange={event => this.onInputChange("dog", event)}
+                      name="title"
+                      placeholder="Add Testimonial Title"
+                      value={title}
+                      onChange={event => this.onInputChange("title", event)}
                     />
                   </div>
                 </div>
@@ -79,7 +68,7 @@ class TestimonialsFormView extends Component {
                   <div className="control">
                     <textarea
                       class="textarea"
-                      placeholder="Create A Testimonial"
+                      placeholder="Add Testimonial"
                       name="body"
                       value={body}
                       onChange={event => this.onInputChange("body", event)}
@@ -94,6 +83,7 @@ class TestimonialsFormView extends Component {
                       className="input"
                       type="text"
                       name="author"
+                      placeholder="Add Testimonial Author"
                       value={author}
                       onChange={event => this.onInputChange("author", event)}
                     />
@@ -105,7 +95,7 @@ class TestimonialsFormView extends Component {
                     <input
                       className="button is-link"
                       type="submit"
-                      value="Book"
+                      value="Add Testamonial"
                     />
                   </div>
                 </div>

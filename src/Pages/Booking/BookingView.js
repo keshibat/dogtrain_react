@@ -20,7 +20,6 @@ class BookingView extends Component {
   //change this later to not use async, make use of props
   async componentDidMount() {
     const confirmedDates = await this.getConfirmed();
-    console.log(confirmedDates);
     this.setState({ confirmed: { ...confirmedDates }, fetching: false });
   }
 
@@ -57,7 +56,6 @@ class BookingView extends Component {
       `${process.env.REACT_APP_API_URL}/bookings`,
       newBooking
     );
-    console.log(response);
     this.setState({
       firstName: "",
       lastName: "",
