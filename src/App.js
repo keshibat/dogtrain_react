@@ -22,7 +22,7 @@ import TestmonialsView from "./Pages/Testmonials/TestmonialsView";
 import BlogView from "./Pages/Blog/BlogView";
 import BlogEditView from "./Pages/Blog/EditView";
 import BlogShowView from "./Pages/Blog/ShowView";
-import ShopView from "./Pages/Shop/ShopView";
+
 import BookingView from "./Pages/Booking/BookingView";
 import Navbar from "./Pages/Navbar/Navbar";
 
@@ -107,7 +107,7 @@ class App extends React.Component {
 
             <Route exact path="/testmonials" component={TestmonialsView} />
             <Route exact path="/blog" component={BlogView} />
-            <Route exact path="/shop" component={ShopView} />
+
             <Route exact path="/booking" component={BookingView} />
             <Route exact path="/blog/:id" component={BlogShowView} />
 

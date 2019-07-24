@@ -1,3 +1,4 @@
-a.medium-widget-article__image {
-  flex: none;
+.content.has-text-centered.blogs {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }

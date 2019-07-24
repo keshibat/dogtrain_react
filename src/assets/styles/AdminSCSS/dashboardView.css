@@ -18,3 +18,8 @@ a.booking-box {
 span.bookingDetails {
   text-align: center;
 }
+
+.box.content.dashboard {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

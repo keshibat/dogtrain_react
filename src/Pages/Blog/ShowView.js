@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 import LocalAPI from "./../../apis/local";
 // import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 import Loader from "./../../components/Loader";
@@ -19,15 +19,30 @@ class BlogsShowView extends Component {
     });
   }
 
+  onDeleteClick = async event => {
+    event.preventDefault();
+    const { id } = this.props.match.params;
+    const response = await LocalAPI.delete(`/blog/${id}`);
+    this.props.history.push("/admin");
+  };
+
+  onConfirmClick = async event => {
+    event.preventDefault();
+    this.setState({ fetching: true });
+    const { id } = this.props.match.params;
+    await LocalAPI.put(`/blog/${id}/confirm`);
+    //optimize later
+    LocalAPI.get(`/blog/${id}`).then(res =>
+      this.setState({ booking: { ...res.data }, fetching: false })
+    );
+  };
+
   render() {
-    // const { bookings } = this.state;
-    // console.log(this.props.match.params.id);
-    // console.log(this.props.bookings);
     const { blog, fetching } = this.state;
 
-    // if (fetching) {
-    //   return <Loader />;
-    // }
+    if (fetching) {
+      return <Loader />;
+    }
 
     return (
       <>
@@ -53,6 +68,23 @@ class BlogsShowView extends Component {
                       <p>{blog.body && blog.body}</p>
                     </span>
                   </div>
+                  {sessionStorage.getItem("token") ? (
+                    <p>
+                      <a href="" onClick={this.onConfirmClick}>
+                        Confirm
+                      </a>{" "}
+                      | {}
+                      <Link to={`/blog/${this.props.match.params.id}/edit`}>
+                        Edit
+                      </Link>{" "}
+                      | {}
+                      <a href="" onClick={this.onDeleteClick}>
+                        Delete
+                      </a>{" "}
+                      | {}
+                      <Link to={"/admin"}>Back</Link>
+                    </p>
+                  ) : null}
                 </div>
               </div>
             </div>
@@ -64,3 +96,40 @@ class BlogsShowView extends Component {
 }
 
 export default BlogsShowView;
+
+// state = {
+//   booking: {},
+//   fetching: true
+// };
+
+// //try using filter array to get item, if its faster than querying
+// componentDidMount() {
+//   const { id } = this.props.match.params;
+//   LocalAPI.get(`/blog/${id}`).then(res =>
+//     this.setState({ booking: { ...res.data }, fetching: false })
+//   );
+// }
+
+// // getBooking = async () => {
+// //     const { id } = this.props.match.params;
+// //     const response = await LocalAPI.get(`/blog/${id}`);
+// //     return response.data;
+// // }
+
+// onDeleteClick = async event => {
+//   event.preventDefault();
+//   const { id } = this.props.match.params;
+//   const response = await LocalAPI.delete(`/blog/${id}`);
+//   this.props.history.push("/admin");
+// };
+
+// onConfirmClick = async event => {
+//   event.preventDefault();
+//   this.setState({ fetching: true });
+//   const { id } = this.props.match.params;
+//   await LocalAPI.put(`/blog/${id}/confirm`);
+//   //optimize later
+//   LocalAPI.get(`/blog/${id}`).then(res =>
+//     this.setState({ booking: { ...res.data }, fetching: false })
+//   );
+// };
