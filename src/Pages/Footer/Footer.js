@@ -19,11 +19,21 @@ class Footer extends Component {
           <div className="columns has-text-centered is-size-1 is-gapless">
             <div className="column">
               <div className="footericons">
-                <FontAwesomeIcon icon={["fab", "instagram"]} />
-
-                <FontAwesomeIcon icon={["fab", "twitter-square"]} />
-
-                <FontAwesomeIcon icon={["fab", "facebook-square"]} />
+                <a
+                  href="https://www.instagram.com/muttswithmanners/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={["fab", "instagram"]} />
+                </a>
+                <a href="https://twitter.com/MuttswithMannrs" target="_blank">
+                  <FontAwesomeIcon icon={["fab", "twitter-square"]} />
+                </a>
+                <a
+                  href="https://www.facebook.com/muttswithmanners/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={["fab", "facebook-square"]} />
+                </a>
               </div>
             </div>
           </div>
