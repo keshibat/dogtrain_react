@@ -1,76 +1,82 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import LocalAPI from "./../../apis/local";
 import BlogCSS from "./../../assets/styles/BlogSCSS/BlogCSS.css";
 import Loader from "./../../components/Loader";
 
 class BlogView extends Component {
-  constructor() {
-    super();
-    this.state = {
-
-      blog: {},
-      fetching: true
-
-    };
-  }
+  state = {
+    blog: [],
+    fetching: true
+  };
 
   componentDidMount() {
-
-      window.mediumWidget(); //not async
-      setTimeout(() => {this.setState({ fetching: false })}, 1000);
-
+    this.getBlogs()
+      .then(res => {
+        this.setState({ blog: [...res], fetching: false });
+      })
+      .catch(err => console.log(err));
   }
 
+  getBlogs = async () => {
+    const response = await LocalAPI.get("/blog").catch(err => {
+      console.log(err);
+    });
+    return response.data;
+  };
+
   render() {
-    const { name, height } = this.state.blog;
+    const { blog, fetching } = this.state;
+
+    if (fetching) {
+      return <Loader />;
+    }
 
     return (
       <>
-      {this.state.fetching ? <Loader /> : null}
         <section className="section title-heading">
           <div className="container">
             <div className="content has-text-centered">
-              <h1>Blog</h1>
+              <h1>Blogs</h1>
             </div>
           </div>
         </section>
-        <section className="section title-heading">
-          <div className="container">
-            <div className="content has-text-centered">
+
+        <section>
+          <div className="content has-text-centered">
+            <div className="container">
               <div className="columns is-centered">
                 <div className="column is-half">
-                  <div id="medium-widget" />
+                  {blog.reverse().map((item, index) => {
+                    return (
+                      <div className="box content">
+                        <span className="blogDetails">{item.title}</span>
+                        <p>
+                          <span className="blogDetails">
+                            {new Date(item.date).toLocaleDateString()}
+                          </span>
+                        </p>
+
+                        <h6
+                          className="title is-6 has-text-centered"
+                          key={item._id}
+                        />
+
+                        <span className="blogOptions">
+                          <p>{item.body && item.body.slice(0, 255)}</p>
+                        </span>
+
+                        {(item.body && item.body.length <= 255) ||
+                        !item.body ? null : (
+                          <Link to={`/blog/${item._id}`} className="blog-box">
+                            <p> See More. </p>
+                          </Link>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-        <section className="section title-heading">
-          <div className="container">
-            <div className="content has-text-centered">
-              <h1>{name}</h1>
-              <h5>
-                <i className="has-text-grey">{height}</i>
-              </h5>
-            </div>
-          </div>
-        </section>
-        <section className="section title-heading">
-          <div className="container">
-            <div className="content has-text-centered">
-              <h1>{name}</h1>
-              <h5>
-                <i className="has-text-grey">{height}</i>
-              </h5>
-            </div>
-          </div>
-        </section>
-        <section className="section title-heading">
-          <div className="container">
-            <div className="content has-text-centered">
-              <h1>{name}</h1>
-              <h5>
-                <i className="has-text-grey">{height}</i>
-              </h5>
             </div>
           </div>
         </section>
