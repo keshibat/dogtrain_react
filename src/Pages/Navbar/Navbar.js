@@ -16,7 +16,7 @@ export default class Navbar extends Component {
       >
         <div className="navbar-brand">
           <Link to="/" className="navbar-item" href="/">
-            <img src={MwMLogo} width="112" height="28" />
+            <img src={MwMLogo} alt="logo" width="112" height="28" />
           </Link>
 
           <a
@@ -68,10 +68,16 @@ export default class Navbar extends Component {
 
           <div className="navbar-end">
             <div className="navbar-item">
-              <Link to="/contactus" className="navbar-item has-text-weight-bold">
+              <Link
+                to="/contactus"
+                className="navbar-item has-text-weight-bold"
+              >
                 Contact Us
               </Link>
-              <Link to="/testmonials" className="navbar-item has-text-weight-bold">
+              <Link
+                to="/testmonials"
+                className="navbar-item has-text-weight-bold"
+              >
                 Testimonials
               </Link>
               <Link to="/shop" className="navbar-item has-text-weight-bold">

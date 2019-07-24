@@ -47,11 +47,11 @@ class DashboardView extends Component {
         <section>
           <div className="content has-text-centered">
             <div className="columns">
-              <div className="box content">
+              <div className="box content dashboard">
                 <div className="column">
                   <h5 className="title is-5">Bookings</h5>
                   <ul>
-                    {bookings.map((item, index) => {
+                    {bookings.reverse().map((item, index) => {
                       return (
                         <div className="box content">
                           <Link

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+
 import LocalAPI from "./../../apis/local";
 // import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 import Loader from "./../../components/Loader";
@@ -20,14 +20,11 @@ class BlogsShowView extends Component {
   }
 
   render() {
-    // const { bookings } = this.state;
-    // console.log(this.props.match.params.id);
-    // console.log(this.props.bookings);
     const { blog, fetching } = this.state;
 
-    // if (fetching) {
-    //   return <Loader />;
-    // }
+    if (fetching) {
+      return <Loader />;
+    }
 
     return (
       <>
