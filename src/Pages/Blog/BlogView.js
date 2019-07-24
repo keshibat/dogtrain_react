@@ -36,9 +36,7 @@ class BlogView extends Component {
       <>
         <section className="section title-heading">
           <div className="container">
-            <div className="content has-text-centered">
-              {sessionStorage.getItem("token") ? <h1>true</h1> : <h1>Blogs</h1>}
-            </div>
+            <div className="content has-text-centered" />
           </div>
         </section>
 
