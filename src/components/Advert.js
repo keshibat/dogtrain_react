@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import LocalAPI from "./../apis/local";
 
-
 class AdvertView extends Component {
     state = {
         title: "",
@@ -11,12 +10,12 @@ class AdvertView extends Component {
 
     async componentDidMount() {
         const response = await LocalAPI.get("/advert");
-        console.log(response.data[0]);
+        // console.log(response.data[0]);
         this.setState({...response.data[0]});
     }
 
 render(){
-    console.log(this.state && this.state.title);
+    // console.log(this.state && this.state.title);
     const{
         title,
         body,
@@ -25,9 +24,9 @@ render(){
 
     return (
         <div>
-            <div>{title}</div>
-            <div>{body}</div>
-            <div>{link}</div>
+            <div><h1>{title}</h1></div>
+            <div><p>{body}</p></div>
+            <div><i>{link}</i></div>
         </div>
     );
 }};
