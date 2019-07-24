@@ -80,9 +80,12 @@ export default class Navbar extends Component {
               >
                 Testimonials
               </Link>
-              <Link to="/shop" className="navbar-item has-text-weight-bold">
+              <a
+                href="https://www.muttswithmanners.com.au/shop"
+                className="navbar-item has-text-weight-bold"
+              >
                 Shop
-              </Link>
+              </a>
             </div>
           </div>
         </div>
