@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import ContactUsCSS from "./../../assets/styles/AboutSCSS/ContactUsCSS.css";
 import ContactUsIMG from "./../../assets/images/contact-us.jpeg";
+import Loader from "./../../components/Loader";
+import Messages from "./../../components/Messages";
 
 class ContactUsView extends Component {
   state = {
@@ -10,13 +12,16 @@ class ContactUsView extends Component {
     phone: "",
     suburb: "",
     dogDetails: "",
-    details: ""
+    details: "",
+    fetching: false,
+    message: null
   };
   onInputChange = (name, event) => {
     this.setState({ [name]: event.target.value });
   };
   onFormSubmit = event => {
     event.preventDefault();
+    this.setState({ fetching: true });
     const { name, email, phone, suburb, dogDetails, details } = this.state;
     const newEnquiry = {
       name,
@@ -27,12 +32,28 @@ class ContactUsView extends Component {
       details
     };
     axios
-      .post("http://127.0.0.1:3000/contactus", newEnquiry)
+      .post(`${process.env.REACT_APP_API_URL}/contactus`, newEnquiry)
       .then(response => console.log(response))
       .catch(err => console.log(err));
+
+      //reset form on submission
+      this.setState({
+        name: "",
+        email: "",
+        phone: "",
+        suburb: "",
+        dogDetails: "",
+        details: "",
+        fetching: false,
+        message: "Your enquiry has been sent and will be reviewed. We will be in contact with you shortly."
+      });
   };
   render() {
-    const { name, email, phone, suburb, dogDetails, details } = this.state;
+    const { name, email, phone, suburb, dogDetails, details, fetching, message } = this.state;
+
+    if (fetching) {
+      return <Loader />;
+    }
 
     return (
       <>
@@ -43,6 +64,8 @@ class ContactUsView extends Component {
             </div>
           </div>
         </section>
+
+        {message ? Messages(message) : null}
 
         <form onSubmit={this.onFormSubmit}>
           <section className="section">
@@ -144,7 +167,7 @@ class ContactUsView extends Component {
                       <input
                         className="button is-link is-center"
                         type="submit"
-                        value="Sumit"
+                        value="Submit"
                       />
                     </div>
                   </div>

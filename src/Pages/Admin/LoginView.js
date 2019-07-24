@@ -61,8 +61,8 @@ class LoginView extends Component {
 
                 <div className="field is-centered">
                 <div className="formButton control">
-                {fetching ? <input className="button is-primary" type="submit" value="Login" disabled /> : 
-                    <input className="button is-primary" type="submit" value="Login" />}
+                {fetching ? <input className="button is-link" type="submit" value="Login" disabled /> : 
+                    <input className="button is-link" type="submit" value="Login" />}
                 </div>
                 </div>
             </form>

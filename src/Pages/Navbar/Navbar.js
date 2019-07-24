@@ -71,7 +71,7 @@ export default class Navbar extends Component {
               <Link to="/contactus" className="navbar-item has-text-weight-bold">
                 Contact Us
               </Link>
-              <Link to="/testimonials" className="navbar-item has-text-weight-bold">
+              <Link to="/testmonials" className="navbar-item has-text-weight-bold">
                 Testimonials
               </Link>
               <Link to="/shop" className="navbar-item has-text-weight-bold">
