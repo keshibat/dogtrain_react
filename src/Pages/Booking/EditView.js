@@ -24,6 +24,14 @@ class BookingsEditView extends Component {
     );
   }
 
+  //convert date that will be displayed on edit form
+  convertDate(date) {
+    if (Date.parse(date)) {
+      return new Date(date).toISOString().slice(0, 10);
+    }
+    return null;
+  }
+
   convertDate(date) {
     if (Date.parse(date)) {
       return new Date(date).toISOString().slice(0, 10);
