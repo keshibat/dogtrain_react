@@ -3,40 +3,16 @@ import { Link } from "react-router-dom";
 import LocalAPI from "./../../apis/local";
 import "./../../assets/styles/AdminSCSS/dashboardView.css";
 import Loader from "./../../components/Loader";
-//testimonials
 import TestimonialsFormView from "./../Testmonials/TestimonialsForm";
 import BlogFormView from "./../Blog/BlogFormView";
+import AdvertFormView from "./../Admin/AdvertFormView";
 
 //index view, view all bookings
 //CRUD views, edit/update, delete, confirm/change status
 class DashboardView extends Component {
-  state = {
-    bookings: [],
-    fetching: true
-  };
-
-  componentDidMount() {
-    this.getBookings()
-      .then(res => {
-        console.log(res);
-        this.setState({ bookings: [...res], fetching: false });
-      })
-      .catch(err => console.log(err));
-  }
-
-  getBookings = async () => {
-    const response = await LocalAPI.get("/bookings").catch(err => {
-      console.log(err);
-    });
-    return response.data;
-  };
 
   render() {
-    const { bookings, fetching } = this.state;
-
-    if (fetching) {
-      return <Loader />;
-    }
+    
     return (
       <>
         <section className="section title-heading">
@@ -47,50 +23,16 @@ class DashboardView extends Component {
           </div>
         </section>
 
+        <div className="tabs is-centered">
+                <ul>
+                    <li className="is-active"><Link to={`/admin`}>Admin Panel</Link></li>
+                    <li><Link to={`/bookings`}>Manage Bookings</Link></li>
+                </ul>
+          </div>
+
         <section className="section">
           <div className="columns">
-            <div className="column">
-              <div className="box content">
-                <h2 className="title is-3 has-text-centered">Bookings</h2>
-                <ul>
-                  {bookings.reverse().map((item, index) => {
-                    return (
-                      <div className="box content">
-                        <Link
-                          to={`/bookings/${item._id}`}
-                          className="booking-box"
-                        >
-                          <span className="bookingDetails">
-                            {item.firstName} {item.lastName} for{" "}
-                            {new Date(item.bookingDate).toDateString()}
-                          </span>
-
-                          <h6
-                            className="title is-6 has-text-centered"
-                            key={item._id}
-                          />
-
-                          <span className="bookingOptions">
-                            <p>
-                              Status: {item.status}, {}
-                            </p>
-                            <p>
-                              Paid: {`${item.paid}`}, {}
-                            </p>
-                            <p>
-                              Created:{" "}
-                              {new Date(item.date).toLocaleDateString()}
-                              {/* add this to mongoose schema as getter */}
-                            </p>
-                            <p>Details: {item.details}</p>
-                          </span>
-                        </Link>
-                      </div>
-                    );
-                  })}
-                </ul>
-              </div>
-            </div>
+            <AdvertFormView />
             <TestimonialsFormView />
             <BlogFormView />
           </div>

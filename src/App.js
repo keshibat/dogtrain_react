@@ -34,6 +34,7 @@ import DashboardView from "./Pages/Admin/DashboardView";
 //bookings
 import BookingsShowView from "./Pages/Booking/ShowView";
 import BookingsEditView from "./Pages/Booking/EditView";
+import BookingsIndexView from "./Pages/Booking/IndexView";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -152,6 +153,13 @@ class App extends React.Component {
               exact
               path="/testimonials/:id/edit"
               component={TestimonialsShowEdit}
+              token={token}
+            />
+
+            <PrivateRoute
+              exact
+              path="/bookings"
+              component={BookingsIndexView}
               token={token}
             />
 
