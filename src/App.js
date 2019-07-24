@@ -44,6 +44,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import TestimonialsShowEdit from "./Pages/Testmonials/TestimonialsShowEdit";
 
 library.add(
   fab,
@@ -145,6 +146,12 @@ class App extends React.Component {
               exact
               path="/blog/:id/edit"
               component={BlogEditView}
+              token={token}
+            />
+            <PrivateRoute
+              exact
+              path="/testimonials/:id/edit"
+              component={TestimonialsShowEdit}
               token={token}
             />
 

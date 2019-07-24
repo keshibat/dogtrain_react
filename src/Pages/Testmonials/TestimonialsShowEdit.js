@@ -4,25 +4,25 @@ import LocalAPI from "./../../apis/local";
 // import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 import Loader from "./../../components/Loader";
 
-class BlogsShowView extends Component {
+class TestimonialsShowEdit extends Component {
   state = {
-    blog: {},
+    testimonials: {},
     fetching: true
   };
 
   //try using filter array to get item, if its faster than querying
   componentDidMount() {
     const { id } = this.props.match.params;
-    LocalAPI.get(`/blog/${id}`).then(res => {
+    LocalAPI.get(`/testimonials/${id}`).then(res => {
       console.log(res);
-      this.setState({ blog: { ...res.data }, fetching: false });
+      this.setState({ testimonials: { ...res.data }, fetching: false });
     });
   }
 
   onDeleteClick = async event => {
     event.preventDefault();
     const { id } = this.props.match.params;
-    const response = await LocalAPI.delete(`/blog/${id}`);
+    const response = await LocalAPI.delete(`/testimonials/${id}`);
     this.props.history.push("/admin");
   };
 
@@ -30,15 +30,15 @@ class BlogsShowView extends Component {
     event.preventDefault();
     this.setState({ fetching: true });
     const { id } = this.props.match.params;
-    await LocalAPI.put(`/blog/${id}/confirm`);
+    await LocalAPI.put(`/testimonials/${id}/confirm`);
     //optimize later
-    LocalAPI.get(`/blog/${id}`).then(res =>
-      this.setState({ booking: { ...res.data }, fetching: false })
+    LocalAPI.get(`/testimonials/${id}`).then(res =>
+      this.setState({ testimonials: { ...res.data }, fetching: false })
     );
   };
 
   render() {
-    const { blog, fetching } = this.state;
+    const { testimonials, fetching } = this.state;
 
     if (fetching) {
       return <Loader />;
@@ -49,7 +49,7 @@ class BlogsShowView extends Component {
         <section className="section title-heading">
           <div className="container">
             <div className="content has-text-centered">
-              <h1>{blog.title}</h1>
+              <h1>{testimonials.dog}</h1>
             </div>
           </div>
         </section>
@@ -59,13 +59,9 @@ class BlogsShowView extends Component {
               <div className="columns is-centered">
                 <div className="column is-half">
                   <div className="box content">
-                    <span className="blogDetails">
-                      {new Date(blog.date).toLocaleDateString()}
-                    </span>
-
                     <h6 className="title is-6 has-text-centered" />
                     <span className="blogOptions">
-                      <p>{blog.body && blog.body}</p>
+                      <p>{testimonials.body && testimonials.body}</p>
                     </span>
                   </div>
                   {sessionStorage.getItem("token") ? (
@@ -74,7 +70,9 @@ class BlogsShowView extends Component {
                         Confirm
                       </a>{" "}
                       | {}
-                      <Link to={`/blog/${this.props.match.params.id}/edit`}>
+                      <Link
+                        to={`/testimonials/${this.props.match.params.id}/edit`}
+                      >
                         Edit
                       </Link>{" "}
                       | {}
@@ -95,4 +93,4 @@ class BlogsShowView extends Component {
   }
 }
 
-export default BlogsShowView;
+export default TestimonialsShowEdit;
