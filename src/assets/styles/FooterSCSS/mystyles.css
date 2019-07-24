@@ -32,3 +32,8 @@ div.footericons {
   padding-left: 150px;
   padding-right: 150px;
 }
+
+footer.footer {
+  width: 100%;
+  bottom: 0;
+}

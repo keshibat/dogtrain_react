@@ -43,7 +43,7 @@ class BlogView extends Component {
         </section>
 
         <section>
-          <div className="content has-text-centered">
+          <div className="content has-text-centered blogs">
             <div className="container">
               <div className="columns is-centered">
                 <div className="column is-half">
