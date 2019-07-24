@@ -35,7 +35,7 @@ class HomeView extends Component {
                 <Link to="/puppy">
                   <div className="box content home">
                     <div className="content-overlay" />
-                    <img className="content-image" src={Puppy} />
+                    <img className="content-image" src={Puppy} alt="puppy" />
 
                     <div className="content-details fadeIn-bottom">
                       <h3 className="content-title">Puppies</h3>
@@ -53,7 +53,11 @@ class HomeView extends Component {
                 <Link to="/naughty">
                   <div className="box content home">
                     <div className="content-overlay" />
-                    <img className="content-image" src={AdultDog} />
+                    <img
+                      className="content-image"
+                      src={AdultDog}
+                      alt="adult dog"
+                    />
                     <div className="content-details fadeIn-bottom">
                       <h3 className="content-title">Older Dogs</h3>
                       <p className="content-text">
@@ -72,7 +76,11 @@ class HomeView extends Component {
                 <Link to="/naughty">
                   <div className="box content home">
                     <div className="content-overlay" />
-                    <img className="content-image" src={BarkingDog} />
+                    <img
+                      className="content-image"
+                      src={BarkingDog}
+                      alt="barking dog"
+                    />
                     <div className="content-details fadeIn-bottom">
                       <h3 className="content-title">Noisy Dogs</h3>
                       <p className="content-text">
@@ -88,7 +96,11 @@ class HomeView extends Component {
                 <Link to="/newfamilymember">
                   <div className="box content home">
                     <div className="content-overlay" />
-                    <img className="content-image" src={AdoptionDog} />
+                    <img
+                      className="content-image"
+                      src={AdoptionDog}
+                      alt="adoption dog"
+                    />
                     <div className="content-details fadeIn-bottom">
                       <h3 className="content-title">New Family Introduction</h3>
                       <p className="content-text">
@@ -108,7 +120,11 @@ class HomeView extends Component {
                 <Link to="/apartment">
                   <div className="box content home">
                     <div className="content-overlay" />
-                    <img className="content-image" src={ApartmentDog} />
+                    <img
+                      className="content-image"
+                      src={ApartmentDog}
+                      alt="apartment dog"
+                    />
                     <div className="content-details fadeIn-bottom">
                       <h3 className="content-title">Apartment Training</h3>
                       <p className="content-text">
@@ -126,7 +142,11 @@ class HomeView extends Component {
                 <Link to="/naughty">
                   <div className="box content home">
                     <div className="content-overlay" />
-                    <img className="content-image" src={DogAggression} />
+                    <img
+                      className="content-image"
+                      src={DogAggression}
+                      alt="dog aggression"
+                    />
                     <div className="content-details fadeIn-bottom">
                       <h3 className="content-title">Aggression</h3>
                       <p className="content-text">
@@ -143,7 +163,11 @@ class HomeView extends Component {
                 <Link to="/rescued">
                   <div className="box content home">
                     <div className="content-overlay" />
-                    <img className="content-image" src={DogSad} />
+                    <img
+                      className="content-image"
+                      src={DogSad}
+                      alt="rescue dog"
+                    />
                     <div className="content-details fadeIn-bottom">
                       <h3 className="content-title">Fearful</h3>
                       <p className="content-text">
@@ -160,7 +184,11 @@ class HomeView extends Component {
                 <Link to="/feaful">
                   <div className="box content home">
                     <div className="content-overlay" />
-                    <img className="content-image" src={DogReactive} />
+                    <img
+                      className="content-image"
+                      src={DogReactive}
+                      alt="reactive dog"
+                    />
                     <div className="content-details fadeIn-bottom">
                       <h3 className="content-title">Reactive</h3>
                       <p className="content-text">

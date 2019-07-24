@@ -20,7 +20,9 @@ import ObedienceTrainingView from "./Pages/Training/ObedienceTrainingView";
 import AdvancedTrainingView from "./Pages/Training/AdvancedTrainingView";
 import TestmonialsView from "./Pages/Testmonials/TestmonialsView";
 import BlogView from "./Pages/Blog/BlogView";
-import ShopView from "./Pages/Shop/ShopView";
+import BlogEditView from "./Pages/Blog/EditView";
+import BlogShowView from "./Pages/Blog/ShowView";
+
 import BookingView from "./Pages/Booking/BookingView";
 import Navbar from "./Pages/Navbar/Navbar";
 
@@ -42,6 +44,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import TestimonialsShowEdit from "./Pages/Testmonials/TestimonialsShowEdit";
 
 library.add(
   fab,
@@ -105,8 +108,9 @@ class App extends React.Component {
 
             <Route exact path="/testmonials" component={TestmonialsView} />
             <Route exact path="/blog" component={BlogView} />
-            <Route exact path="/shop" component={ShopView} />
+
             <Route exact path="/booking" component={BookingView} />
+            <Route exact path="/blog/:id" component={BlogShowView} />
 
             <PrivateRoute
               exact
@@ -114,6 +118,7 @@ class App extends React.Component {
               component={DashboardView}
               token={token}
             />
+
             <Route
               exact
               path="/admin/login"
@@ -135,6 +140,18 @@ class App extends React.Component {
               exact
               path="/bookings/:id/edit"
               component={BookingsEditView}
+              token={token}
+            />
+            <PrivateRoute
+              exact
+              path="/blog/:id/edit"
+              component={BlogEditView}
+              token={token}
+            />
+            <PrivateRoute
+              exact
+              path="/testimonials/:id/edit"
+              component={TestimonialsShowEdit}
               token={token}
             />
 
