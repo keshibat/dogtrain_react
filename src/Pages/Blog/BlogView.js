@@ -52,19 +52,24 @@ class BlogView extends Component {
                   {blog.reverse().map((item, index) => {
                     return (
                       <div className="box content">
-                        <Link to={`/blog/${item._id}`} className="blog-box">
-                          <span className="blogDetails">{item.title}</span>
+                        <span className="blogDetails">{item.title}</span>
 
-                          <h6
-                            className="title is-6 has-text-centered"
-                            key={item._id}
-                          />
+                        <h6
+                          className="title is-6 has-text-centered"
+                          key={item._id}
+                        />
+                        {console.log(item._id)}
+                        <span className="blogOptions">
+                          <p>{item.body && item.body.slice(0, 255)}</p>
+                          {console.log(typeof item.body)}
+                        </span>
 
-                          <span className="blogOptions">
-                            <p>{item.body}</p>
-                            {console.log(item.body)}
-                          </span>
-                        </Link>
+                        {(item.body && item.body.length <= 255) ||
+                        !item.body ? null : (
+                          <Link to={`/blog/${item._id}`} className="blog-box">
+                            <p> See More. </p>
+                          </Link>
+                        )}
                       </div>
                     );
                   })}
