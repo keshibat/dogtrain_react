@@ -10,6 +10,7 @@ import DogAggression from "./../../assets/images/home/aggro-dog.jpg";
 import DogSad from "./../../assets/images/home/sad-dog.jpeg";
 import DogReactive from "./../../assets/images/home/dog-pulling.jpg";
 import HomeCSS from "./../../assets/styles/AboutSCSS/HomeCSS.css";
+import Advert from "./../../components/Advert";
 
 class HomeView extends Component {
   componentDidMount() {
@@ -204,6 +205,8 @@ class HomeView extends Component {
           </div>
         </section>
 
+
+
         <section className="section title-heading">
           <div className="container">
             <div className="content">
@@ -224,7 +227,9 @@ class HomeView extends Component {
                     charSet="utf-8"
                   />
                 </div>
-                <div className="column one" />
+                <div className="column one">
+                  <Advert/>
+                </div>
               </div>
             </div>
           </div>
