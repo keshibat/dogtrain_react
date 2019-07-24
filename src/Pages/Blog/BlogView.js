@@ -47,7 +47,7 @@ class BlogView extends Component {
                 <div className="column is-half">
                   {blog.reverse().map((item, index) => {
                     return (
-                      <div className="box content">
+                      <div className="box content" key={item._id}>
                         <span className="blogDetails">{item.title}</span>
                         <p>
                           <span className="blogDetails">
@@ -57,7 +57,6 @@ class BlogView extends Component {
 
                         <h6
                           className="title is-6 has-text-centered"
-                          key={item._id}
                         />
 
                         <span className="blogOptions">

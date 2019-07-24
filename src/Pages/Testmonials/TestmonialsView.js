@@ -1,10 +1,39 @@
 import React, { Component } from "react";
+import LocalAPI from "./../../apis/local";
+import Loader from "./../../components/Loader";
 import mystyles from "./../../assets/styles/TrainningSCSS/mystyles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AdvancedDog from "./../../assets/images/trainning/advancedDog.jpg";
 
 class TestmonialsView extends Component {
+
+  state = {
+    testimonials: [],
+    fetching: true
+  };
+
+  componentDidMount() {
+    this.getTestamonials()
+      .then(res => {
+        this.setState({ testimonials: [...res], fetching: false });
+      })
+      .catch(err => console.log(err));
+  }
+
+  getTestamonials = async () => {
+    const response = await LocalAPI.get("/testimonials").catch(err => {
+      console.log(err);
+    });
+    return response.data;
+  };
+
   render() {
+    const { testimonials, fetching } = this.state;
+
+    if (fetching) {
+      return <Loader />;
+    }
+
     return (
       <>
         <section className="hero section">
@@ -27,18 +56,19 @@ class TestmonialsView extends Component {
           </div>
         </section>
 
-        <ul>
-          {/* Insert loop for Testimonials here */}
-          <section className="section">
-            <div className="box content">
-              <h3 className="has-text-centered">
-                {/* testimonials title (dog) */}
-              </h3>
-              <p className="is-size-6-desktop">{/* testimonials body */}</p>
-              <p>{/* testimonials author */}</p>
-            </div>
-          </section>
-        </ul>
+        {testimonials.reverse().map((item, index) => {
+          return ( 
+            <section className="section" key={item._id}>
+              <div className="box content">
+                <h3 className="has-text-centered">
+                  {item.title}
+                </h3>
+                <p className="is-size-6-desktop">{item.body}</p>
+                <p>{item.author}</p>
+              </div>
+            </section>
+          )
+        })}
 
         <section className="section">
           <div className="box content">
