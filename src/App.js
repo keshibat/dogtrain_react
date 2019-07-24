@@ -20,6 +20,7 @@ import ObedienceTrainingView from "./Pages/Training/ObedienceTrainingView";
 import AdvancedTrainingView from "./Pages/Training/AdvancedTrainingView";
 import TestmonialsView from "./Pages/Testmonials/TestmonialsView";
 import BlogView from "./Pages/Blog/BlogView";
+import BlogEditView from "./Pages/Blog/EditView";
 import BlogShowView from "./Pages/Blog/ShowView";
 import ShopView from "./Pages/Shop/ShopView";
 import BookingView from "./Pages/Booking/BookingView";
@@ -116,6 +117,7 @@ class App extends React.Component {
               component={DashboardView}
               token={token}
             />
+
             <Route
               exact
               path="/admin/login"
@@ -137,6 +139,12 @@ class App extends React.Component {
               exact
               path="/bookings/:id/edit"
               component={BookingsEditView}
+              token={token}
+            />
+            <PrivateRoute
+              exact
+              path="/blog/:id/edit"
+              component={BlogEditView}
               token={token}
             />
 

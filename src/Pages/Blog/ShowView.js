@@ -25,7 +25,6 @@ class BlogsShowView extends Component {
     // console.log(this.props.bookings);
     const { blog, fetching } = this.state;
 
-    console.log("sdsdds");
     // if (fetching) {
     //   return <Loader />;
     // }
