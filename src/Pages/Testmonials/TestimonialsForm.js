@@ -81,7 +81,7 @@ class TestimonialsFormView extends Component {
                       class="textarea"
                       placeholder="Create A Testimonial"
                       name="body"
-                      value="test"
+                      value={body}
                       onChange={event => this.onInputChange("body", event)}
                     />
                   </div>
