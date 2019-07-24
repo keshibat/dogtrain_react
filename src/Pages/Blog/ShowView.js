@@ -45,7 +45,9 @@ class BlogsShowView extends Component {
               <div className="columns is-centered">
                 <div className="column is-half">
                   <div className="box content">
-                    <span className="blogDetails">{blog.title}</span>
+                    <span className="blogDetails">
+                      {new Date(blog.date).toLocaleDateString()}
+                    </span>
 
                     <h6 className="title is-6 has-text-centered" />
                     <span className="blogOptions">

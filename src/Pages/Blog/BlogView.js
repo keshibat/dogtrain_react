@@ -13,7 +13,6 @@ class BlogView extends Component {
   componentDidMount() {
     this.getBlogs()
       .then(res => {
-        console.log(res);
         this.setState({ blog: [...res], fetching: false });
       })
       .catch(err => console.log(err));
@@ -28,7 +27,6 @@ class BlogView extends Component {
 
   render() {
     const { blog, fetching } = this.state;
-    console.log(blog[6] && blog[6].title);
 
     if (fetching) {
       return <Loader />;
@@ -53,15 +51,19 @@ class BlogView extends Component {
                     return (
                       <div className="box content">
                         <span className="blogDetails">{item.title}</span>
+                        <p>
+                          <span className="blogDetails">
+                            {new Date(item.date).toLocaleDateString()}
+                          </span>
+                        </p>
 
                         <h6
                           className="title is-6 has-text-centered"
                           key={item._id}
                         />
-                        {console.log(item._id)}
+
                         <span className="blogOptions">
                           <p>{item.body && item.body.slice(0, 255)}</p>
-                          {console.log(typeof item.body)}
                         </span>
 
                         {(item.body && item.body.length <= 255) ||
