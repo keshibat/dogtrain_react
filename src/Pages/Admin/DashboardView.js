@@ -39,7 +39,7 @@ class DashboardView extends Component {
         <h1>Dashboard</h1>
         <h2>Bookings:</h2>
         <ul>
-          {bookings.map((item, index) => {
+          {bookings.reverse().map((item, index) => {
             return (
               <li key={item._id}>
                 <Link to={`/bookings/${item._id}`}>

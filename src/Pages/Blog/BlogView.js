@@ -6,7 +6,7 @@ import Loader from "./../../components/Loader";
 
 class BlogView extends Component {
   state = {
-    blogs: [],
+    blog: [],
     fetching: true
   };
 
@@ -14,20 +14,21 @@ class BlogView extends Component {
     this.getBlogs()
       .then(res => {
         console.log(res);
-        this.setState({ blogs: [...res], fetching: false });
+        this.setState({ blog: [...res], fetching: false });
       })
       .catch(err => console.log(err));
   }
 
   getBlogs = async () => {
-    const response = await LocalAPI.get("/blogs").catch(err => {
+    const response = await LocalAPI.get("/blog").catch(err => {
       console.log(err);
     });
     return response.data;
   };
 
   render() {
-    const { blogs, fetching } = this.state;
+    const { blog, fetching } = this.state;
+    console.log(blog[6] && blog[6].title);
 
     if (fetching) {
       return <Loader />;
@@ -45,30 +46,28 @@ class BlogView extends Component {
 
         <section>
           <div className="content has-text-centered">
-            <div className="columns">
-              <div className="box content">
-                <div className="column">
-                  <h5 className="title is-5">Blogs</h5>
-                  <ul>
-                    {blogs.reverse().map((item, index) => {
-                      return (
-                        <div className="box content">
-                          <Link to={`/blogs/${item._id}`} className="blog-box">
-                            <span className="blogDetails">{blogs.title}</span>
+            <div className="container">
+              <div className="columns is-centered">
+                <div className="column is-half">
+                  {blog.reverse().map((item, index) => {
+                    return (
+                      <div className="box content">
+                        <Link to={`/blog/${item._id}`} className="blog-box">
+                          <span className="blogDetails">{item.title}</span>
 
-                            <h6
-                              className="title is-6 has-text-centered"
-                              key={item._id}
-                            />
+                          <h6
+                            className="title is-6 has-text-centered"
+                            key={item._id}
+                          />
 
-                            <span className="blogOptions">
-                              <p>{blogs.body}</p>
-                            </span>
-                          </Link>
-                        </div>
-                      );
-                    })}
-                  </ul>
+                          <span className="blogOptions">
+                            <p>{item.body}</p>
+                            {console.log(item.body)}
+                          </span>
+                        </Link>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
