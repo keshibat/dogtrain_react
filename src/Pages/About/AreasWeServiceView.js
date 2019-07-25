@@ -10,7 +10,7 @@ const infoboxTemplate = options => {
           <div className="title">{options.title}</div>
           {options.descriptions &&
             options.descriptions.map(item => {
-              return <div key={options.id}>{item}</div>;
+              return <div key={`${options.location}`}>{item}</div>;
             })}
           {options.description}
           {options.image && <img src={options.image} alt="cartoon puppy" />}
