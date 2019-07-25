@@ -67,7 +67,7 @@ class BlogFormView extends Component {
                   <label className="label">Body</label>
                   <div className="control">
                     <textarea
-                      class="textarea"
+                      className="textarea"
                       placeholder="Write a Blog Post"
                       name="body"
                       value={body}

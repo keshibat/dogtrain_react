@@ -118,7 +118,7 @@ class NewFamilyMemberTrainingView extends Component {
         </section>
 
         <section className="quotes">
-          <div class="has-text-centered is-size-1">
+          <div className="has-text-centered is-size-1">
             <FontAwesomeIcon icon="quote-left" />
           </div>
 

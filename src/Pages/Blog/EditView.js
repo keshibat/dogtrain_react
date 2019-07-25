@@ -81,7 +81,7 @@ class BlogEditView extends Component {
                   <label className="label">Blog Post</label>
                   <div className="control">
                     <textarea
-                      class="textarea"
+                      className="textarea"
                       placeholder="Edit your blog post"
                       name="body"
                       value={body}

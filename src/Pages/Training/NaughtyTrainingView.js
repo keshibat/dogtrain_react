@@ -130,7 +130,7 @@ class NaughtyTrainingView extends Component {
           </div>
         </section>
         <section className="quotes">
-          <div class="has-text-centered is-size-1">
+          <div className="has-text-centered is-size-1">
             <FontAwesomeIcon icon="quote-left" />
           </div>
           <div className="columns">
