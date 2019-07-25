@@ -26,7 +26,6 @@ class BlogEditView extends Component {
   }
 
   onInputChange = (name, event) => {
-    console.log(event.target.value);
     this.setState({ [name]: event.target.value });
   };
 

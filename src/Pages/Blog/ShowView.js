@@ -13,7 +13,6 @@ class BlogsShowView extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     LocalAPI.get(`/blog/${id}`).then(res => {
-      console.log(res);
       this.setState({ blog: { ...res.data }, fetching: false });
     });
   }

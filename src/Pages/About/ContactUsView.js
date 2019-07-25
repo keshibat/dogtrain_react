@@ -33,7 +33,6 @@ class ContactUsView extends Component {
     };
     axios
       .post(`${process.env.REACT_APP_API_URL}/contactus`, newEnquiry)
-      .then(response => console.log(response))
       .catch(err => console.log(err));
 
       //reset form on submission
