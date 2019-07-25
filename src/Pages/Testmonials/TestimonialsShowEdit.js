@@ -13,7 +13,6 @@ class TestimonialsShowEdit extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     LocalAPI.get(`/testimonials/${id}`).then(res => {
-      console.log(res);
       this.setState({ testimonials: { ...res.data }, fetching: false });
     });
   }

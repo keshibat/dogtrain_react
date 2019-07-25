@@ -13,7 +13,6 @@ class BookingsIndexView extends Component {
     componentDidMount() {
       this.getBookings()
         .then(res => {
-          console.log(res);
           this.setState({ bookings: [...res], fetching: false });
         })
         .catch(err => console.log(err));
