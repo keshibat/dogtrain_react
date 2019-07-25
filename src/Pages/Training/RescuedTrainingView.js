@@ -31,8 +31,8 @@ class RescuedTrainingView extends Component {
             <div className="columns">
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Let us help you make your rescue dog's home his 'forever
                       home'
                     </p>
@@ -48,8 +48,8 @@ class RescuedTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Using this gentle, confidence-building technique with our
                       Adopted Dog Training we can help with:
                     </p>
@@ -77,8 +77,8 @@ class RescuedTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Free follow-up email and telephone rescued dog training
                       support available
                     </p>

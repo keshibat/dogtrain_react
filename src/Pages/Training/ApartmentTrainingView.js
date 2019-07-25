@@ -31,8 +31,8 @@ class ApartmentTrainingView extends Component {
             <div className="columns">
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Any dog, big or small, can be a perfect apartment dog
                     </p>
                   </div>
@@ -47,8 +47,8 @@ class ApartmentTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Apartment dogs and their people have a whole different set
                       of rules and circumstances that they need to deal with.
                     </p>
@@ -76,8 +76,8 @@ class ApartmentTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Dog training for apartment dogs still covers dog obedience
                       but will also address:
                     </p>

@@ -32,8 +32,8 @@ class AdvancedTrainingView extends Component {
             <div className="columns">
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Because a well-trained dog is a happy dog - and they're
                       NEVER too old to learn!
                     </p>
@@ -49,8 +49,8 @@ class AdvancedTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Here are some ideas of what our dog training service can
                       help you with:
                     </p>
@@ -75,8 +75,8 @@ class AdvancedTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Trick training can include:
                     </p>
                   </div>

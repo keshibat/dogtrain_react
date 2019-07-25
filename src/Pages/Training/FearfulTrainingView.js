@@ -31,8 +31,8 @@ class FearfulTrainingView extends Component {
             <div className="columns">
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       A fearful dog may run or he may hide - either way we want
                       him to become comfortabe and confident wherever he is.
                     </p>
@@ -48,8 +48,8 @@ class FearfulTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       {" "}
                       Our motivational “Think Dog” approach develops a dog’s
                       confidence with{" "}
@@ -76,8 +76,8 @@ class FearfulTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       {" "}
                       private dog training to help them deal with fear of:{" "}
                     </p>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import mystyles from "./../../assets/styles/TrainningSCSS/mystyles.css";
+import "./../../assets/styles/TrainningSCSS/mystyles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Puppy from "./../../assets/images/home/puppies.jpeg";
 
@@ -32,8 +32,8 @@ class PuppyTrainingView extends Component {
             <div className="columns">
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Train your puppy early, and ENJOY him
                     </p>
                   </div>
@@ -49,8 +49,8 @@ class PuppyTrainingView extends Component {
 
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       A two hour puppy training consultation will include:
                     </p>
                   </div>
@@ -82,8 +82,8 @@ class PuppyTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       1 hour follow-up lesson with us to cover:
                     </p>
                   </div>
