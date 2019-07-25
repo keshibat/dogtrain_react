@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AccomdationViewCSS from "./../../assets/styles/AboutSCSS/AccomodationView.css";
+import "./../../assets/styles/AboutSCSS/AccomodationView.css";
 import PlaceHolder from "./../../assets/images/640x360.png";
 
 class AccomodationView extends Component {

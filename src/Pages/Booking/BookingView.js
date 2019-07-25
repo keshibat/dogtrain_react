@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Calendar from "react-calendar";
 import Loader from "./../../components/Loader";
-import bookingViewCSS from "./../../assets/styles/BookingSCSS/bookingView.css";
+import "./../../assets/styles/BookingSCSS/bookingView.css";
 import Messages from "./../../components/Messages";
 
 class BookingView extends Component {
@@ -51,7 +51,7 @@ class BookingView extends Component {
       bookingDate
     };
 
-    const response = await axios.post(
+    await axios.post(
       `${process.env.REACT_APP_API_URL}/bookings`,
       newBooking
     );

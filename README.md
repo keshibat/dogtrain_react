@@ -18,13 +18,14 @@
 
 
 ## About
-1. Link to [Original Website](https://www.muttswithmanners.com.au/)
-2. Link to [published app on Frontend AmazonS3](http://react-keep-static.s3-website-ap-southeast-2.amazonaws.com/)
-3. Link to [published app on Backend HEROKU]()
-4. Link to [Github Repo Frond-end](https://github.com/keshibat/dogtrain_react)
-5. Link to [Github Repo Back-end]()
+1. Link to [App AmazonS3](http://react-keep-static.s3-website-ap-southeast-2.amazonaws.com/)
+2. Link to [Github Repo Frond-end](https://github.com/keshibat/dogtrain_react)
+3. Link to [Github Repo Back-end](https://dogsdata.herokuapp.com/)
 
-[![kendo coupns](https://i.imgur.com/xia7mKr.png)](https://kendodeal.herokuapp.com/)
+
+
+
+[![Imgur](https://i.imgur.com/Ko5Tu9u.png)](http://react-keep-static.s3-website-ap-southeast-2.amazonaws.com/)
 
 
 
@@ -50,9 +51,17 @@ Implementing/resolving all of the above using the most recent technology using t
 
 ### Feature
 
+![Imgur](https://i.imgur.com/Oqr9b0C.png)
+
+![Imgur](https://i.imgur.com/Uv11dPc.png)
+
 
 
 ### Tech stack
+
+![Imgur](https://i.imgur.com/rpYWJva.png)
+
+![Imgur](https://i.imgur.com/nDYvIL8.png)
 
 
 ### Instruction
@@ -127,21 +136,54 @@ As Nathaniel, I'd like to have a dog trainer that is available to come to my hou
 
 ### Project plan and timeline
 
-![Imgur](https://i.imgur.com/dtQBljS.png)
+
 
 ### Trello
-[![Trello](https://i.imgur.com/ulDKE97.png)](https://trello.com/b/njBkUzsO/kenjonajo)
+[![Imgur](https://i.imgur.com/P6egEdG.png)](https://trello.com/b/njBkUzsO/kenjonajo)
 
 
 ### Short Answer Questions
 
 #### a. What are the most important aspects of quality software?
 
-
-
-
+1. Easy usability (intuitive to use),
+2. functions as expected (i.e.buttons work),
+3. no bugs,
+4. easy to navigate,
+5. code has comments,
+6. Good documentation
 
 #### b. What libraries are being used in the app and why?
+
+React-DOM - this is the library we need to access for frontend
+
+React-Router-DOM - for frontend
+
+React-redux - for frontend
+
+Express - this is used for the backend
+
+Bulma CSS Framework - this is used for front end styling
+
+Mongoose - helps create schemas and models for MongoDB
+
+React-BingMaps - importing a map into the react application
+
+React-Calendar - importing a calendar into the react application for booking appointments for customers to the client
+
+Node-sass - sass styling package for the mern stack
+
+Axios - connected our express to react to access our end points
+
+FortAwesome - custom icons used for styling inside the application
+
+DotENV - A package to be able to use our env file inside our application
+
+CORS -
+
+Morgan - To help show in our terminal what was currently happening during events in our app
+
+Celebrate - middleware validation for our express backend
 
 
 
@@ -149,16 +191,55 @@ As Nathaniel, I'd like to have a dog trainer that is available to come to my hou
 #### c. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
 
+The team would need to know what the problems are, and how their project will help resolve these problems. They would need to be able to define the project scope and the tools required for the build and release.
+The team should be equipped with the following knowledge and skills:
+
+1. Know the programming language for the build (i.e. MERN, HTML/CSS)
+2. Be able to test the app during build/production/release
+3. Be comfortable with deploying the app
+4. Be able to debug and fix any errors/problems during coding
+5. Communicate well with clients and team members to have a sound  understanding of tasks required and expectations
+6. Be able to work in a team towards a deadline
+7. Be able to learn on the job if the client wants to use certain packages that you have not used before, you should have the skill to be able to learn new things
+8. Basic knowledge of design, and design skills as they will be require to use some design tools to make the website look good
+9. Be able to make responsive design - responsive websites - different designs for different size devices
+10. Understand common security attacks and how to prevent them
+
+a. SQL injection
+
+b. Cross-site scripting
+
+c. Protect your API keys
+
+d. Error messages
+
+11. Image resizing and effects
+12. Resoluteness
+13. Confidence
+14. Frustration tolerance and patience
+15. Time management and detailed planning
+
+a.Set long-term goals as well as short-term.
+
+b. Plan tasks in detail to avoid re-planning.
+
+c. Make a to-do list to follow each day.
+
+d. Don’t shelve difficult tasks, break them into smaller pieces and do them straightaway.
+
+e. Discipline yourself, make your working hours consistent.
+
+f. Include time for rest in your schedule.
 
 
 #### d. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
+The knowledge and skills that were required to complete our challenges for ourselves as well as a group were the requirements for question three. Examples being, being comfortable deploying, debuggings and knowledge and application of the MERN stack.
 
-
+As a group, we all had challenges we all faced during our project. Some of these issues were regarding application and usage of codes, to reading through dozens of documents and tutorials.
 
 
 #### e. Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
 
+Nathaniel - moving around and getting used to the states and class components in React. Improvements for future would be more practice with the framework and applications.
 
-[Rails]: <https://github.com/joemccann/dillinger>
-[Github]: <https://github.com/>
-[Trello]: <https://trello.com/>
+

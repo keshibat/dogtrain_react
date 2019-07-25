@@ -24,7 +24,7 @@ class AdvertFormView extends Component {
       body,
       link
     };
-    const response = await LocalAPI.post(`/advert`, content);
+    await LocalAPI.post(`/advert`, content);
     this.setState({
       title: "",
       body: "",

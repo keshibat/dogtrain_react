@@ -24,7 +24,7 @@ class BlogFormView extends Component {
       body,
       tags
     };
-    const response = await LocalAPI.post(`/blog`, newPost);
+    await LocalAPI.post(`/blog`, newPost);
     this.setState({
       title: "",
       body: "",

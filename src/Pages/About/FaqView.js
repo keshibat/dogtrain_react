@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FaqViewCSS from "./../../assets/styles/AboutSCSS/FaqViewCSS.css";
+import "./../../assets/styles/AboutSCSS/FaqViewCSS.css";
 
 export default class FaqView extends Component {
   constructor() {
