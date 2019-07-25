@@ -34,6 +34,23 @@ div.message.is-primary.is-medium.quote {
 
 
 
+div.message-header.listheader.color {
+  background-color: #FAFAD2;
+}
+
+
+div.message.is-info.message-header.color {
+  background-color: #FAFAD2;
+}
+
+
+
+
+
+p.title.has-text-centered.fontcolor {
+  color: #8B0000;
+}
+
 
 
 

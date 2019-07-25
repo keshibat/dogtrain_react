@@ -32,8 +32,8 @@ class NewFamilyMemberTrainingView extends Component {
             <div className="columns">
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Because a well-trained dog is a happy dog - and they're
                       NEVER too old to learn!
                     </p>
@@ -49,8 +49,8 @@ class NewFamilyMemberTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       All dogs can benefit from a little dog obedience training
                       at any age and in-home dog obedience training will help
                       you with issues that are important to YOU.
@@ -79,8 +79,8 @@ class NewFamilyMemberTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Below are some of the dog obedience training skills that
                       you might like professional help with:
                     </p>

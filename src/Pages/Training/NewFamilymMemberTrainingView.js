@@ -31,8 +31,8 @@ class NewFamilyMemberTrainingView extends Component {
             <div className="columns">
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       Dogs, cats (and kids!) are all trainable - aim for harmony
                       in your home
                     </p>
@@ -48,8 +48,8 @@ class NewFamilyMemberTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       A dog who has often been the substitute child now has to
                       deal with a lot of changes.
                     </p>
@@ -74,8 +74,8 @@ class NewFamilyMemberTrainingView extends Component {
               </div>
               <div className="column">
                 <article className="message is-info">
-                  <div className="message-header listheader">
-                    <p className="title has-text-centered">
+                  <div className="message-header listheader color">
+                    <p className="title has-text-centered fontcolor">
                       To minimise the stress for all, our in home dog training
                       can cover:
                     </p>
