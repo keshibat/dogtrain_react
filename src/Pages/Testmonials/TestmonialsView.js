@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import LocalAPI from "./../../apis/local";
 import Loader from "./../../components/Loader";
-import mystyles from "./../../assets/styles/TrainningSCSS/mystyles.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import AdvancedDog from "./../../assets/images/trainning/advancedDog.jpg";
 
 class TestmonialsView extends Component {
 

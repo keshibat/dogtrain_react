@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-
 import axios from "axios";
-
-// import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 
 class LoginView extends Component {
   state = {

@@ -9,8 +9,9 @@ import ApartmentDog from "./../../assets/images/home/apartment-dog-1.jpeg";
 import DogAggression from "./../../assets/images/home/aggro-dog.jpg";
 import DogSad from "./../../assets/images/home/sad-dog.jpeg";
 import DogReactive from "./../../assets/images/home/dog-pulling.jpg";
-import HomeCSS from "./../../assets/styles/AboutSCSS/HomeCSS.css";
 import Advert from "./../../components/Advert";
+import "./../../assets/styles/AboutSCSS/HomeCSS.css";
+
 
 class HomeView extends Component {
   componentDidMount() {

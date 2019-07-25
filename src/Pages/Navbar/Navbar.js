@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavBarCSS from "./../../assets/styles/NavbarSCSS/NavBarCSS.css";
+import "./../../assets/styles/NavbarSCSS/NavBarCSS.css";
 import NavbarAboutUs from "./Navbar-AboutUs";
 import NavbarTraining from "./Navbar-Training";
 import MwMLogo from "./../../assets/images/MwM-logo.jpg";

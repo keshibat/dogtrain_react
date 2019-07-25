@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import ContactUsCSS from "./../../assets/styles/AboutSCSS/ContactUsCSS.css";
+import "./../../assets/styles/AboutSCSS/ContactUsCSS.css";
 import ContactUsIMG from "./../../assets/images/contact-us.jpeg";
 import Loader from "./../../components/Loader";
 import Messages from "./../../components/Messages";

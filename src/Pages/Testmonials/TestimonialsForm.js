@@ -24,7 +24,7 @@ class TestimonialsFormView extends Component {
       body,
       author
     };
-    const response = await LocalAPI.post(`/testimonials`, newPost);
+    await LocalAPI.post(`/testimonials`, newPost);
     this.setState({
       title: "",
       body: "",

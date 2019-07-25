@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LocalAPI from "./../../apis/local";
-import BlogCSS from "./../../assets/styles/BlogSCSS/BlogCSS.css";
+import "./../../assets/styles/BlogSCSS/BlogCSS.css";
 import Loader from "./../../components/Loader";
 
 class BlogView extends Component {

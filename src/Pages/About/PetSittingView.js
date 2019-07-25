@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PetSittingViewCSS from "./../../assets/styles/AboutSCSS/PetSittingView.css";
+import "./../../assets/styles/AboutSCSS/PetSittingView.css";
 import PlaceHolder from "./../../assets/images/640x360.png";
 
 class PetSittingView extends Component {

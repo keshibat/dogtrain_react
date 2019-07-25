@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LocalAPI from "./../../apis/local";
-// import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 import Loader from "./../../components/Loader";
 
 class BookingsEditView extends Component {
@@ -32,15 +31,7 @@ class BookingsEditView extends Component {
     return null;
   }
 
-  convertDate(date) {
-    if (Date.parse(date)) {
-      return new Date(date).toISOString().slice(0, 10);
-    }
-    return null;
-  }
-
   onInputChange = (name, event) => {
-    console.log(event.target.value);
     this.setState({ [name]: event.target.value });
   };
 
@@ -68,11 +59,10 @@ class BookingsEditView extends Component {
       status
     };
 
-    const response = await LocalAPI.put(
+    await LocalAPI.put(
       `/bookings/${this.props.match.params.id}`,
       updateBooking
     );
-    console.log(response);
     this.props.history.push(`/bookings/${this.props.match.params.id}`);
   };
 
@@ -88,9 +78,7 @@ class BookingsEditView extends Component {
       fetching
     } = this.state;
 
-    const dateString = new Date(bookingDate).toLocaleDateString() || "";
-
-    if (this.state.fetching) {
+    if (fetching) {
       return <Loader />;
     }
 

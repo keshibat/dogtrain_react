@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AreasWeServiceCSS from "./../../assets/styles/AboutSCSS/AreasWeServiceCSS.css";
+import "./../../assets/styles/AboutSCSS/AreasWeServiceCSS.css";
 import { Map } from "./Map";
 
 const infoboxTemplate = options => {

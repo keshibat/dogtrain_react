@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import mystyles from "./../../assets/styles/TrainningSCSS/mystyles.css";
+import "./../../assets/styles/TrainningSCSS/mystyles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ApartmentDog from "./../../assets/images/home/apartment-dog-1.jpeg";
 

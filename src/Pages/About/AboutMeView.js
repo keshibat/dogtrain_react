@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MariaCunningHam from "./../../assets/images/maria-cunningham.jpg";
-import AboutMeViewCSS from "./../../assets/styles/AboutSCSS/AboutMeView.css";
+import "./../../assets/styles/AboutSCSS/AboutMeView.css";
 
 class AboutMeView extends Component {
   render() {

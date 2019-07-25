@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LocalAPI from "./../../apis/local";
-// import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 import Loader from "./../../components/Loader";
 
 class BookingsShowView extends Component {
@@ -10,7 +9,6 @@ class BookingsShowView extends Component {
     fetching: true
   };
 
-  //try using filter array to get item, if its faster than querying
   componentDidMount() {
     const { id } = this.props.match.params;
     LocalAPI.get(`/bookings/${id}`).then(res =>
@@ -18,16 +16,10 @@ class BookingsShowView extends Component {
     );
   }
 
-  // getBooking = async () => {
-  //     const { id } = this.props.match.params;
-  //     const response = await LocalAPI.get(`/bookings/${id}`);
-  //     return response.data;
-  // }
-
   onDeleteClick = async event => {
     event.preventDefault();
     const { id } = this.props.match.params;
-    const response = await LocalAPI.delete(`/bookings/${id}`);
+    await LocalAPI.delete(`/bookings/${id}`);
     this.props.history.push("/admin");
   };
 
@@ -43,9 +35,6 @@ class BookingsShowView extends Component {
   };
 
   render() {
-    // const { bookings } = this.state;
-    // console.log(this.props.match.params.id);
-    // console.log(this.props.bookings);
     const {
       bookingDate,
       date,
