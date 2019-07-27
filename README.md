@@ -54,6 +54,14 @@ Functional modern responsive website that admin user is able to create/read/dele
 ![Imgur](https://i.imgur.com/Oqr9b0C.png)
 #### Map
 ![Imgur](https://i.imgur.com/Uv11dPc.png)
+#### Dashboard
+```
+/admin
+user: admin
+Password: admin
+```
+![Imgur](https://i.imgur.com/j13OPve.png)
+
 
 
 
