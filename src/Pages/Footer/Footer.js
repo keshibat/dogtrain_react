@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import FooterStyles from "./../../assets/styles/FooterSCSS/mystyles.css";
+import "./../../assets/styles/FooterSCSS/mystyles.css";
 
 class Footer extends Component {
   render() {

@@ -24,7 +24,7 @@ class AdvertFormView extends Component {
       body,
       link
     };
-    const response = await LocalAPI.post(`/advert`, content);
+    await LocalAPI.post(`/advert`, content);
     this.setState({
       title: "",
       body: "",
@@ -67,7 +67,7 @@ class AdvertFormView extends Component {
                   <label className="label">Content</label>
                   <div className="control">
                     <textarea
-                      class="textarea"
+                      className="textarea"
                       placeholder="Add Content"
                       name="body"
                       value={body}

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LocalAPI from "./../../apis/local";
-// import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 import Loader from "./../../components/Loader";
 
 class BlogsShowView extends Component {
@@ -14,7 +13,6 @@ class BlogsShowView extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     LocalAPI.get(`/blog/${id}`).then(res => {
-      console.log(res);
       this.setState({ blog: { ...res.data }, fetching: false });
     });
   }
@@ -22,7 +20,7 @@ class BlogsShowView extends Component {
   onDeleteClick = async event => {
     event.preventDefault();
     const { id } = this.props.match.params;
-    const response = await LocalAPI.delete(`/blog/${id}`);
+    await LocalAPI.delete(`/blog/${id}`);
     this.props.history.push("/admin");
   };
 

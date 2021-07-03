@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import mystyles from "./../../assets/styles/TrainningSCSS/mystyles.css";
+import "./../../assets/styles/TrainningSCSS/mystyles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DogAggression from "./../../assets/images/home/aggro-dog.jpg";
 
@@ -130,7 +130,7 @@ class NaughtyTrainingView extends Component {
           </div>
         </section>
         <section className="quotes">
-          <div class="has-text-centered is-size-1">
+          <div className="has-text-centered is-size-1">
             <FontAwesomeIcon icon="quote-left" />
           </div>
           <div className="columns">

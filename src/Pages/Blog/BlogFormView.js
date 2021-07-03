@@ -24,7 +24,7 @@ class BlogFormView extends Component {
       body,
       tags
     };
-    const response = await LocalAPI.post(`/blog`, newPost);
+    await LocalAPI.post(`/blog`, newPost);
     this.setState({
       title: "",
       body: "",
@@ -67,7 +67,7 @@ class BlogFormView extends Component {
                   <label className="label">Body</label>
                   <div className="control">
                     <textarea
-                      class="textarea"
+                      className="textarea"
                       placeholder="Write a Blog Post"
                       name="body"
                       value={body}

@@ -1,14 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import LocalAPI from "./../../apis/local";
 import "./../../assets/styles/AdminSCSS/dashboardView.css";
-import Loader from "./../../components/Loader";
 import TestimonialsFormView from "./../Testmonials/TestimonialsForm";
 import BlogFormView from "./../Blog/BlogFormView";
 import AdvertFormView from "./../Admin/AdvertFormView";
 
-//index view, view all bookings
-//CRUD views, edit/update, delete, confirm/change status
 class DashboardView extends Component {
 
   render() {

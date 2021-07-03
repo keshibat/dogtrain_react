@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LocalAPI from "./../../apis/local";
-// import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 import Loader from "./../../components/Loader";
 
 class BlogEditView extends Component {
@@ -27,7 +26,6 @@ class BlogEditView extends Component {
   }
 
   onInputChange = (name, event) => {
-    console.log(event.target.value);
     this.setState({ [name]: event.target.value });
   };
 
@@ -42,11 +40,10 @@ class BlogEditView extends Component {
       body
     };
 
-    const response = await LocalAPI.put(
+    await LocalAPI.put(
       `/blog/${this.props.match.params.id}`,
       updateBlog
     );
-    console.log(response);
     this.props.history.push(`/blog/${this.props.match.params.id}`);
   };
 
@@ -84,7 +81,7 @@ class BlogEditView extends Component {
                   <label className="label">Blog Post</label>
                   <div className="control">
                     <textarea
-                      class="textarea"
+                      className="textarea"
                       placeholder="Edit your blog post"
                       name="body"
                       value={body}

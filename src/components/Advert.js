@@ -10,12 +10,10 @@ class AdvertView extends Component {
 
     async componentDidMount() {
         const response = await LocalAPI.get("/advert");
-        // console.log(response.data[0]);
         this.setState({...response.data.reverse()[0]});
     }
 
 render(){
-    // console.log(this.state && this.state.title);
     const{
         title,
         body,

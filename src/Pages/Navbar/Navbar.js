@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavBarCSS from "./../../assets/styles/NavbarSCSS/NavBarCSS.css";
+import "./../../assets/styles/NavbarSCSS/NavBarCSS.css";
 import NavbarAboutUs from "./Navbar-AboutUs";
 import NavbarTraining from "./Navbar-Training";
 import MwMLogo from "./../../assets/images/MwM-logo.jpg";
@@ -19,7 +19,7 @@ export default class Navbar extends Component {
             <img src={MwMLogo} alt="logo" width="112" height="28" />
           </Link>
 
-          <a
+          <span
             role="button"
             className="navbar-burger"
             aria-label="menu"
@@ -29,7 +29,7 @@ export default class Navbar extends Component {
             <span aria-hidden="true" />
             <span aria-hidden="true" />
             <span aria-hidden="true" />
-          </a>
+          </span>
         </div>
 
         <div id="navbarBasicExample" className="navbar-menu">
@@ -39,14 +39,14 @@ export default class Navbar extends Component {
             </Link>
 
             <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link has-text-weight-bold">About Us</a>
+              <span className="navbar-link has-text-weight-bold">About Us</span>
               <div className="navbar-dropdown">
                 <NavbarAboutUs />
               </div>
             </div>
 
             <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link has-text-weight-bold">Training</a>
+              <span className="navbar-link has-text-weight-bold">Training</span>
 
               <div className="navbar-dropdown">
                 <NavbarTraining />

@@ -1,14 +1,11 @@
 import React, { Component } from "react";
-
 import axios from "axios";
-
-// import dashboardViewCSS from "./../../assets/styles/AdminSCSS/dashboardView.css";
 
 class LoginView extends Component {
   state = {
     username: "",
     password: "",
-    error: null,
+    // error: null,
     fetching: false
   };
 
@@ -27,7 +24,7 @@ class LoginView extends Component {
       });
     } catch (error) {
       console.log(error);
-      this.setState({ error });
+      // this.setState({ error });
       this.setState({ fetching: false });
     }
   };
